@@ -1,18 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const users = require('./routes/api/users');
 const user = require('./routes/api/user');
-const lecturers = require('./routes/api/lecturers');
-const lecturer = require('./routes/api/lecturer');
 
 
 const app = express();
 
+//body parser middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 //database
 const db = require('./config/keys').mongoURL;
 
-//connection to mongoose
+//connection to database
 mongoose
     .connect(db, { useNewUrlParser: true })
     .then(() => console.log("Connected to the mongoose"))
@@ -22,11 +25,9 @@ mongoose
 
 const port = process.env.PORT || 5000;
 
-
+//Setting up of routes
 app.use('/api/users', users);
 app.use('/api/user', user);
-app.use('/api/lecturers', lecturers);
-app.use('/api/lecturer', lecturer);
 
 
 app.get('/', (req, res) => res.send("Hello World"));
