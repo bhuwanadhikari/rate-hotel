@@ -2,6 +2,7 @@ const express = require('express');
 const gravatar = require('gravatar');
 const bcrypt  = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const passport = require('passport');
 
 
 const User = require('../../models/User');
@@ -71,6 +72,13 @@ router.post('/login', (req, res) => {
            }
         });
     }).catch(); //error of find one
+});
+
+//@route api/users/current
+// return current user
+// access private
+router.get('/current',passport.authenticate('jwt',{session:false}),(req, res)=>{
+    res.json(req.user);
 });
 
     module.exports = router;
