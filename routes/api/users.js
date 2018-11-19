@@ -6,6 +6,7 @@ const passport = require('passport');
 
 //Load Input Validation
 const validateRegisterInput = require('../../validation/register');
+const validateLoginInput =  require('../../validation/login')
 
 
 const User = require('../../models/User');
@@ -27,7 +28,7 @@ router.post('/register', (req, res) => {
     const {errors, isValid} = validateRegisterInput(req.body);
     //check validation
     if(!isValid){
-        return res.status(400).json(errors); 
+        return res.status(400).json(errors);
     }
 
     User.findOne({email: 'req.body.email'})
@@ -66,11 +67,19 @@ router.post('/register', (req, res) => {
 // return token back which is sent as header to authenticate
 // access public
 router.post('/login', (req, res) => {
+
+    //Validation of Login Input
+    const {errors, isValid} = validateLoginInput(req.body);
+    if(!isValid){
+        res.status(400).json(errors);
+    }
+
     const email = req.body.email;
     const password = req.body.password;
     User.findOne({email}).then((user) => {
         if(!user){
-            return res.status(404).json({email: 'User not found'});
+            errors.email = 'User not found';
+            return res.status(404).json(errors);
         }
 
         bcrypt.compare(password, user.password).then((isMatch) => {
@@ -82,7 +91,8 @@ router.post('/login', (req, res) => {
                     res.json({success: true, token: 'Bearer '+ token});
                } );
            } else{
-               return res.status(400).json({password: "Password incorrect"});
+               errors.password = 'Password Incorrect'
+               return res.status(400).json(errors);
            }
         });
     }).catch(); //error of find one
