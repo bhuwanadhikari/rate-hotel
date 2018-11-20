@@ -18,7 +18,7 @@ const UserProfileSchema = new Schema({
         type: String,
         required: true
     },
-    bid: {
+    bio: {
         type: String
     },
     nRating: {

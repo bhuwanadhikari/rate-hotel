@@ -85,7 +85,7 @@ router.post('/login', (req, res) => {
         bcrypt.compare(password, user.password).then((isMatch) => {
            if(isMatch){
                //Credentials matched
-               payload = {id: user.id, email: user.email, avatar: user.avatar};
+               payload = {id: user.id, email: user.email, avatar: user.avatar, faculty: user.faculty};
 
                jwt.sign(payload, keys.secret, {expiresIn: 36000}, (err, token) => {
                     res.json({success: true, token: 'Bearer '+ token});
