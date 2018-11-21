@@ -3,6 +3,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
 
+const validateUserProfileInput = require('../../validation/userProfile');
+
+//-----------------------------------------------
+mongoose.set('useFindAndModify', false);//------- can be removed after mongoose updates
+//-----------------------------------------------
 
 //Load profile model
 const UserProfile = require('../../models/UserProfile');
@@ -10,16 +15,22 @@ const UserProfile = require('../../models/UserProfile');
 //Load user model
 const User = require('../../models/User');
 
-//USER
-router.get('/test', (req, res) => res.json({msg: 'user works'}));
 
 
-//@route /api/userProfile
-// get current user profile
-// private
-router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
+
+
+
+
+
+
+
+//@route /api/userProfile/handle/:handle
+// get any user profile by handle
+// public
+router.get('/handle/:handle', (req, res) => {
     const errors = {};
-    UserProfile.findOne({user: req.user.id}) //req.user's user from stored token's payload
+    UserProfile.findOne({handle: req.params.handle}) //handle in the params
+        .populate('user', ['name', 'avatar', 'faculty'])
         .then((profile) => {
             if(!profile){
                 errors.noProfile = 'There is no profile for this user';
@@ -32,11 +43,83 @@ router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
 });
 
 
+//@route /api/userProfile/user/:id
+// get  profile by user id
+// public
+router.get('/user/:user_id', (req, res) => {
+    const errors = {};
+    UserProfile.findOne({user: req.params.user_id})
+        .populate('user', ['name', 'avatar', 'faculty'])
+        .then((profile) => {
+            if(!profile){
+                errors.noProfile = 'There is no profile for this user';
+                res.status(404).json(errors);
+            }
+            res.status(200).json(profile);
+        }).catch( (err) => {
+        res.status(404).json(err);
+    });
+});
+
+
+//@route /api/userProfile/all
+// get all userProfiles
+// public
+router.get('/all', (req, res) => {
+    const errors = {};
+    UserProfile.find()
+        .populate('user', ['name', 'avatar', 'faculty'])
+        .then(profiles => {
+            if(!profiles){
+                errors.noProfile = 'There are no profiles';
+                return res.status(404).json(errors);
+            }
+            res.json(profiles);
+        }).catch( (err) => {
+        res.status(404).json(err);
+    });
+});
+
+
+
+
+
+
+
+
+
+//@route /api/userProfile
+// get current user profile
+// private
+router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
+    const errors = {};
+    UserProfile.findOne({user: req.user.id}) //req.user's user from stored token's payload
+        .populate('user', ['name', 'avatar', 'faculty'])
+        .then((profile) => {
+            if(!profile){
+                errors.noProfile = 'There is no profile for this user';
+                res.status(404).json(errors);
+            }
+            res.status(200).json(profile)
+        }).catch( (err) => {
+        res.status(404).json(err);
+    });
+});
+
+
+
 //@route /api/userProfile
 // create or edit current userProfile
 // private
 router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
-    const errors = {};
+
+    //destructuring
+    const {errors, isValid}  = validateUserProfileInput(req.body);
+    if(!isValid){
+        return res.status(400).json(errors);
+    }
+
+
     //get fields
     const profileFields = {};
     profileFields.user = req.user.id;
@@ -54,31 +137,33 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
     if(req.body.github) profileFields.social.github = req.body.github;
     if(req.body.facebook) profileFields.social.facebook = req.body.facebook;
 
-    Profile.findOne({user: req.user.id}).then((profile) => {
+
+
+    UserProfile.findOne({user: req.user.id}).then((profile) => {
         if(profile){
             //Update
-            Profile.findOneAndUpdate(
+            UserProfile.findOneAndUpdate(
                 {user: req.user.id},
                 {$set: profileFields},
                 {new: true}
             ).then((profile) => {
                 res.json(profile);
-            })
+            }).catch(err => res.status(400).json(err))
         }else{
             //create
             //check if handle exists
-            Profile.findOne({handle: profileFields.handle}).then((profile) => {
+            UserProfile.findOne({handle: profileFields.handle}).then((profile) => {
                 if(profile){
-                    errors.handle = 'Handle already exists';
-                    res.status(400).json(errors);
+                    res.status(400).json('Handle already exists');
                 }
-                new Profile(profileFields).save().then((profile) => {
+                new UserProfile(profileFields).save().then((profile) => {
                     res.json(profile)
-                })
-
-            });
+                });
+            }).catch(err = res.statu(400).json(err));
         }
-    })
-
+    }).catch(err => res.json(err));
 });
+
+
+
 module.exports = router;

@@ -8,8 +8,7 @@ const UserProfileSchema = new Schema({
     },
     handle: {
         type: String,  //capital string here in mongoose
-        required: true,
-        maxLength: 40
+        required: true
     },
     location: {
         type: String
@@ -22,10 +21,12 @@ const UserProfileSchema = new Schema({
         type: String
     },
     nRating: {
-        type: Number
+        type: Number,
+        default: 0
     },
     aRating: {
-        type: Number
+        type: Number,
+        default: 0
     },
     social: {
         twitter: {
