@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
 
+
 const validateUserProfileInput = require('../../validation/userProfile');
 
 //-----------------------------------------------
@@ -14,6 +15,8 @@ const UserProfile = require('../../models/UserProfile');
 
 //Load user model
 const User = require('../../models/User');
+
+
 
 
 
@@ -162,6 +165,22 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
             }).catch(err = res.statu(400).json(err));
         }
     }).catch(err => res.json(err));
+});
+
+
+
+
+
+//@route /api/userProfile
+// delete logged in userProfile
+// private
+router.delete('/', passport.authenticate('jwt', {session: false}), (req, res)=>{
+        UserProfile.findOneAndRemove({user: req.user.id})
+            .then(() => {
+                User.findOneAndRemove({_id: req.user.id}).then(() => {
+                    res.json({success: true});
+                }).catch(err => res.status(400).json(err));
+            }).catch(err => res.status(400).json(err));
 });
 
 

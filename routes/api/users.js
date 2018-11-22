@@ -17,8 +17,6 @@ const keys = require('../../config/keys');
 const router = express.Router();
 
 
-//USERS
-router.get('/test', (req, res) => res.json({msg: 'users works'}));
 
 //@route api/users/register
 // register a new user
@@ -31,11 +29,15 @@ router.post('/register', (req, res) => {
         return res.status(400).json(errors);
     }
 
-    User.findOne({email: 'req.body.email'})
-        .then((user) => {
-            if (user) {
-                return res.status(400).json({email: "Email already exists"});
-            } else {
+
+
+
+    User.findOne({email: req.body.email})
+        .then(user => {
+            if(user){
+                errors.email = 'Email already exists';
+                return res.status(400).json(errors);
+            }else{
                 const avatar = gravatar.url(req.body.email, {
                     s: '200',
                     r: 'pg',
@@ -53,14 +55,18 @@ router.post('/register', (req, res) => {
                     bcrypt.hash(newUser.password, salt, (err, hash) => {
                         if (err) throw err;
                         newUser.password = hash;
-                        newUser
-                            .save()
-                                .then(user => res.json(user))
-                                .catch(err => console.log(err));
+                        newUser.save()
+                            .then(user => res.json(user))
+                            .catch(err => res.json(err));
                     });
-                })
+                });
             }
-        });
+
+        }).catch(err => res.status(404).json(err))
+
+
+
+
 });
 
 //@route api/users/login
@@ -83,17 +89,17 @@ router.post('/login', (req, res) => {
         }
 
         bcrypt.compare(password, user.password).then((isMatch) => {
-           if(isMatch){
-               //Credentials matched
-               payload = {id: user.id, email: user.email, avatar: user.avatar, faculty: user.faculty};
+            if(isMatch){
+                //Credentials matched
+                payload = {id: user.id, email: user.email, avatar: user.avatar, faculty: user.faculty};
 
-               jwt.sign(payload, keys.secret, {expiresIn: 36000}, (err, token) => {
+                jwt.sign(payload, keys.secret, {expiresIn: 36000}, (err, token) => {
                     res.json({success: true, token: 'Bearer '+ token});
-               } );
-           } else{
-               errors.password = 'Password Incorrect'
-               return res.status(400).json(errors);
-           }
+                } );
+            } else{
+                errors.password = 'Password Incorrect';
+                return res.status(400).json(errors);
+            }
         });
     }).catch(); //error of find one
 });
@@ -109,4 +115,4 @@ router.get('/current',passport.authenticate('jwt',{session:false}),(req, res)=>{
     });
 });
 
-    module.exports = router;
+module.exports = router;
