@@ -3,9 +3,8 @@ const Schema = mongoose.Schema;
 
 const LecturerSchema = new Schema({
     name:{type: String, required: true},
-    commonName: {type: String, required: true},
+    commonName: {type: String},
     email: {type: String, required: true},
-    password: {type: String, required: true},
     avatar: {type: String},
     handle: {type: String, required: true},
     faculty: {type: String, required: true},
@@ -44,7 +43,7 @@ const LecturerSchema = new Schema({
         }
     ],
     overallRating:{
-        type: number,
+        type: Number,
         default: 0
     }
 });
