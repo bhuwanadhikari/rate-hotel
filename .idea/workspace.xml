@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/routes/api/lecturerProfile.js" line="4" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/lecturerProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/lecturerProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/userProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/lecturers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/lecturers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,10 +19,10 @@
     <favorites_list name="Rating App" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.37393525">
+    <splitter split-orientation="horizontal" split-proportion="0.59738135">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="731">
@@ -37,11 +31,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="lecturers.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="lecturers.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/routes/api/lecturers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+                <state relative-caret-position="357">
+                  <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="registerLecturer.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/validation/registerLecturer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
                 </state>
               </provider>
             </entry>
@@ -71,8 +74,17 @@
           <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/routes/api/users.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+                <state relative-caret-position="1047">
+                  <caret line="80" selection-start-line="80" selection-end-line="80" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Lecturer.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/Lecturer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="867">
+                  <caret line="50" column="72" lean-forward="true" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
                 </state>
               </provider>
             </entry>
@@ -108,10 +120,10 @@
         <option value="$PROJECT_DIR$/models/Lecturer.js" />
         <option value="$PROJECT_DIR$/validation/registerLecturer.js" />
         <option value="$PROJECT_DIR$/routes/api/lecturerProfile.js" />
-        <option value="$PROJECT_DIR$/routes/api/lecturers.js" />
         <option value="$PROJECT_DIR$/routes/api/userProfile.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/routes/api/lecturers.js" />
       </list>
     </option>
   </component>
@@ -156,12 +168,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
               <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
@@ -183,7 +201,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,30 +259,32 @@
       <workItem from="1542970819480" duration="6125000" />
       <workItem from="1542980320584" duration="3438000" />
       <workItem from="1543021078775" duration="637000" />
+      <workItem from="1543038996910" duration="2249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114034000" />
+    <option name="totallyTimeSpent" value="116283000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="154" y="184" width="209" height="749" id="Project" order="2" visible="true" weight="0.14055637" />
+      <window_info active="true" content_ui="combo" x="154" y="184" width="209" height="749" id="Project" order="2" visible="true" weight="0.105417274" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info auto_hide="true" id="npm" order="0" type="SLIDING" />
+      <window_info anchor="bottom" id="Run" order="6" />
       <window_info auto_hide="true" id="Structure" order="3" side_tool="true" type="SLIDING" weight="0.17935579" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.20217097" />
       <window_info id="Favorites" order="1" show_stripe_button="false" side_tool="true" type="SLIDING" weight="0.11615785" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.27456647" />
@@ -571,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Lecturer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="50" column="72" lean-forward="true" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -589,20 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation/registerLecturer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -620,17 +618,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/validation/registerLecturer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Lecturer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="50" column="72" lean-forward="true" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="1047">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/lecturers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+        <state relative-caret-position="357">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>

@@ -32,37 +32,37 @@ router.post('/register', (req, res) => {
 
 
 
-    User.findOne({email: req.body.email})
-        .then(user => {
-            if(user){
-                errors.email = 'Email already exists';
-                return res.status(400).json(errors);
-            }else{
-                const avatar = gravatar.url(req.body.email, {
-                    s: '200',
-                    r: 'pg',
-                    d: 'mm'
-                });
-                const newUser = new User({
-                    name: req.body.name,
-                    email: req.body.email,
-                    password: req.body.password,
-                    avatar,
-                    faculty: req.body.faculty
-                });
+   User.findOne({email: req.body.email})
+      .then(user => {
+         if(user){
+            errors.email = 'Email already exists';
+            return res.status(400).json(errors);
+         }else{
+            const avatar = gravatar.url(req.body.email, {
+               s: '200',
+               r: 'pg',
+               d: 'mm'
+            });
+            const newUser = new User({
+               name: req.body.name,
+               email: req.body.email,
+               password: req.body.password,
+               avatar,
+               faculty: req.body.faculty
+            });
 
-                bcrypt.genSalt(10, (err, salt) => {
-                    bcrypt.hash(newUser.password, salt, (err, hash) => {
-                        if (err) throw err;
-                        newUser.password = hash;
-                        newUser.save()
-                            .then(user => res.json(user))
-                            .catch(err => res.json(err));
-                    });
-                });
-            }
+            bcrypt.genSalt(10, (err, salt) => {
+               bcrypt.hash(newUser.password, salt, (err, hash) => {
+                  if (err) throw err;
+                  newUser.password = hash;
+                  newUser.save()
+                     .then(user => res.json(user))
+                     .catch(err => res.json(err));
+               });
+            });
+         }
 
-        }).catch(err => res.status(400).json(err));
+      }).catch(err => res.status(400).json(err));
 
 
 
@@ -74,10 +74,10 @@ router.post('/register', (req, res) => {
 // access public
 router.post('/login', (req, res) => {
 
-    //Validation of Login Input
-    const {errors, isValid} = validateLoginInput(req.body);
-    if(!isValid){
-        res.status(400).json(errors);
+   //Validation of Login Input
+   const {errors, isValid} = validateLoginInput(req.body);
+   if(!isValid){
+      res.status(400).json(errors);
     }
 
     const email = req.body.email;
