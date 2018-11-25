@@ -6,6 +6,7 @@ const passport = require('passport');
 const users = require('./routes/api/users');
 const userProfile = require('./routes/api/userProfile');
 const hotels = require('./routes/api/hotels');
+const hotelProfile = require('./routes/api/hotelProfile');
 
 
 const app = express();
@@ -39,6 +40,7 @@ require('./config/passport')(passport);
 app.use('/api/users', users);
 app.use('/api/userProfile', userProfile);
 app.use('/api/hotels', hotels);
+app.use('/api/hotelProfile', hotelProfile);
 
 
 app.get('/', (req, res) => res.send("Hello World"));

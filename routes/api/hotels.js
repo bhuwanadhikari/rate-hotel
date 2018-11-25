@@ -17,6 +17,20 @@ router.post('/register', (req, res) => {
       return res.status(400).json(errors);
    }
 
+   Hotel.findOne({email: req.body.email}).then( hotel => {
+      if(hotel){
+         errors.email = 'Email already exists';
+         return res.status(400).json(errors);
+      }
+   });
+
+   Hotel.findOne({handle: req.body.handle}).then( hotel => {
+      if(hotel){
+         errors.handle = 'Handle already exists';
+         return res.status(400).json(errors);
+      }
+   });
+
    const avatar = gravatar.url(req.body.email,{
       s:'200',
       r: 'pg',
@@ -37,13 +51,14 @@ router.post('/register', (req, res) => {
       .catch(err => res.json(err));
 
 
+
+
 });
 
 
 
 
 module.exports = router;
-
 
 
 
