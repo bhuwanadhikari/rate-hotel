@@ -17,16 +17,6 @@ const UserProfile = require('../../models/UserProfile');
 const User = require('../../models/User');
 
 
-
-
-
-
-
-
-
-
-
-
 //@route /api/userProfile/handle/:handle
 // get any user profile by handle
 // public
