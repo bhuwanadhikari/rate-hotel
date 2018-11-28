@@ -21,18 +21,18 @@ const User = require('../../models/User');
 // get any user profile by handle
 // public
 router.get('/handle/:handle', (req, res) => {
-    const errors = {};
-    UserProfile.findOne({handle: req.params.handle}) //handle in the params
-        .populate('user', ['name', 'avatar', 'faculty'])
-        .then((profile) => {
-            if(!profile){
-                errors.noProfile = 'There is no profile for this user';
-                res.status(404).json(errors);
-            }
-            res.status(200).json(profile)
-        }).catch( (err) => {
-        res.status(404).json(err);
-    });
+   const errors = {};
+   UserProfile.findOne({handle: req.params.handle}) //handle in the params
+      .populate('user', ['name', 'avatar', 'faculty'])
+      .then((profile) => {
+         if(!profile){
+            errors.noProfile = 'There is no profile for this user';
+            res.status(404).json(errors);
+         }
+         res.status(200).json(profile)
+      }).catch( (err) => {
+      res.status(404).json(err);
+   });
 });
 
 
@@ -40,18 +40,18 @@ router.get('/handle/:handle', (req, res) => {
 // get  profile by user id
 // public
 router.get('/user/:user_id', (req, res) => {
-    const errors = {};
-    UserProfile.findOne({user: req.params.user_id})
-        .populate('user', ['name', 'avatar', 'faculty'])
-        .then((profile) => {
-            if(!profile){
-                errors.noProfile = 'There is no profile for this user';
-                res.status(404).json(errors);
-            }
-            res.status(200).json(profile);
-        }).catch( (err) => {
-        res.status(404).json(err);
-    });
+   const errors = {};
+   UserProfile.findOne({user: req.params.user_id})
+      .populate('user', ['name', 'avatar', 'faculty'])
+      .then((profile) => {
+         if(!profile){
+            errors.noProfile = 'There is no profile for this user';
+            res.status(404).json(errors);
+         }
+         res.status(200).json(profile);
+      }).catch( (err) => {
+      res.status(404).json(err);
+   });
 });
 
 
@@ -59,18 +59,18 @@ router.get('/user/:user_id', (req, res) => {
 // get all userProfiles
 // public
 router.get('/all', (req, res) => {
-    const errors = {};
-    UserProfile.find()
-        .populate('user', ['name', 'avatar', 'faculty'])
-        .then(profiles => {
-            if(!profiles){
-                errors.noProfile = 'There are no profiles';
-                return res.status(404).json(errors);
-            }
-            res.json(profiles);
-        }).catch( (err) => {
-        res.status(404).json(err);
-    });
+   const errors = {};
+   UserProfile.find()
+      .populate('user', ['name', 'avatar', 'faculty'])
+      .then(profiles => {
+         if(!profiles){
+            errors.noProfile = 'There are no profiles';
+            return res.status(404).json(errors);
+         }
+         res.json(profiles);
+      }).catch( (err) => {
+      res.status(404).json(err);
+   });
 });
 
 
@@ -85,18 +85,18 @@ router.get('/all', (req, res) => {
 // get current user profile
 // private
 router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
-    const errors = {};
-    UserProfile.findOne({user: req.user.id}) //req.user's user from stored token's payload
-        .populate('user', ['name', 'avatar', 'faculty'])
-        .then((profile) => {
-            if(!profile){
-                errors.noProfile = 'There is no profile for this user';
-                res.status(404).json(errors);
-            }
-            res.status(200).json(profile)
-        }).catch( (err) => {
-        res.status(404).json(err);
-    });
+   const errors = {};
+   UserProfile.findOne({user: req.user.id}) //req.user's user from stored token's payload
+      .populate('user', ['name', 'avatar', 'faculty'])
+      .then((profile) => {
+         if(!profile){
+            errors.noProfile = 'There is no profile for this user';
+            res.status(404).json(errors);
+         }
+         res.status(200).json(profile)
+      }).catch( (err) => {
+      res.status(404).json(err);
+   });
 });
 
 
@@ -106,55 +106,93 @@ router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
 // private
 router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
 
-    //destructuring
-    const {errors, isValid}  = validateUserProfileInput(req.body);
-    if(!isValid){
-        return res.status(400).json(errors);
-    }
+   //destructuring
+   const {errors, isValid}  = validateUserProfileInput(req.body);
+   if(!isValid){
+      return res.status(400).json(errors);
+   }
 
 
-    //get fields
-    const profileFields = {};
-    profileFields.user = req.user.id;
-    if(req.body.handle) profileFields.handle = req.body.handle;
-    if(req.body.location) profileFields.location = req.body.location;
-    if(req.body.year) profileFields.year = req.body.year;
-    if(req.body.bio) profileFields.bio = req.body.bio;
-    if(req.body.nRating) profileFields.nRating = req.body.nRating;
-    if(req.body.aRating) profileFields.aRating = req.body.aRating;
+   //get fields
+   const profileFields = {};
+   profileFields.user = req.user.id;
+   if(req.body.handle) profileFields.handle = req.body.handle;
+   if(req.body.location) profileFields.location = req.body.location;
+   if(req.body.year) profileFields.year = req.body.year;
+   if(req.body.bio) profileFields.bio = req.body.bio;
+   if(req.body.nRating) profileFields.nRating = req.body.nRating;
+   if(req.body.aRating) profileFields.aRating = req.body.aRating;
 
-    profileFields.social = {};
+   profileFields.social = {};
 
-    if(req.body.twitter) profileFields.social.twitter = req.body.twitter;
-    if(req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
-    if(req.body.github) profileFields.social.github = req.body.github;
-    if(req.body.facebook) profileFields.social.facebook = req.body.facebook;
+   if(req.body.twitter) profileFields.social.twitter = req.body.twitter;
+   if(req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
+   if(req.body.github) profileFields.social.github = req.body.github;
+   if(req.body.facebook) profileFields.social.facebook = req.body.facebook;
+
+
+   UserProfile.findOne({user: req.user.id}).then(userProfile => {
+      if(userProfile){
+         //check if handle exists
+         UserProfile.findOne({handle: req.body.handle}).then(pro => {})
+         UserProfile.findOneAndUpdate(
+            {user: req.user.id},
+            {$set: profileFields},
+            {new: true}
+         ).then(userProfile => {
+            return res.status(200).json(userProfile);
+         }).catch();
+      } else if (!userProfile){
+
+         //check if handle exists
+         UserProfile.findOne({handle: req.body.handle}).then(userProfile => {
+            if(userProfile) {
+               errors.handle = 'Handle already exists';
+               return res.status(400).json(errors);
+            }
+            const newUserProfile = new UserProfile(profileFields);
+            newUserProfile.save().then(userProfile => {
+                res.status(200).json(userProfile);
+            }).catch()
+         })
+      }
+   }).catch();
 
 
 
-    UserProfile.findOne({user: req.user.id}).then((profile) => {
-        if(profile){
-            //Update
-            UserProfile.findOneAndUpdate(
-                {user: req.user.id},
-                {$set: profileFields},
-                {new: true}
-            ).then((profile) => {
-                res.json(profile);
-            }).catch(err => res.status(400).json(err))
-        }else{
-            //create
-            //check if handle exists
-            UserProfile.findOne({handle: profileFields.handle}).then((profile) => {
-                if(profile){
-                    res.status(400).json('Handle already exists');
-                }
-                new UserProfile(profileFields).save().then((profile) => {
-                    res.json(profile)
-                });
-            }).catch(err = res.statu(400).json(err));
-        }
-    }).catch(err => res.json(err));
+
+
+
+/*
+
+
+   UserProfile.findOne({user: req.user.id}).then((profile) => {
+      if(profile){
+         //Update
+         UserProfile.findOneAndUpdate(
+            {user: req.user.id},
+            {$set: profileFields},
+            {new: true}
+         ).then((profile) => {
+            res.json(profile);
+         }).catch(err => res.status(400).json(err))
+      }else{
+         //create
+         //check if handle exists
+         UserProfile.findOne({handle: req.body.handle}).then((profile) => {
+            if(profile){
+               return res.status(400).json({err:'Handle already exists'});
+            } else if(!profile) {
+               new UserProfile(profileFields).save().then(profile => {
+                  res.json(profile)
+               });
+            }
+         }).catch(err = res.statu(400).json(err));
+      }
+   }).catch(err => res.json(err));
+
+   */
+
 });
 
 
@@ -165,12 +203,12 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
 // delete logged in userProfile
 // private
 router.delete('/', passport.authenticate('jwt', {session: false}), (req, res)=>{
-        UserProfile.findOneAndRemove({user: req.user.id})
-            .then(() => {
-                User.findOneAndRemove({_id: req.user.id}).then(() => {
-                    res.json({success: true});
-                }).catch(err => res.status(400).json(err));
-            }).catch(err => res.status(400).json(err));
+   UserProfile.findOneAndRemove({user: req.user.id})
+      .then(() => {
+         User.findOneAndRemove({_id: req.user.id}).then(() => {
+            res.json({success: true});
+         }).catch(err => res.status(400).json(err));
+      }).catch(err => res.status(400).json(err));
 });
 
 

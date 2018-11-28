@@ -82,7 +82,7 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
 // start from here
    Rating.findOne({hotel: req.params.id}).then( rating => {
       if(!rating){
-         errors.noRating = 'No rating is done yet';
+         errors.noRating = 'Neither Hotel nor rating found';
          return res.status(400).json(errors);
       }
       //check if user already exists in array of objects
@@ -93,11 +93,11 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
       for(let key in keyArr) {
          key = keyArr[key];
          key = key.toString();
-         if (rating.rates[key].filter(rate => rate.user.toString() === req.user.id).length > 0) {
+         if ((rating.rates[key].filter(rate => rate.user.toString() === req.user.id).length > 0) && req.body[key]) {
 
              errors[key] = `You have already rated ${key}`;
 
-            rating = rating.rates[key].filter(rate=>rate.user.toString() != req.user.id);
+            rating.rates[key] = rating.rates[key].filter(rate=>rate.user.toString() !== req.user.id);
          }
 
          if (req.body[key]) {
