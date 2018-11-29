@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/models/Rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Rating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/hotelProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/hotelProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/hotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/hotels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/userProfile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +20,7 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.28654486">
+    <splitter split-orientation="horizontal" split-proportion="0.35049835">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
@@ -74,7 +71,7 @@
           <file leaf-file-name="Rating.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/models/Rating.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
+                <state relative-caret-position="527">
                   <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
                   <folding>
                     <element signature="e#281#443#0" />
@@ -103,8 +100,8 @@
           <file leaf-file-name="hotels.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/routes/api/hotels.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="411">
-                  <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+                <state relative-caret-position="360">
+                  <caret line="109" column="6" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -320,12 +317,12 @@
       <workItem from="1543372206547" duration="11919000" />
       <workItem from="1543417632713" duration="11049000" />
       <workItem from="1543478301931" duration="6968000" />
-      <workItem from="1543491003310" duration="4010000" />
+      <workItem from="1543491003310" duration="4620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198309000" />
+    <option name="totallyTimeSpent" value="198919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -702,7 +699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Rating.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state relative-caret-position="527">
           <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
           <folding>
             <element signature="e#281#443#0" />
@@ -725,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/hotels.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="360">
+          <caret line="109" column="6" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
         </state>
       </provider>
     </entry>

@@ -107,11 +107,7 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
             rating.rates[key].unshift(object);
          }
       }
-
-      //Keeping track of the comments
-      if(req.body.commentUp) rating.comments.commentUp = req.body.commentUp;
-      if(req.body.commentDown) rating.comments.commentDown = req.body.commentDown;
-
+      
 
 
       rating.save().then(rating => {
