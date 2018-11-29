@@ -91,12 +91,10 @@ router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
       .then((profile) => {
          if(!profile){
             errors.noProfile = 'There is no profile for this user';
-            res.status(404).json(errors);
+            return res.status(400).json(errors);
          }
          res.status(200).json(profile)
-      }).catch( (err) => {
-      res.status(404).json(err);
-   });
+      }).catch( (err) => res.status(404).json(err));
 });
 
 
@@ -117,6 +115,8 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
    const profileFields = {};
    profileFields.user = req.user.id;
    if(req.body.handle) profileFields.handle = req.body.handle;
+
+
    if(req.body.location) profileFields.location = req.body.location;
    if(req.body.year) profileFields.year = req.body.year;
    if(req.body.bio) profileFields.bio = req.body.bio;
@@ -134,14 +134,25 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
    UserProfile.findOne({user: req.user.id}).then(userProfile => {
       if(userProfile){
          //check if handle exists
-         UserProfile.findOne({handle: req.body.handle}).then(pro => {})
-         UserProfile.findOneAndUpdate(
-            {user: req.user.id},
-            {$set: profileFields},
-            {new: true}
-         ).then(userProfile => {
-            return res.status(200).json(userProfile);
-         }).catch();
+         UserProfile.findOne({handle: req.body.handle}).then(pro => {
+
+            if (pro && (pro.user.toString() !== req.user.id.toString())) {
+               errors.handle = 'Handle already exists';
+               return res.status(404).json(errors);
+            } else{
+               UserProfile.findOneAndUpdate(
+                  {user: req.user.id},
+                  {$set: profileFields},
+                  {new: true}
+               ).then(userProfile => {
+                  return res.status(200).json(userProfile);
+               }).catch();
+            }
+
+         }).catch(err => res.status(400).json(err));
+
+
+
       } else if (!userProfile){
 
          //check if handle exists
