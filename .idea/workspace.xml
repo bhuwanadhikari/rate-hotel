@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/userProfile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +53,8 @@
           <file leaf-file-name="UserProfile.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/models/UserProfile.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="782">
-                  <caret line="46" column="28" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="28" />
+                <state relative-caret-position="238">
+                  <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -317,16 +316,15 @@
       <workItem from="1543319180917" duration="14880000" />
       <workItem from="1543372206547" duration="11919000" />
       <workItem from="1543417632713" duration="11049000" />
-      <workItem from="1543478301931" duration="6107000" />
+      <workItem from="1543478301931" duration="6968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193438000" />
+    <option name="totallyTimeSpent" value="194299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" x="154" y="184" width="209" height="749" id="Project" order="2" weight="0.11859444" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -336,7 +334,7 @@
       <window_info auto_hide="true" id="npm" order="0" type="SLIDING" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info auto_hide="true" id="Structure" order="3" side_tool="true" type="SLIDING" weight="0.17935579" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.34393063" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2283237" />
       <window_info id="Favorites" order="1" show_stripe_button="false" side_tool="true" type="SLIDING" weight="0.11615785" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -733,17 +731,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/UserProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/userProfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="93" column="46" lean-forward="true" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/UserProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
