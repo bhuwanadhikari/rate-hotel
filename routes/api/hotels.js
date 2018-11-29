@@ -107,7 +107,7 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
             rating.rates[key].unshift(object);
          }
       }
-      
+
 
 
       rating.save().then(rating => {

@@ -84,8 +84,8 @@ const RatingSchema = new Schema(
       comments: [{ //or say compliments in frontend
          writer: {type: String},
          user: {type: Schema.Types.ObjectId, ref: 'users'},
-         commentUp: {type: String, required: true},
-         commentDown: {type: String, required: true},
+         commentUp: {type: String},
+         commentDown: {type: String},
          avatar: {type: String},
          date: {type: Date, default: Date.now()}
       }]
