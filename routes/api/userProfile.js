@@ -131,6 +131,8 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
    if(req.body.facebook) profileFields.social.facebook = req.body.facebook;
 
 
+
+
    UserProfile.findOne({user: req.user.id}).then(userProfile => {
       if(userProfile){
          //check if handle exists
@@ -168,42 +170,6 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
          })
       }
    }).catch();
-
-
-
-
-
-
-/*
-
-
-   UserProfile.findOne({user: req.user.id}).then((profile) => {
-      if(profile){
-         //Update
-         UserProfile.findOneAndUpdate(
-            {user: req.user.id},
-            {$set: profileFields},
-            {new: true}
-         ).then((profile) => {
-            res.json(profile);
-         }).catch(err => res.status(400).json(err))
-      }else{
-         //create
-         //check if handle exists
-         UserProfile.findOne({handle: req.body.handle}).then((profile) => {
-            if(profile){
-               return res.status(400).json({err:'Handle already exists'});
-            } else if(!profile) {
-               new UserProfile(profileFields).save().then(profile => {
-                  res.json(profile)
-               });
-            }
-         }).catch(err = res.statu(400).json(err));
-      }
-   }).catch(err => res.json(err));
-
-   */
-
 });
 
 

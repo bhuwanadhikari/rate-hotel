@@ -53,8 +53,8 @@ router.get('/handle/:handle', (req, res) => {
    const errors = {};
 
 
-   Hotel.findOne({handle: req.params.handle})
-      .populate('rating')
+   Rating.findOne({handle: req.params.handle})
+      .populate('hotel')
       .then(hotel => {
          if(!hotel){
             errors.noHotel = 'There is no hotel for this handle';
