@@ -1,0 +1,52 @@
+.FormBox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.LoginIcon{
+    display: block;
+    width: 100px;
+    margin: 30px auto;
+}
+
+h1{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    color: #fc4c02;
+}
+
+.Form {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+}
+
+.Input{
+    display: block;
+    width: 75vw;
+    margin : 10px auto;
+    height: 30px;
+    border: 1px solid #fc4c02;
+    border-radius: 3px;
+    color: grey;
+    font-family: 'Muli', sans-serif;
+    padding: 4px;
+}
+
+input:focus{
+    border: 2px solid #fc4c02;
+}
+
+
+@media only screen and (min-width: 450px) {
+    .Input{
+        width: 25vw;;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .Input{
+        width: 60vw;;
+    }
+}
