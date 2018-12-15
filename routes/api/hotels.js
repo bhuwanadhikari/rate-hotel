@@ -9,7 +9,7 @@ const Rating = require('../../models/Rating');
 
 const router = express.Router();
 
-//Load Input Validation;
+//Load Splash Validation;
 const ValidateRegisterInput = require('../../validation/hotel');
 
 //@route /api/hotels/register

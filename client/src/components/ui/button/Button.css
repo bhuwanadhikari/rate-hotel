@@ -13,9 +13,9 @@
 }
 
 
-.Success {
+button {
     color:var(--theme);
-    background:transparent;
+    background:rgba(255, 255, 255, 0.5);
     border: 2px solid var(--theme);
     position:relative;
     display:block;
@@ -25,7 +25,7 @@
     font-family:comfortaa, sans-serif;
     font-weight:bold
 }
-.Success:before, button:after {
+button:before, button:after {
     content:'';
     display:block;
     position:absolute;
@@ -35,23 +35,23 @@
     width:1em;height:1em;
     transition:all 0.3s ease-in-out
 }
-.Success:before {
+button:before {
     top:-6px;
     left:-6px;
     border-width:2px 0 0 2px;
     z-index:5;
 }
-.Success:after {
+button:after {
     bottom:-6px;
     right:-6px;
     border-width:0 2px 2px 0;
 }
-.Success:hover:before, button:hover:after {
+button:hover:before, button:hover:after {
     width:calc(100% + 12px);
     height:calc(100% + 12px);
     border-color: var(--theme);
 }
-.Success:hover {
+button:hover {
     color:white;
     background-color:var(--theme);
     border-color:var(--theme);
@@ -60,14 +60,14 @@
 
 /*For DESKTOPS*/
 @media only screen and (min-width: 450px) {
-    .Success{
+    button{
         padding:1em 10vw;
     }
 }
 
 /*For TABS*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
-    .Success{
+    button{
     padding:1em 15vw;
     }
 }

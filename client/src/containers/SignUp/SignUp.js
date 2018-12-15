@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Button from '../../components/ui/button/Button';
-import userIcon from '../../img/user-plus-solid.svg';
+import userIcon from '../../img/navImg/user-plus-solid.svg';
 import './SignUp.css';
 
 class SignUp extends Component{
@@ -20,7 +20,7 @@ class SignUp extends Component{
       return (
          <div className= "FormBox">
                <img className="UserIcon" src={userIcon} alt=""/>
-            <form className="Form" action="">
+            <form className="Form" noValidate>
                <input className="Input" type="text" placeholder = "Full Name"/>
                <input className="Input" type="email" placeholder = "Email"/>
                <input className="Input" type="password" placeholder = "Password"/>

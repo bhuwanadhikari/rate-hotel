@@ -21,7 +21,7 @@ const splash = (props) => {/*
           </div>
        );
 
-   return props.hideSplash ? null : <div>{splashScreen}</div>;
+   return <div>{splashScreen}</div>;
 
 };
 

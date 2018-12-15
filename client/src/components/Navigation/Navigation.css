@@ -1,0 +1,84 @@
+/*Navigation*/
+
+header{
+    display: block;
+    width: 100vw;
+    height: 50px;
+    background:#fc4c02;
+}
+
+
+
+
+
+
+
+
+/*Navigation Items*/
+
+.NavigationItems{
+    display: block;
+    width:75vw;
+    height: 50px;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+/*Navigation Item*/
+
+.NavigationItem{
+    height: 50px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.NavigationItem a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    padding: 19px 2px;
+    box-sizing: border-box;
+    width: 25vw;
+    height: 50px;
+    font-family: comfortaa, sans-serif;
+    font-weight: bold;
+    transition: border-bottom 0.5s step-start;
+}
+
+.NavigationItem a:hover {
+    border-bottom: 3px solid white ;
+}
+
+
+
+
+/*For DESKTOPS ONLY*/
+@media only screen and (min-width: 450px) {
+    .NavigationItems{
+        width:45vw;
+    }
+
+    a {
+        width: 10vw;
+    }
+}
+
+/*For TABS ONLY*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .NavigationItems{
+        width:60vw;
+    }
+
+    a {
+        width: 20vw;
+    }
+}

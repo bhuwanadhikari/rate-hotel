@@ -4,7 +4,7 @@ const bcrypt  = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
-//Load Input Validation
+//Load Splash Validation
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput =  require('../../validation/login');
 
@@ -74,7 +74,7 @@ router.post('/register', (req, res) => {
 // access public
 router.post('/login', (req, res) => {
 
-   //Validation of Login Input
+   //Validation of Login Splash
    const {errors, isValid} = validateLoginInput(req.body);
    if(!isValid){
       res.status(400).json(errors);
