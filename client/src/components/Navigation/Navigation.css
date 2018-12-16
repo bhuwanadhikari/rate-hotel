@@ -51,11 +51,15 @@ header{
     height: 50px;
     font-family: comfortaa, sans-serif;
     font-weight: bold;
-    transition: border-bottom 0.5s step-start;
+    transition: border-bottom 0.2s ease-in;
 }
 
-.NavigationItem a:hover {
+.NavigationItem a:hover, .NavigationItem a:active {
     border-bottom: 3px solid white ;
+}
+
+.NavigationItem .ActiveLink {
+    border-bottom: 3px solid white;
 }
 
 

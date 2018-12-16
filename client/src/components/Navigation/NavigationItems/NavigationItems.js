@@ -2,11 +2,13 @@
 import React from 'react';
 import NavigationItem from './NavigationItem/NavigationItem';
 import './NavigationItems.css';
+/*
 
 import homeIcon from '../../../img/navImg/003-home.svg';
 import hotelIcon from '../../../img/navImg/004-restaurant.svg';
 import searchIcon from '../../../img/navImg/002-search-1.svg';
 import profileIcon from '../../../img/navImg/005-settings.svg';
+*/
 
 const NavigationItems = () => {
    return (

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css'; //CSS for all of the apps
-import Splash from './components/ui/Splash';
+import Splash from './components/ui/Splash/Splash';
 import SignUp from './containers/SignUp/SignUp';
 import Login from './containers/Login/Login';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import NavigationItems from './components/Navigation/NavigationItems/NavigationItems';
 import Landing from './components/Landing/Landing';
 import AllHotels from './components/AllHotels/AllHotels';
 import Footer from './components/Footer/Footer';
