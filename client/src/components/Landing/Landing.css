@@ -2,6 +2,7 @@
 
 .Landing {
     height: calc(100vh - 50px - 30px);
+    background: #FBCEB1;
 }
 
 .Landing img {

@@ -64,10 +64,10 @@ header{
 /*For DESKTOPS ONLY*/
 @media only screen and (min-width: 450px) {
     .NavigationItems{
-        width:45vw;
+        width:60vw;
     }
 
-    a {
+    .NavigationItem a {
         width: 10vw;
     }
 }
@@ -78,7 +78,7 @@ header{
         width:60vw;
     }
 
-    a {
+    .NavigationItem a {
         width: 20vw;
     }
 }

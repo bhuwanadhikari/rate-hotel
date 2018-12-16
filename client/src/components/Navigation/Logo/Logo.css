@@ -1,8 +1,28 @@
 .WhiteLogo {
-    height: 26px;
-    padding: 13px 10px 13px 25px;
-}
+     height: 26px;
+     padding: 13px 10px 13px 25px;
+ }
 
 .Container {
     height: 50px;
+}
+
+
+
+/*For DESKTOPS ONLY*/
+@media only screen and (min-width: 800px) {
+    .WhiteLogo {
+
+        height: 30px;
+        padding: 10px 5% 10px 30%;
+    }
+}
+
+
+/*For TABS ONLY*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .WhiteLogo{
+        height: 30px;
+        padding: 10px 10% 10px 20%;
+    }
 }
