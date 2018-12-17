@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 import Button from '../../components/ui/button/Button';
 import userIcon from '../../img/navImg/user-plus-solid.svg';
@@ -18,7 +19,15 @@ class SignUp extends Component{
    };
 
    onChangeHandler = (e) => {
-      this.setState({[e.target.name] : e.target.value})
+      this.setState({[e.target.name] : e.target.value});
+
+      const newErr = {...this.state.errors};
+      newErr[e.target.name] = '';
+
+
+
+
+      this.setState({errors: newErr});
    };
 
    onClickHandler = (e) => {
@@ -30,7 +39,10 @@ class SignUp extends Component{
          password2: this.state.password2,
          faculty: this.state.faculty,
       };
-      console.log(newUser);
+      axios.post('api/users/register', newUser)
+         .then(res => console.log(res.data))
+         .catch(err => this.setState({errors: err.response.data}));
+
    };
 
 
@@ -48,6 +60,7 @@ class SignUp extends Component{
                   name = "name"
                   onChange={this.onChangeHandler}
                />
+               {this.state.errors.name? (<div className="errorFeedback">{this.state.errors.name}</div>):null      }
                <input
                   className="Input"
                   value = {this.state.email}
@@ -56,6 +69,7 @@ class SignUp extends Component{
                   name = "email"
                   onChange={this.onChangeHandler}
                />
+               {this.state.errors.email? (<div className="errorFeedback">{this.state.errors.email}</div>):null      }
                <input
                   className="Input"
                   value = {this.state.password}
@@ -64,6 +78,7 @@ class SignUp extends Component{
                   name = "password"
                   onChange={this.onChangeHandler}
                />
+               {this.state.errors.password? (<div className="errorFeedback">{this.state.errors.password}</div>):null      }
                <input
                   className="Input"
                   value = {this.state.password2}
@@ -72,6 +87,7 @@ class SignUp extends Component{
                   name = "password2"
                   onChange={this.onChangeHandler}
                />
+               {this.state.errors.password2? (<div className="errorFeedback">{this.state.errors.password2}</div>):null      }
             </form>
 
             <select
@@ -110,6 +126,7 @@ class SignUp extends Component{
 
 
             </select>
+            {this.state.errors.faculty? (<div className="errorFeedback">{this.state.errors.faculty}</div>):null      }
 
             <Button cls = "Success" value = "Sign Up" clicked = {this.onClickHandler} />
 

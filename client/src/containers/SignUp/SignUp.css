@@ -42,15 +42,32 @@ select option {
     color: #3D2B1F;
 }
 
+.errorFeedback {
+    position: relative;
+    top: -7px;
+    margin: auto;
+    width: 75vw;
+    font-size: 0.65em;
+    box-sizing: border-box;
+    color: red;
+
+}
+
+
 
 @media only screen and (min-width: 450px) {
     .Input{
         width: 25vw;;
+    }
+    .errorFeedback {
+        width: 25vw;
     }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .Input{
         width: 60vw;;
-    }
+    }.errorFeedback {
+         width: 60vw;
+     }
 }
