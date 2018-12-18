@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import Button from '../../components/ui/button/Button';
 import loginIcon from '../../img/navImg/login-solid.svg';
 import './Login.css';
+import propTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { loginUser } from '../../redux/actions/authActions';
 
 class Login extends Component{
    constructor(){
@@ -20,12 +23,23 @@ class Login extends Component{
 
    onClickHandler = (e) => {
       e.preventDefault(); //prevents from default submission
-      const user = {
+      const userData = {
          email: this.state.email,
          password: this.state.password
       };
-      console.log(user);
+      this.props.loginUser(userData);
    };
+
+   componentWillReceiveProps(nextProps){
+      if(nextProps.auth.isAuthenticated){
+         this.props.history.push('./dashboard');
+      }
+
+      if(nextProps.errors){
+         this.setState({errors: nextProps.errors});
+      }
+
+   }
 
    render(){
       return (
@@ -41,8 +55,10 @@ class Login extends Component{
                   onChange = {this.onChangeHandler}
                   name = "email"
                   value = {this.state.email}
-
                />
+
+               {this.state.errors.email? (<div className="errorFeedback">{this.state.errors.email}</div>):null}
+
                <input
                   className="Input"
                   type="password"
@@ -50,8 +66,8 @@ class Login extends Component{
                   onChange = {this.onChangeHandler}
                   name = "password"
                   value = {this.state.password}
-
                />
+               {this.state.errors.password? (<div className="errorFeedback">{this.state.errors.password}</div>):null}
 
             </form>
 
@@ -62,4 +78,15 @@ class Login extends Component{
    }
 }
 
-export default Login;
+Login.propTypes = {
+  loginUser : propTypes.func.isRequired,
+  auth: propTypes.object.isRequired,
+  errors: propTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+   auth: state.auth,
+   errors: state.errors
+});
+
+export default connect(mapStateToProps, { loginUser })(Login);

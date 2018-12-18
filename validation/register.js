@@ -22,7 +22,7 @@ module.exports = function validateRegisterInput(data){
         errors.email = 'Email field can not be empty';
     }
     if(!validator.isEmail(data.email)){
-        errors.email = 'Email you entered is not valid';
+        errors.email = 'Invalid Email';
     }
 
 

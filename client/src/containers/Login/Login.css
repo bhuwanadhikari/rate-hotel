@@ -38,6 +38,22 @@ input:focus{
     background-color: Lavenderblush;
 }
 
+.errorFeedback {
+    position: relative;
+    top: -7px;
+    margin: auto;
+    width: 75vw;
+    font-size: 0.65em;
+    box-sizing: border-box;
+    color: red;
+
+}
+
+
+
+
+
+
 
 @media only screen and (min-width: 450px) {
     .Input{

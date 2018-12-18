@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import propTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+
+import { registerUser } from '../../redux/actions/authActions';
 
 import Button from '../../components/ui/button/Button';
 import userIcon from '../../img/navImg/user-plus-solid.svg';
@@ -23,12 +27,14 @@ class SignUp extends Component{
 
       const newErr = {...this.state.errors};
       newErr[e.target.name] = '';
-
-
-
-
       this.setState({errors: newErr});
    };
+
+   componentWillReceiveProps(nextProps){
+      if(nextProps.errors){
+         this.setState({errors: nextProps.errors});
+      }
+   }
 
    onClickHandler = (e) => {
       e.preventDefault(); //prevents from default submission
@@ -39,9 +45,8 @@ class SignUp extends Component{
          password2: this.state.password2,
          faculty: this.state.faculty,
       };
-      axios.post('api/users/register', newUser)
-         .then(res => console.log(res.data))
-         .catch(err => this.setState({errors: err.response.data}));
+
+      this.props.registerUser(newUser, this.props.history);
 
    };
 
@@ -135,4 +140,16 @@ class SignUp extends Component{
    }
 }
 
-export default SignUp;
+SignUp.propTypes = {
+   registerUser: propTypes.func.isRequired,
+   auth: propTypes.object.isRequired,
+   errors : propTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+   auth: state.auth,
+   errors: state.errors
+});
+
+
+export default connect(mapStateToProps, {registerUser})(withRouter(SignUp)); //connect react and redux
