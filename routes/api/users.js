@@ -70,7 +70,7 @@ router.post('/login', (req, res) => {
    //Validation of Login Splash
    const {errors, isValid} = validateLoginInput(req.body);
    if(!isValid){
-      res.status(400).json(errors);
+      return res.status(400).json(errors);
    }
 
    const email = req.body.email;
