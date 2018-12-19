@@ -19,7 +19,7 @@ import store from './redux/store/store';
 
 //check for token
 if(localStorage.jwtToken){
-   //set auth token header auth
+   //set auth token header auth to be used in every request
    setAuthToken(localStorage.jwtToken);
    //decode the token
    const decoded = jwt_decode(localStorage.jwtToken);

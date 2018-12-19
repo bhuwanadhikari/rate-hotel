@@ -1,7 +1,11 @@
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import propTypes from 'prop-types';
 import NavigationItem from './NavigationItem/NavigationItem';
 import './NavigationItems.css';
+import { logUserOut } from '../../../redux/actions/authActions';
+
 /*
 
 import homeIcon from '../../../img/navImg/003-home.svg';
@@ -12,7 +16,8 @@ import profileIcon from '../../../img/navImg/005-settings.svg';
 
 class NavigationItems extends Component{
    render() {
-      return (
+      const {isAuthenticated, user} = this.props.auth;
+      const guestNavBar = (
          <div className="NavigationItems">
 
             <NavigationItem link="/allhotels">
@@ -27,8 +32,9 @@ class NavigationItems extends Component{
             <NavigationItem link="/login">
                Log In
             </NavigationItem>
-         </div>
-      );
+         </div>);
+
+       if(isAuthenticated){ return null}else{return guestNavBar}
 
 
       /*
@@ -56,7 +62,16 @@ class NavigationItems extends Component{
 
    </ul>
    */
+   }
+}
+NavigationItems.propTypes = {
+   logUserOut: propTypes.func.isRequired,
+   auth: propTypes.object.isRequired
+};
 
-   }}
+const mapStateToProps =(state) => ({
+   auth: state.auth
 
-export default NavigationItems;
+});
+
+export default connect(mapStateToProps, { logUserOut} )(NavigationItems);
