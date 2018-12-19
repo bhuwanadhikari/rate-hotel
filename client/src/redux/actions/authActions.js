@@ -16,10 +16,10 @@ export const registerUser = (userData, history) => dispatch => {
    axios.post('api/users/register', userData)
       .then(res => {
          history.push('/login');
-         // dispatch({
-         //    type: ALERT_REGISTRATION,
-         //    payload: res.data.name
-         // });
+         dispatch({
+            type: ALERT_REGISTRATION,
+            payload: res.data.name
+         });
          }
       )
       .catch(err => dispatch({
@@ -80,3 +80,4 @@ export const logUserOut = () => dispatch => {
    dispatch(setCurrentUser({})); //dispatch to update the store
    //
 };
+

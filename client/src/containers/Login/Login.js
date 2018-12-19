@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Button from '../../components/ui/button/Button';
 import loginIcon from '../../img/navImg/login-solid.svg';
 import './Login.css';
-//import Modal from '../../components/ui/Modal/AlertRegistration';
+import Modal from '../../components/ui/Modal/AlertRegistration';
 
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -35,7 +35,6 @@ class Login extends Component{
    componentWillReceiveProps(nextProps){
       if(nextProps.auth.isAuthenticated){
          this.props.history.push('./dashboard');
-      }
 
       if(nextProps.errors){
          this.setState({errors: nextProps.errors});
@@ -46,7 +45,7 @@ class Login extends Component{
    render(){
       return (
          <div className= "FormBox">
-
+            <Modal/>
             <img className="LoginIcon" src={loginIcon} alt="Log In Icon for the CrowApp"/>
 
             <form className="Form" >
