@@ -133,7 +133,7 @@ class SignUp extends Component{
             </select>
             {this.state.errors.faculty? (<div className="errorFeedback">{this.state.errors.faculty}</div>):null      }
 
-            <Button cls = "Success" value = "Sign Up" clicked = {this.onClickHandler} />
+            <Button cls = "Success" clicked = {this.onClickHandler} >Sign Up</Button>
 
          </div>
       )

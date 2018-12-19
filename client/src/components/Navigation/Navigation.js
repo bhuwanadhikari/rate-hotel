@@ -8,8 +8,6 @@ return (
    <header>
       <Logo/>
       <NavigationItems/>
-
-
    </header>
 )
 };

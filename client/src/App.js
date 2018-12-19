@@ -42,7 +42,7 @@ class App extends Component {
             <Router>
                <div className="App">
                   <Navigation/>
-                  <Route exact path = "/" component = {Landing} />
+                  <Route exact path = "/" component = {Landing} history = {this.props.history} />
                   <Route exact path = "/signup" component = {SignUp} />
                   <Route exact path = "/login" component = {Login} />
                   <Route exact path = "/allHotels" component = {AllHotels} />

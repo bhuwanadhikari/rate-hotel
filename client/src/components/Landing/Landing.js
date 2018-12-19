@@ -4,16 +4,27 @@ import androidbg from '../../img/backImages/androidbg2.jpg';
 import desktopbg from '../../img/backImages/desktopbg2.jpg';
 import Button from '../ui/button/Button';
 
-const Landing = () => {
+const Landing = (props) => {
    const match = matchMedia("(min-width: 450px)");
 
    const backImg = match.matches?desktopbg:androidbg;
+
+   const onSignupHandler = (e) => {
+      e.preventDefault();
+      props.history.push('/signup');
+   };
+
+   const onLoginHandler = (e) => {
+      e.preventDefault();
+      props.history.push('/login');
+   };
+
    return(
       <div className="Landing">
          <img src={backImg} alt="Background of CrowApp"/>
          <div className="Container">
-            <Button cls = "Success" value = "Sign Up" />
-            <Button cls = "Success" value = "Log In" />
+            <Button cls = "Success" clicked = {onSignupHandler} >Sign Up</Button>
+            <Button cls = "Success" clicked = {onLoginHandler} >Log In</Button>
             <div className="Command">
                Log In to find top hotels
             </div>

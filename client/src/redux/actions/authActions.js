@@ -1,4 +1,9 @@
-import { GET_ERRORS, SET_CURRENT_USER } from './types';
+import {
+   GET_ERRORS,
+   SET_CURRENT_USER,
+   ALERT_REGISTRATION,
+   HIDE_REGMODAL
+} from './types';
 import setAuthToken from '../../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
@@ -9,15 +14,30 @@ import axios from 'axios';
 export const registerUser = (userData, history) => dispatch => {
 
    axios.post('api/users/register', userData)
-      .then(res => history.push('/login') )
-      .catch(err => {
-         dispatch({
-            type: GET_ERRORS,
-            payload: err.response.data
-         })
-      });
+      .then(res => {
+         history.push('/login');
+         // dispatch({
+         //    type: ALERT_REGISTRATION,
+         //    payload: res.data.name
+         // });
+         }
+      )
+      .catch(err => dispatch({
+         type: GET_ERRORS,
+         payload: err.response.data})
+      );
 
 };
+
+
+//Hide registration modal
+export const hideRegModal = () => dispatch =>  {
+   dispatch({
+      type: HIDE_REGMODAL,
+      payload: null
+   });
+};
+
 
 //Login
 export const loginUser = (userData) => dispatch => {
@@ -34,12 +54,10 @@ export const loginUser = (userData) => dispatch => {
          dispatch(setCurrentUser(decoded));
 
       })
-      .catch(err => {
-         dispatch({
+      .catch(err => (dispatch({
             type: GET_ERRORS,
-            payload: err.response.data
-         })
-      });
+            payload: err.response.data}))
+      );
 };
 
 
@@ -49,4 +67,16 @@ export const setCurrentUser = (decoded) => {
       type: SET_CURRENT_USER,
       payload: decoded
    };
+};
+
+
+//Log User Out
+export const logUserOut = () => dispatch => {
+   //Delete token
+   localStorage.removeItem('jwtToken');
+   //Remove auth header
+   setAuthToken(false);
+   //Set current user to {}
+   dispatch(setCurrentUser({})); //dispatch to update the store
+   //
 };

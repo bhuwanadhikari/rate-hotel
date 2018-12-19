@@ -1,1 +1,0 @@
-export const hideSplash = () => ({type: 'nothing', payload:hideSplash});

@@ -8,12 +8,12 @@
 
 
 
-.Success {
+.Btn{
     margin: 20px auto 20px auto;
 }
 
 
-button {
+.Btn {
     color:var(--theme);
     background:rgba(255, 255, 255, 0.5);
     border: 2px solid var(--theme);
@@ -25,7 +25,7 @@ button {
     font-family:comfortaa, sans-serif;
     font-weight:bold
 }
-button:before, button:after {
+.Btn:before, .Btn:after {
     content:'';
     display:block;
     position:absolute;
@@ -35,23 +35,23 @@ button:before, button:after {
     width:1em;height:1em;
     transition:all 0.3s ease-in-out
 }
-button:before {
+.Btn:before {
     top:-6px;
     left:-6px;
     border-width:2px 0 0 2px;
     z-index:5;
 }
-button:after {
+.Btn:after {
     bottom:-6px;
     right:-6px;
     border-width:0 2px 2px 0;
 }
-button:hover:before, button:hover:after {
+.Btn:hover:before, .Btn:hover:after {
     width:calc(100% + 12px);
     height:calc(100% + 12px);
     border-color: var(--theme);
 }
-button:hover {
+.Btn:hover {
     color:white;
     background-color:var(--theme);
     border-color:var(--theme);
@@ -60,14 +60,14 @@ button:hover {
 
 /*For DESKTOPS*/
 @media only screen and (min-width: 450px) {
-    button{
+    .Btn{
         padding:1em 10vw;
     }
 }
 
 /*For TABS*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
-    button{
+    .Btn{
     padding:1em 15vw;
     }
 }

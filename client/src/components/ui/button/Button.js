@@ -2,13 +2,14 @@ import React from 'react';
 import './Button.css';
 
 const  Button = (props) => {
+   const myClasses = `${props.cls.toString()} Btn`;
    return (
       <button
          type="button"
-         className={props.cls}
+         className={myClasses}
          onClick={props.clicked}
       >
-         {props.value}
+         {props.children}
       </button>
    )
 };

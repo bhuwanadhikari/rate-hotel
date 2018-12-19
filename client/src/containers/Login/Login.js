@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import Button from '../../components/ui/button/Button';
 import loginIcon from '../../img/navImg/login-solid.svg';
 import './Login.css';
+//import Modal from '../../components/ui/Modal/AlertRegistration';
+
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../redux/actions/authActions';
@@ -33,7 +35,6 @@ class Login extends Component{
    componentWillReceiveProps(nextProps){
       if(nextProps.auth.isAuthenticated){
          this.props.history.push('./dashboard');
-         console.log(this.props.history);
       }
 
       if(nextProps.errors){
@@ -45,6 +46,7 @@ class Login extends Component{
    render(){
       return (
          <div className= "FormBox">
+
             <img className="LoginIcon" src={loginIcon} alt="Log In Icon for the CrowApp"/>
 
             <form className="Form" >
@@ -72,7 +74,7 @@ class Login extends Component{
 
             </form>
 
-            <Button cls = "Success" value = "Log In" clicked={this.onClickHandler} />
+            <Button cls = "Success" clicked={this.onClickHandler} >Log In</Button>
 
          </div>
       )
@@ -82,12 +84,12 @@ class Login extends Component{
 Login.propTypes = {
   loginUser : propTypes.func.isRequired,
   auth: propTypes.object.isRequired,
-  errors: propTypes.object.isRequired
+  errors: propTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
    auth: state.auth,
-   errors: state.errors
+   errors: state.errors,
 });
 
 export default connect(mapStateToProps, { loginUser })(Login);

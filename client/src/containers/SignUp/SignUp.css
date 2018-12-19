@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 .UserIcon{
     display: block;
     width: 100px;
@@ -47,6 +48,7 @@ select option {
     top: -7px;
     margin: auto;
     width: 75vw;
+    text-align: center;
     font-size: 0.65em;
     box-sizing: border-box;
     color: red;
@@ -55,7 +57,8 @@ select option {
 
 
 
-@media only screen and (min-width: 450px) {
+/*For DESKTOPS*/
+@media only screen and (min-width: 800px) {
     .Input{
         width: 25vw;;
     }
@@ -64,6 +67,7 @@ select option {
     }
 }
 
+/*For TABS*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .Input{
         width: 60vw;;

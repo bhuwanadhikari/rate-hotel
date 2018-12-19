@@ -55,12 +55,15 @@ input:focus{
 
 
 
-@media only screen and (min-width: 450px) {
+/*For DESKTOPS*/
+@media only screen and (min-width: 800px) {
     .Input{
         width: 25vw;;
     }
 }
 
+
+/*For TABS*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .Input{
         width: 60vw;;
