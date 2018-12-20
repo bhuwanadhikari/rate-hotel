@@ -1,11 +1,11 @@
 import React from 'react';
-import './NavHome.css';
+import './NavHotels.css';
 import '../AuthNavigationItem.css';
 import { NavLink } from 'react-router-dom';
 
-import homeIcon from '../../../../../img/navImg/home.svg';
+import homeIcon from '../../../../../img/navImg/hotels.svg';
 
-const NavHome = (props) =>{
+const NavHotels = (props) =>{
    return (
       <li className ="AuthNavigationItem">
          <NavLink className="AuthNavLink"  activeClassName = "ActiveLink" to={props.link}>
@@ -15,4 +15,4 @@ const NavHome = (props) =>{
    )
 };
 
-export default NavHome;
+export default NavHotels;

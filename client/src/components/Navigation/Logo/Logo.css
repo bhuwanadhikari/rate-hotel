@@ -3,8 +3,8 @@
      padding: 13px 10px 13px 25px;
  }
 
-.Container {
-    height: 50px;
+.WhiteLogo:hover {
+    filter: opacity(90%);
 }
 
 

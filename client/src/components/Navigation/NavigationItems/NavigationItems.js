@@ -9,15 +9,15 @@ import Auxi from '../../../hoc/Auxi';
 
 
 
-import homeIcon from '../../../img/navImg/003-home.svg';
-import hotelIcon from '../../../img/navImg/004-restaurant.svg';
-import searchIcon from '../../../img/navImg/002-search-1.svg';
-import profileIcon from '../../../img/navImg/005-settings.svg';
+import NavHome from "./AuthNavigationItem/NavHome/NavHome";
+import NavHotels from "./AuthNavigationItem/NavHotels/NavHotels";
+import NavSearch from "./AuthNavigationItem/NavSearch/NavSearch";
+import NavAccount from "./AuthNavigationItem/NavAccount/NavAccount";
 
 
 class NavigationItems extends Component{
    render() {
-      const {isAuthenticated, user} = this.props.auth;
+      const {isAuthenticated} = this.props.auth;
       const guestNavBar = (
 
          <Auxi>
@@ -37,8 +37,13 @@ class NavigationItems extends Component{
       );
 
       const authNavBar = (
+         <Auxi>
+            <NavHome link = "/home"/>
+            <NavHotels link = "/hotels"/>
+            <NavSearch link = "/search"/>
+            <NavAccount link = "/account"/>
+         </Auxi>
 
-         <div>Auth Navbar</div>
 
       );
 

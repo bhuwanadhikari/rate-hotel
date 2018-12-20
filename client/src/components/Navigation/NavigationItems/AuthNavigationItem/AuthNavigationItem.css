@@ -1,0 +1,59 @@
+.AuthNavigationItem {
+    height: 50px;
+    width: 18.75vw;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.AuthNavigationItem a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    height: 47px;
+    width: 18.75vw;
+}
+
+.AuthNavigationItem img {
+    display: block;
+    height: 22px;
+    padding: 12px 15px 13px 15px;
+    margin: auto;
+}
+
+.AuthNavigationItem a:hover, .AuthNavigationItem a:active {
+    border-bottom: 3px solid white ;
+}
+
+.AuthNavigationItem .ActiveLink{
+    border-bottom: 3px solid white;
+}
+
+/*For DESKTOPS ONLY*/
+@media only screen and (min-width: 450px) {
+    .NavigationItems{
+        width:60vw;
+    }
+    .AuthNavigationItem {
+         width: 10vw;
+     }
+
+    .AuthNavigationItem a {
+        width: 10vw;
+    }
+}
+
+/*For TABS ONLY*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .NavigationItems{
+        width:60vw;
+    }
+
+    .AuthNavigationItem {
+        width: 15vw;
+    }
+
+    .AuthNavigationItem a {
+        width: 15vw;
+    }
+}
