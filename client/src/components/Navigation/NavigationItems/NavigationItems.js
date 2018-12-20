@@ -74,4 +74,4 @@ const mapStateToProps =(state) => ({
 
 });
 
-export default connect(mapStateToProps, { logUserOut} )(NavigationItems);
+export default connect(mapStateToProps, { logUserOut}, null, {pure: false} )(NavigationItems);
