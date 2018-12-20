@@ -1,13 +1,12 @@
 import React from 'react';
-import  './NavigationItem.css';
+import './GuestNavigationItem.css';
 import { NavLink } from 'react-router-dom';
 
-const NavigationItem = (props) =>{
+const GuestNavigationItem = (props) =>{
    return (
       <li className ="NavigationItem">
          <NavLink activeClassName = "ActiveLink"
-            to={props.link}
-            className={props.active? "active" : null}  >
+            to={props.link}>
             {props.children}
          </NavLink>
       </li>
@@ -18,7 +17,7 @@ const NavigationItem = (props) =>{
 
          case "logo":
             return (
-               <li className ="NavigationItem">
+               <li className ="GuestNavigationItem">
                   <a
                      href={props.link}
                      className={props.active? "active" : null}>s
@@ -29,7 +28,7 @@ const NavigationItem = (props) =>{
 
          case "homeIcon":
             return (
-               <li className ="NavigationItem">
+               <li className ="GuestNavigationItem">
                   <a
                      href={props.link}
                      className={props.active? "active" : null}>
@@ -40,7 +39,7 @@ const NavigationItem = (props) =>{
 
          case "hotelIcon":
             return (
-               <li className ="NavigationItem">
+               <li className ="GuestNavigationItem">
                   <a
                      href={props.link}
                      className={props.active? "active" : null}>
@@ -51,7 +50,7 @@ const NavigationItem = (props) =>{
 
          case "searchIcon":
             return (
-               <li className ="NavigationItem">
+               <li className ="GuestNavigationItem">
                   <a
                      href={props.link}
                      className={props.active? "active" : null}>
@@ -62,7 +61,7 @@ const NavigationItem = (props) =>{
 
          case "profileIcon":
             return (
-               <li className ="NavigationItem">
+               <li className ="GuestNavigationItem">
                   <a
                      href={props.link}
                      className={props.active? "active" : null}>
@@ -76,4 +75,4 @@ const NavigationItem = (props) =>{
 
    };
 
-export default NavigationItem;
+export default GuestNavigationItem;
