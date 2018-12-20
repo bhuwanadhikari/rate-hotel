@@ -33,14 +33,14 @@ header{
 
 /*Navigation Item*/
 
-.NavigationItem{
+.GuestNavigationItem{
     height: 50px;
     float: left;
     display: block;
     text-align: center;
 }
 
-.NavigationItem a {
+.GuestNavigationItem a {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -54,11 +54,11 @@ header{
     transition: border-bottom 0.2s ease-in;
 }
 
-.NavigationItem a:hover, .NavigationItem a:active {
+.GuestNavigationItem a:hover, .GuestNavigationItem a:active {
     border-bottom: 3px solid white ;
 }
 
-.NavigationItem .ActiveLink {
+.GuestNavigationItem .ActiveLink {
     border-bottom: 3px solid white;
 }
 
@@ -72,7 +72,7 @@ header{
         width:60vw;
     }
 
-    .NavigationItem a {
+    .GuestNavigationItem a {
         width: 10vw;
     }
 }
@@ -83,7 +83,7 @@ header{
         width:60vw;
     }
 
-    .NavigationItem a {
+    .GuestNavigationItem a {
         width: 20vw;
     }
 }

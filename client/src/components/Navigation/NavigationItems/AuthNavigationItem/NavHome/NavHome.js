@@ -15,4 +15,4 @@ const NavHome = (props) =>{
 
 };
 
-export default GuestNavigationItem;
+export default NavHome;

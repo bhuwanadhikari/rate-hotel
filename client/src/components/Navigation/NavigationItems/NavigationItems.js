@@ -5,6 +5,7 @@ import propTypes from 'prop-types';
 import GuestNavigationItem from './GuestNavigationItem/GuestNavigationItem';
 import './NavigationItems.css';
 import { logUserOut } from '../../../redux/actions/authActions';
+import Auxi from '../../../hoc/Auxi';
 
 
 
@@ -18,8 +19,8 @@ class NavigationItems extends Component{
    render() {
       const {isAuthenticated, user} = this.props.auth;
       const guestNavBar = (
-         <div className="NavigationItems">
 
+         <Auxi>
             <GuestNavigationItem link="/allhotels">
                All Hotels
             </GuestNavigationItem>
@@ -32,33 +33,20 @@ class NavigationItems extends Component{
             <GuestNavigationItem link="/login">
                Log In
             </GuestNavigationItem>
-         </div>);
+         </Auxi>
+      );
 
       const authNavBar = (
 
-         <ul className="NavigationItems">
-
-            <GuestNavigationItem active link="/">
-               <img src={homeIcon} alt="Home Icon"/>
-            </GuestNavigationItem>
-
-            <GuestNavigationItem link = "/hotels">
-               <img src={hotelIcon} alt="Hotel Icon"/>
-            </GuestNavigationItem>
-
-            <GuestNavigationItem link = "/search">
-               <img src={searchIcon} alt="Search Icon"/>
-            </GuestNavigationItem>
-
-            <GuestNavigationItem link = "/profile">
-               <img src={profileIcon} alt="Profile  Icon"/>
-            </GuestNavigationItem>
-
-         </ul>
+         <div>Auth Navbar</div>
 
       );
 
-       if(isAuthenticated){ return authNavBar}else{return guestNavBar}
+      return (
+         <div className="NavigationItems">
+            {isAuthenticated?authNavBar:guestNavBar}
+         </div>
+      );
 
 
 

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const GuestNavigationItem = (props) =>{
    return (
-      <li className ="NavigationItem">
+      <li className ="GuestNavigationItem">
          <NavLink activeClassName = "ActiveLink"
             to={props.link}>
             {props.children}
