@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/containers/Hotels/Hotels.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/containers/Search/Search.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/Logo/Logo.js" afterPath="$PROJECT_DIR$/client/src/components/Navigation/Logo/Logo.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/Navigation.css" afterPath="$PROJECT_DIR$/client/src/components/Navigation/Navigation.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.js" afterPath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavHotels/NavHotels.css" afterPath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavHotels/NavHotels.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavHotels/NavHotels.js" afterPath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavHotels/NavHotels.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavSearch/NavSearch.js" afterPath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavSearch/NavSearch.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/NavigationItems.js" afterPath="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/NavigationItems.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Hotels/Hotels.js" afterPath="$PROJECT_DIR$/client/src/containers/Hotels/Hotels.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Hotels/RecommendedHotels/RecommendedHotels.js" afterPath="$PROJECT_DIR$/client/src/containers/Hotels/RecommendedHotels/RecommendedHotels.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Search/Search.js" afterPath="$PROJECT_DIR$/client/src/containers/Search/Search.js" />
+      <change beforePath="$PROJECT_DIR$/validation/login.js" afterPath="$PROJECT_DIR$/validation/login.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -93,7 +81,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Search.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Search.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/containers/Search/Search.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="364">
@@ -103,6 +91,16 @@
                     <element signature="e#1161#1253#0" expanded="false" />
                     <element signature="e#1290#1339#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/validation/login.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="154">
+                  <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -192,7 +190,6 @@
         <option value="$PROJECT_DIR$/client/src/components/Landing/Landing.js" />
         <option value="$PROJECT_DIR$/client/src/components/ui/Modal/AlertRegistraton.css" />
         <option value="$PROJECT_DIR$/client/src/redux/actions/types.js" />
-        <option value="$PROJECT_DIR$/validation/login.js" />
         <option value="$PROJECT_DIR$/client/src/redux/reducers/errorReducer.js" />
         <option value="$PROJECT_DIR$/client/src/redux/reducers/authReducer.js" />
         <option value="$PROJECT_DIR$/client/src/redux/reducers/index.js" />
@@ -231,6 +228,7 @@
         <option value="$PROJECT_DIR$/client/src/containers/Search/Search.js" />
         <option value="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.js" />
         <option value="$PROJECT_DIR$/client/src/containers/Search/Search.css" />
+        <option value="$PROJECT_DIR$/validation/login.js" />
       </list>
     </option>
   </component>
@@ -409,6 +407,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -538,7 +541,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467834000" />
+    <option name="totallyTimeSpent" value="468138000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,7 +565,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4313433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.5007728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="0" y="291" width="1366" height="155" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.06955178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="0" y="291" width="1366" height="155" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -635,13 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -998,6 +994,14 @@
             <element signature="e#1161#1253#0" expanded="false" />
             <element signature="e#1290#1339#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
