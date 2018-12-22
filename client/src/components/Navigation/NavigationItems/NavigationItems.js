@@ -39,7 +39,7 @@ class NavigationItems extends Component{
       const authNavBar = (
          <Auxi>
             <NavHome link = "/home"/>
-            <NavHotels link = "/hotels"/>
+            <NavHotels link = "/recommended-hotels"/>
             <NavSearch link = "/search"/>
             <NavAccount link = "/account"/>
          </Auxi>
