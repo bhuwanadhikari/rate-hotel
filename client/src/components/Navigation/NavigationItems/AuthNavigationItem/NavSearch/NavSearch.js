@@ -3,13 +3,13 @@ import './NavSearch.css';
 import '../AuthNavigationItem.css';
 import { NavLink } from 'react-router-dom';
 
-import homeIcon from '../../../../../img/navImg/search.svg';
+import searchIcon from '../../../../../img/navImg/search.svg';
 
 const NavSearch = (props) =>{
    return (
       <li className ="AuthNavigationItem">
          <NavLink className="AuthNavLink"  activeClassName = "ActiveLink" to={props.link}>
-            <img className="AuthNavIcon" src={homeIcon} alt="Home Icon of CrowApp"/>
+            <img className="AuthNavIcon" src={searchIcon} alt="Search Icon of CrowApp"/>
          </NavLink>
       </li>
    )

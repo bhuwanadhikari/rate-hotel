@@ -10,3 +10,4 @@ const RecommendedHotels = () => {
 
 
 export default RecommendedHotels;
+
