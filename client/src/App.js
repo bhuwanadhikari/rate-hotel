@@ -13,11 +13,13 @@ import AllHotels from './components/AllHotels/AllHotels';
 import Footer from './components/Footer/Footer';
 import Navigation from './components/Navigation/Navigation';
 
-
-import Home from './containers/Home/Home'
-import Hotels from './containers/Hotels/Hotels'
-import Search from './containers/Search/Search'
-import Account from './containers/Account/Account'
+//Basic routes imports
+import Home from './containers/Home/Home';
+import NewestHotels from './containers/Hotels/NewestHotels/NewestHotels';
+import RecommendedHotels from './containers/Hotels/RecommendedHotels/RecommendedHotels';
+import TopRatedHotels from './containers/Hotels/TopRatedHotels/TopRatedHotels';
+import Search from './containers/Search/Search';
+import Account from './containers/Account/Account';
 
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser } from './redux/actions/authActions';
@@ -54,7 +56,9 @@ class App extends Component {
                   <Route exact path = "/signup" component = {SignUp} />
                   <Route exact path = "/login" component = {Login} />
                   <Route exact path = "/home" component = {Home} />
-                  <Route exact path = "/hotels" component = {Hotels} />
+                  <Route exact path = "/recommended-hotels" component = {RecommendedHotels} />
+                  <Route exact path = "/top-rated-hotels" component = {TopRatedHotels} />
+                  <Route exact path = "/newest-hotels" component = {NewestHotels} />
                   <Route exact path = "/search" component = {Search} />
                   <Route exact path = "/account" component = {Account} />
 

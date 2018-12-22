@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.AuthNavigationItem a {
+.AuthNavigationItem .AuthNavLink {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -21,7 +21,7 @@
     margin: auto;
 }
 
-.AuthNavigationItem a:hover, .AuthNavigationItem a:active {
+.AuthNavigationItem .AuthNavLink:hover, .AuthNavigationItem .AuthNavLink:active {
     border-bottom: 3px solid white ;
 }
 
@@ -38,7 +38,7 @@
          width: 10vw;
      }
 
-    .AuthNavigationItem a {
+    .AuthNavigationItem .AuthNavLink {
         width: 10vw;
     }
 }
@@ -50,10 +50,10 @@
     }
 
     .AuthNavigationItem {
-        width: 15vw;
+        width: 14vw;
     }
 
-    .AuthNavigationItem a {
-        width: 15vw;
+    .AuthNavigationItem .AuthNavLink {
+        width: 14vw;
     }
 }

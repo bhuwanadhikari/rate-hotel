@@ -1,0 +1,21 @@
+.DropHotels {
+    display: block;
+    height: 40px;
+    position: relative;
+    left:-43.75vw;
+    top: 3px;
+}
+
+
+
+.DropHotelsLink {
+    display:inline-block;
+    height: 40px;
+    width: 28vw;
+    color: #3D2B1F;
+    background-color: lavenderblush;
+    font-size: 0.9em;
+    text-decoration: none;
+    list-style-type: none;
+    float:  left;
+}
