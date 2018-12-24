@@ -7,7 +7,7 @@ const Navigation = () => {
 return (
    <header>
       <Logo/>
-      <NavigationItems/>
+      <NavigationItems />
    </header>
 )
 };

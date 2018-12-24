@@ -1,0 +1,37 @@
+.AccountNavSec {
+    width: 80vw;
+    float: right;
+    margin: 0;
+    z-index: 2500;
+    padding: 0;
+    background-color: lavenderblush;
+    font-family: Poppins,  Roboto, sans-serif;
+    position: relative;
+    font-size: 0.8em;
+    margin-right: 10vw;
+}
+
+.AccountLinkList {
+    display: block;
+    list-style-type: none;
+    height: 30px;
+    border-bottom:  1px solid gray;
+    text-align: center;
+    color: #fc4c02;
+    line-height: 30px;
+    z-index: 2500;
+
+}
+
+.AccountLink {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    z-index: 2500;
+}
+
+.Disabled {
+    color: silver;
+}
+

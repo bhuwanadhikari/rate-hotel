@@ -4,6 +4,7 @@
     float: left;
     display: block;
     text-align: center;
+    cursor: pointer;
 }
 
 .AuthNavigationItem .AuthNavLink {
