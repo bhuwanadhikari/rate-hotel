@@ -3,6 +3,9 @@ import './Landing.css';
 import androidbg from '../../img/backImages/androidbg2.jpg';
 import desktopbg from '../../img/backImages/desktopbg2.jpg';
 import Button from '../ui/button/Button';
+import { Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 const Landing = (props) => {
    const match = matchMedia("(min-width: 450px)");
@@ -35,4 +38,13 @@ const Landing = (props) => {
 };
 
 
-export default Landing;
+
+Landing.propTypes = {
+   auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+   auth: state.auth
+});
+
+export default connect(mapStateToProps)(Landing);

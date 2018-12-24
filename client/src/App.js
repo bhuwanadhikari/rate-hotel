@@ -55,10 +55,12 @@ class App extends Component {
             <Router>
                <div className="App">
                   <Navigation />
-                  <Route exact path = "/" component = {Landing} history = {this.props.history} />
-                  <Route exact path = "/allHotels" component = {AllHotels} />
-                  <Route exact path = "/signup" component = {SignUp} />
-                  <Route exact path = "/login" component = {Login} />
+                  <Switch>
+                     <PrivateRoute exact path = "/" component = {Landing} history = {this.props.history} />
+                     <Route exact path = "/allHotels" component = {AllHotels} />
+                     <Route exact path = "/signup" component = {SignUp} />
+                     <Route exact path = "/login" component = {Login} />
+                  </Switch>
                   <Switch>
                      <PrivateRoute exact path = "/home" component = {Home} />
                      <PrivateRoute  path = "/hotels" component = {Hotels} />

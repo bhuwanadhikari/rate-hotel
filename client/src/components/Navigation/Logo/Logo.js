@@ -11,15 +11,14 @@ const Logo = () => {
    // if(isAuthenticated){
    //    link = '/home';
    // }
-   const onClickLogoHandler = (e) => {
+   /*const onClickLogoHandler = (e) => {
       e.preventDefault();
       window.location.reload();
-   };
+   };*/
    return (
-         <Link className = "LogoLink" to={link} onClick = {onClickLogoHandler}>
+         <Link className = "LogoLink" to='/' >
             <img className='WhiteLogo' src={whiteLogo} alt=""/>
          </Link>
    )
 };
-
 export default Logo;
