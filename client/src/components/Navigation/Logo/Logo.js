@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import whiteLogo from '../../../img/navImg/whitelogo.svg';
 import './Logo.css';
-import store from '../../../redux/store/store';
+// import store from '../../../redux/store/store';
 
 const Logo = () => {
    // const { isAuthenticated } = store.getState().auth;
    // console.log(isAuthenticated);
-   let link = '/';
+   // let link = '/';
    // if(isAuthenticated){
    //    link = '/home';
    // }

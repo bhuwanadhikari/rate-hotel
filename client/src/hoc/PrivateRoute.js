@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -8,7 +8,6 @@ const PrivateRoute = ({component: Component, auth, ...rest}) => (
    <Route
       {...rest}
       render = {props => {
-         console.log(Component);
          if(Component === Landing){
             return auth.isAuthenticated === true ?
                (<Redirect to='/home'/>) :
