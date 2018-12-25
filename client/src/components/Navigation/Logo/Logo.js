@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import whiteLogo from '../../../img/NewLogo/textLogo.svg';
+import whiteLogo from '../../../img/NewLogo/TextLogoSVG234.svg';
 import './Logo.css';
 import store from '../../../redux/store/store';
 
