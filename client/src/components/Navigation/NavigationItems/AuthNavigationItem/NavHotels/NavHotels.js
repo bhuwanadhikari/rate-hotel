@@ -15,7 +15,6 @@ const styleBorder = (pathName) => {
    const testPath = testPathArray.join("");
    if(testPath === 'hotels'){
       myClasses = 'AuthNavLink MyActiveLink';
-      console.log("done");
    }
    return myClasses;
 };

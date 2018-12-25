@@ -55,6 +55,11 @@
 
 
 
+.LogOut {
+    display: block;
+    cursor: pointer;
+    color: #097eff;
+}
 
 
 /*For DESKTOPS ONLY*/

@@ -21,7 +21,7 @@ class NavigationItems extends Component{
       const guestNavBar = (
 
          <Auxi>
-            <GuestNavigationItem link="/allhotels">
+            <GuestNavigationItem link="/all-hotels">
                All Hotels
             </GuestNavigationItem>
 

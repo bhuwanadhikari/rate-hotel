@@ -6,7 +6,6 @@ import store from '../../../redux/store/store';
 
 const Logo = () => {
    const { isAuthenticated } = store.getState().auth;
-   console.log(isAuthenticated);
    let myClass = 'GuestLogoBox';
    if(isAuthenticated === true) {
       myClass = 'AuthLogoBox'
