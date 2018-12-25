@@ -25,7 +25,7 @@ class NavigationItems extends Component{
                All Hotels
             </GuestNavigationItem>
 
-            <GuestNavigationItem link="/signup">
+            <GuestNavigationItem link="/sign-up">
                Sign Up
             </GuestNavigationItem>
 

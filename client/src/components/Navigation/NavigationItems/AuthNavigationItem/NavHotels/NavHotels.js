@@ -1,23 +1,10 @@
 import React, { Component } from 'react';
 import './NavHotels.css';
 import '../AuthNavigationItem.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import hotelIcon from '../../../../../img/navImg/hotels.svg';
 
-//Style border of hotelIcon according to the path of the url
-const styleBorder = (pathName) => {
-   const pathArray = pathName.split("");
-
-   const testPathArray = pathArray.filter((value, index) => index>0 && index<7);
-
-   let myClasses = 'AuthNavLink';
-   const testPath = testPathArray.join("");
-   if(testPath === 'hotels'){
-      myClasses = 'AuthNavLink MyActiveLink';
-   }
-   return myClasses;
-};
 
 
 class NavHotels extends Component{
@@ -29,12 +16,25 @@ class NavHotels extends Component{
 
    }
 
-   onClickHandler = (e) => {
-      e.preventDefault();
-      this.setState({showDrop: !this.state.showDrop});
-   };
    render() {
-         const myClasses = styleBorder(window.location.pathname);
+      //Style border of hotelIcon according to the path of the url
+      const styleBorder = (pathName) => {
+         if(pathName === '/hotels'){
+            this.props.history.push('/hotels/recommended');
+         }
+         const pathArray = pathName.split("");
+
+         const testPathArray = pathArray.filter((value, index) => index>0 && index<7);
+
+         let myClasses = 'AuthNavLink';
+         const testPath = testPathArray.join("");
+         if(testPath === 'hotels'){
+            myClasses = 'AuthNavLink MyActiveLink';
+         }
+         return myClasses;
+      };
+
+      const myClasses = styleBorder(window.location.pathname);
 
          return (
             <li className="AuthNavigationItem HotelsNav">
@@ -52,7 +52,7 @@ class NavHotels extends Component{
 }
 
 
-export default NavHotels;
+export default withRouter(NavHotels);
 
 
 
