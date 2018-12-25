@@ -1,7 +1,33 @@
+.GuestLogoBox {
+    width: 25vw;
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+}
+
+
+.AuthLogoBox {
+    width: 20vw;
+    display: inline-block;
+}
+
+.LogoWrapper {
+    height: 50px;
+    width: 70px;
+    margin: auto 0 auto 2vw;
+}
+
 .WhiteLogo {
-     height: 26px;
-     padding: 13px 10px 13px 25px;
- }
+
+    height: 30px;
+    box-sizing: border-box;
+    margin: 8px auto 17px auto;
+}
+
+a.LogoLink {
+    height: 50px;
+    display: block;
+}
 
 .WhiteLogo:hover {
     filter: opacity(90%);
@@ -11,18 +37,102 @@
 
 /*For DESKTOPS ONLY*/
 @media only screen and (min-width: 800px) {
+    .GuestLogoBox {
+        width: 15vw;
+
+    }
+    .AuthLogoBox {
+
+    }
+
+    .LogoWrapper {
+        height: 50px;
+        width: 70px;
+        margin: auto;
+    }
     .WhiteLogo {
 
         height: 30px;
-        padding: 10px 5% 10px 30%;
+        box-sizing: border-box;
+        margin: 10px auto;
     }
 }
 
 
 /*For TABS ONLY*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
+    .GuestLogoBox {
+        width: 18.75vw;
+    }
+    .AuthLogoBox {
+
+    }
+
+    .LogoWrapper {
+        height: 50px;
+        width: 70px;
+        margin: auto;
+    }
     .WhiteLogo{
         height: 30px;
-        padding: 10px 10% 10px 20%;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+}
+
+/*
+
+-
+-
+--
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+-
+-
+
+*/
+
+
+/*For VERY SMALL SMART PHONES ONLY*/
+@media only screen  and (max-width: 300px) {
+    .GuestLogoBox {
+        width: 25vw;
+        height: 50px;
+        display: inline-block;
+        margin: 0;
+    }
+
+
+    .AuthLogoBox {
+        width: 20vw;
+        display: inline-block;
+    }
+
+    .LogoWrapper {
+        height: 50px;
+        width: 70px;
+        margin: auto 0 auto 2px;
+    }
+
+    .WhiteLogo {
+
+        height: 30px;
+        box-sizing: border-box;
+        margin: 8px auto 17px auto;
     }
 }

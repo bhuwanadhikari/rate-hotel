@@ -48,7 +48,7 @@ class Login extends Component{
             <Modal/>
             <img className="LoginIcon" src={loginIcon} alt="Log In Icon for the CrowApp"/>
 
-            <form className="Form" >
+            <form className="Form" noValidate>
 
                <input
                   className="Input"

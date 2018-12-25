@@ -7,6 +7,12 @@ header{
     background:#fc4c02;
 }
 
+.NavContainer {
+    display: block;
+    width: 100vw;
+    height: 50px;
+}
+
 
 
 
@@ -17,15 +23,12 @@ header{
 /*Navigation Items*/
 
 .NavigationItems{
-    display: block;
     width:75vw;
     height: 50px;
     float: right;
+    display: inline-block;
+    margin: 0;
 }
-
-
-
-
 
 
 
@@ -35,19 +38,19 @@ header{
 
 .GuestNavigationItem{
     height: 50px;
-    float: left;
-    display: block;
+    display: inline-block;
     text-align: center;
+    width: 25vw;
 }
 
 .GuestNavigationItem a {
+    width: 25vw;
     display: inline-block;
     color: white;
     text-decoration: none;
     font-size: 0.8em;
     padding: 19px 2px;
     box-sizing: border-box;
-    width: 25vw;
     height: 50px;
     font-family: comfortaa, sans-serif;
     font-weight: bold;
@@ -68,22 +71,46 @@ header{
 
 /*For DESKTOPS ONLY*/
 @media only screen and (min-width: 800px) {
+
+    .NavContainer {
+        display: block;
+        width: 60vw;
+        height: 50px;
+        margin: auto;
+    }
+
     .NavigationItems{
-        width:60vw;
+        width:45vw;
+    }
+
+    .GuestNavigationItem {
+        width: 15vw;
     }
 
     .GuestNavigationItem a {
-        width: 10vw;
+        width: 15vw;
     }
 }
 
 /*For TABS ONLY*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
+
+    .NavContainer {
+        display: block;
+        width: 75vw;
+        height: 50px;
+        margin: auto;
+    }
+
     .NavigationItems{
-        width:60vw;
+        width:56.25vw;
+    }
+
+    .GuestNavigationItem {
+        width: 18.75vw;
     }
 
     .GuestNavigationItem a {
-        width: 15vw;
+        width: 18.75vw;
     }
 }

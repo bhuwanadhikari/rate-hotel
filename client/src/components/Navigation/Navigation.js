@@ -4,12 +4,14 @@ import './Navigation.css';
 import Logo from './Logo/Logo';
 
 const Navigation = () => {
-return (
-   <header>
-      <Logo/>
-      <NavigationItems />
-   </header>
-)
+   return (
+      <header>
+         <div className="NavContainer">
+            <Logo/>
+            <NavigationItems />
+         </div>
+      </header>
+   )
 };
 
 export default Navigation;
