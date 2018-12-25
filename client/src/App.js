@@ -17,7 +17,10 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './containers/Home/Home';
 import Hotels from './containers/Hotels/Hotels';
 import Search from './containers/Search/Search';
-import Account from './containers/Account/Account';
+import UserAccount from './containers/Account/UserAccount/UserAccount';
+import SettingsAndPrivacy from './containers/Account/SettingsAndPrivacy/SettingsAndPrivacy';
+import AboutUs from './containers/Account/AboutUs/AboutUs';
+import Help from './containers/Account/Help/Help';
 
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser } from './redux/actions/authActions';
@@ -53,15 +56,18 @@ class App extends Component {
                   <Navigation />
                   <Switch>
                      <PrivateRoute exact path = "/" component = {Landing} history = {this.props.history} />
-                     <Route exact path = "/allHotels" component = {AllHotels} />
+                     <Route exact path = "/all-hotels" component = {AllHotels} />
                      <Route exact path = "/signup" component = {SignUp} />
                      <Route exact path = "/login" component = {Login} />
+                     <Route exact path = "/about-us" component = {AboutUs} />
+                     <Route exact path = "/help" component = {Help} />
                   </Switch>
                   <Switch>
                      <PrivateRoute exact path = "/home" component = {Home} />
-                     <PrivateRoute  path = "/hotels" component = {Hotels} />
+                     <PrivateRoute       path = "/hotels" component = {Hotels} />
                      <PrivateRoute exact path = "/search" component = {Search} />
-                     <PrivateRoute exact path = "/account" component = {Account} />
+                     <PrivateRoute exact path = "/user-account" component = {UserAccount} />
+                     <PrivateRoute exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
                   </Switch>
 
                   <Footer/>

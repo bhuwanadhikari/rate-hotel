@@ -58,7 +58,7 @@ header{
 }
 
 .GuestNavigationItem a:hover, .GuestNavigationItem a:active {
-    border-bottom: 3px solid black ;
+    border-bottom: 3px solid white ;
 }
 
 .GuestNavigationItem .ActiveLink {
