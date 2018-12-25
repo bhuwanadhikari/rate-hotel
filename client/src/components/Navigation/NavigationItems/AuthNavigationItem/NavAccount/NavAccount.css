@@ -36,8 +36,16 @@
     z-index: 20;
 }
 
-.AccountLinkList:hover {
+.Normal:hover {
     font-size: 1.1em;
+}
+
+.Abnormal {
+    color: #123456;
+}
+.Abnormal:hover {
+    color: #123456;
+    text-decoration: underline;
 }
 
 .Disabled {

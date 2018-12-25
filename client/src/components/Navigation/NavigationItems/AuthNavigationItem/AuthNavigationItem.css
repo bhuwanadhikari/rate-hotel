@@ -31,6 +31,11 @@
     background-color: lavenderblush;
 }
 
+.AccountIsActive {
+    box-sizing: border-box;
+    border-bottom: 3px solid white;
+}
+
 
 /*For DESKTOPS ONLY*/
 @media only screen and (min-width: 800px) {

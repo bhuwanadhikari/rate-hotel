@@ -31,15 +31,24 @@ class NavAccount extends React.Component{
 
 
    render() {
+
       document.onclick = this.docClickHandler;
+
       let myClass= 'AuthNavigationItem';
       if(this.state.showAcDrop){
          myClass = 'AuthNavigationItem ActiveNavAccount'
       }
+
+      const path = window.location.pathname;
+      if(path === '/user-account'){
+         myClass = myClass + ' AccountIsActive';
+      }
+      console.log(path);
+
       return (
          <Auxi>
             <li className={myClass} id = "NavAccountID">
-               <div className={`AuthNavLink ${this.state.AcClass} NavAccountLink`} onClick = {this.onClickHandler}>
+               <div className={`AuthNavLink NavAccountLink`} onClick = {this.onClickHandler}>
                   <img className="AuthNavIcon" src={this.state.showAcDrop?accountIconOrange:accountIcon} alt="Account Icon of CrowApp"/>
                </div>
 
@@ -47,12 +56,12 @@ class NavAccount extends React.Component{
             {this.state.showAcDrop?(
                <ul className="AccountNavSec">
 
-                  <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Normal" to = '/user-account'>Profile</NavLink>
+                  <li className="AccountLinkList Normal">
+                     <NavLink className = "AccountLink " to = '/user-account'>Profile</NavLink>
                   </li>
 
-                  <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Normal" to = '/settings-and-privacy'>Settings and Privacy</NavLink>
+                  <li className="AccountLinkList Normal">
+                     <NavLink className = "AccountLink" to = '/settings-and-privacy'>Settings and Privacy</NavLink>
                   </li>
 
                   <li className="AccountLinkList">
@@ -60,19 +69,19 @@ class NavAccount extends React.Component{
                   </li>
 
                   <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Disabled" to = '/disabled'>Disabled</NavLink>
+                     <NavLink className = "AccountLink Disabled" to = '/disabled'>Advanced</NavLink>
+                  </li>
+
+                  <li className="AccountLinkList Abnormal">
+                     <NavLink className = "AccountLink " to = '/about-us'>About Us</NavLink>
+                  </li>
+
+                  <li className="AccountLinkList Abnormal">
+                     <NavLink className = "AccountLink " to = '/help'>Help</NavLink>
                   </li>
 
                   <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Abnormal" to = '/about-us'>About Us</NavLink>
-                  </li>
-
-                  <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Abnormal" to = '/help'>Help</NavLink>
-                  </li>
-
-                  <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Disabled" to = '/disabled'>Disabled</NavLink>
+                     <NavLink className = "AccountLink Disabled" to = '/disabled'>Go Premium</NavLink>
                   </li>
 
                </ul>):null}
