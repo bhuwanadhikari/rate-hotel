@@ -17,23 +17,26 @@ const UserProfile = require('../../models/UserProfile');
 const User = require('../../models/User');
 
 
+
+/*This route has been removed for now*/
 //@route /api/userProfile/handle/:handle
 // get any user profile by handle
 // public
-router.get('/handle/:handle', (req, res) => {
-   const errors = {};
-   UserProfile.findOne({handle: req.params.handle}) //handle in the params
-      .populate('user', ['name', 'avatar', 'faculty'])
-      .then((profile) => {
-         if(!profile){
-            errors.noProfile = 'There is no profile for this user';
-            res.status(404).json(errors);
-         }
-         res.status(200).json(profile)
-      }).catch( (err) => {
-      res.status(404).json(err);
-   });
-});
+// router.get('/handle/:handle', (req, res) => {
+//    const errors = {};
+//    UserProfile.findOne({handle: req.params.handle}) //handle in the params
+//       .populate('user', ['name', 'avatar', 'faculty'])
+//       .then((profile) => {
+//          if(!profile){
+//             errors.noProfile = 'There is no profile for this user';
+//             res.status(404).json(errors);
+//          }
+//          res.status(200).json(profile)
+//       }).catch( (err) => {
+//       res.status(404).json(err);
+//    });
+// });
+
 
 
 //@route /api/userProfile/user/:id

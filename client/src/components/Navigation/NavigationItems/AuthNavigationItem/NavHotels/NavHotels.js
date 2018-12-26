@@ -17,11 +17,9 @@ class NavHotels extends Component{
    }
 
    render() {
+
       //Style border of hotelIcon according to the path of the url
       const styleBorder = (pathName) => {
-         if(pathName === '/hotels'){
-            this.props.history.push('/hotels/recommended');
-         }
          const pathArray = pathName.split("");
 
          const testPathArray = pathArray.filter((value, index) => index>0 && index<7);

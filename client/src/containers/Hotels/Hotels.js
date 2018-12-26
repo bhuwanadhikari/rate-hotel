@@ -7,42 +7,50 @@ import Auxi from '../../hoc/Auxi';
 import './Hotels.css';
 
 
-const Hotels = () => {
-   return(
-      <Auxi>
-         <div className="HotelsNavSec">
+class Hotels extends React.Component {
 
-            <NavLink
-               className="HotelsLink Recommended"
-               activeClassName = "ActiveHotelsLink"
-               to="/hotels/recommended"
-            >
-               Recommended
-            </NavLink>
+   componentDidMount() {
+      //Redirect to /hotels/recommended when Hotels component is mounted
+      this.props.history.push('/hotels/recommended');
+   }
 
-            <NavLink
-               className="HotelsLink TopRated"
-               activeClassName = "ActiveHotelsLink"
-               to="/hotels/top-rated"
-            >
-               Top Rated
-            </NavLink>
+   render() {
+      return (
+         <Auxi>
+            <div className="HotelsNavSec">
 
-            <NavLink
-               className="HotelsLink Newest"
-               activeClassName = "ActiveHotelsLink"
-               to="/hotels/newest"
-            >
-               Newest
-            </NavLink>
+               <NavLink
+                  className="HotelsLink Recommended"
+                  activeClassName="ActiveHotelsLink"
+                  to="/hotels/recommended"
+               >
+                  Recommended
+               </NavLink>
 
-         </div>
+               <NavLink
+                  className="HotelsLink TopRated"
+                  activeClassName="ActiveHotelsLink"
+                  to="/hotels/top-rated"
+               >
+                  Top Rated
+               </NavLink>
 
-         <Route exact path='/hotels/recommended' component ={RecommendedHotels} />
-         <Route exact path='/hotels/top-rated' component ={TopRatedHotels} />
-         <Route exact path='/hotels/newest' component ={NewestHotels} />
-      </Auxi>
-   )
+               <NavLink
+                  className="HotelsLink Newest"
+                  activeClassName="ActiveHotelsLink"
+                  to="/hotels/newest"
+               >
+                  Newest
+               </NavLink>
+
+            </div>
+
+            <Route exact path='/hotels/recommended' component={RecommendedHotels}/>
+            <Route exact path='/hotels/top-rated' component={TopRatedHotels}/>
+            <Route exact path='/hotels/newest' component={NewestHotels}/>
+         </Auxi>
+      )
+   }
 };
 
 

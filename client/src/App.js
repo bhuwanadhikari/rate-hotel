@@ -26,6 +26,8 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser } from './redux/actions/authActions';
 
 import PrivateRoute from './hoc/PrivateRoute';
+import PublicRoute from './hoc/PublicRoute';
+import ProtectedRoute from './hoc/ProtectedRoute';
 
 import store from './redux/store/store';
 
@@ -55,21 +57,19 @@ class App extends Component {
                <div className="App">
                   <Navigation />
                   <Switch>
-                     <PrivateRoute exact path = "/" component = {Landing} history = {this.props.history} />
+                     <PublicRoute exact path = "/" component = {Landing} history = {this.props.history} />
                      <Route exact path = "/all-hotels" component = {AllHotels} />
-                     <PrivateRoute exact path = "/sign-up" component = {SignUp} />
-                     <PrivateRoute exact path = "/login" component = {Login} />
+                     <PublicRoute exact path = "/sign-up" component = {SignUp} />
+                     <PublicRoute exact path = "/login" component = {Login} />
                      <Route exact path = "/about-us" component = {AboutUs} />
                      <Route exact path = "/help" component = {Help} />
+                     <ProtectedRoute exact path = "/home" component = {Home} />
+                     <PrivateRoute         path = "/hotels" component = {Hotels} />
+                     <PrivateRoute   exact path = "/search" component = {Search} />
+                     <PrivateRoute   exact path = "/user-account" component = {UserAccount} />
+                     <PrivateRoute   exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
+                     <Route component = {Home}/>
                   </Switch>
-                  <Switch>
-                     <PrivateRoute exact path = "/home" component = {Home} />
-                     <PrivateRoute       path = "/hotels" component = {Hotels} />
-                     <PrivateRoute exact path = "/search" component = {Search} />
-                     <PrivateRoute exact path = "/user-account" component = {UserAccount} />
-                     <PrivateRoute exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
-                  </Switch>
-
                   <Footer/>
                </div>
             </Router>
