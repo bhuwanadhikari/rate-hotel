@@ -71,7 +71,7 @@ router.post('/login', (req, res) => {
    //Validation of Login Splash
    const {errors, isValid} = validateLoginInput(req.body);
    if(!isValid){
-      return res.status(400).json(errors);
+      return res.status(401).json(errors);
    }
 
    const email = req.body.email;
@@ -79,20 +79,20 @@ router.post('/login', (req, res) => {
    User.findOne({email}).then((user) => {
       if(!user){
          errors.email = 'User not found';
-         return res.status(404).json(errors);
+         return res.status(401).json(errors);
       }
 
       bcrypt.compare(password, user.password).then((isMatch) => {
          if(isMatch){
             //Credentials matched
-            payload = {id: user.id, email: user.email, avatar: user.avatar, faculty: user.faculty};
+            payload = {id: user.id, name:user.name, email: user.email, avatar: user.avatar, faculty: user.faculty};
 
             jwt.sign(payload, keys.secret, {expiresIn: 36000}, (err, token) => {
                res.json({success: true, token: 'Bearer '+ token});
             } );
          } else{
             errors.password = 'Password Incorrect';
-            return res.status(400).json(errors);
+            return res.status(401).json(errors);
          }
       });
    }).catch(); //error of find one

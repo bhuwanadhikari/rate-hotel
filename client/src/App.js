@@ -23,11 +23,11 @@ import AboutUs from './containers/Account/AboutUs/AboutUs';
 import Help from './containers/Account/Help/Help';
 
 import setAuthToken from './utils/setAuthToken';
-import { setCurrentUser } from './redux/actions/authActions';
+import {logUserOut, setCurrentUser} from './redux/actions/authActions';
+import { clearCurrentProfile } from './redux/actions/profileActions';
 
 import PrivateRoute from './hoc/PrivateRoute';
 import PublicRoute from './hoc/PublicRoute';
-import ProtectedRoute from './hoc/ProtectedRoute';
 
 import store from './redux/store/store';
 
@@ -39,7 +39,20 @@ if(localStorage.jwtToken){
    const decoded = jwt_decode(localStorage.jwtToken);
    //set user and is authenticated
    store.dispatch(setCurrentUser(decoded));
+
+   //check for expired jwt
+   const currentTime = Date.now()/1000;
+   if(decoded.exp<currentTime){
+      //Log the User Out
+      store.dispatch(logUserOut());
+      //Clear current Profile
+      store.dispatch(clearCurrentProfile());
+      //redirect to login
+      window.location.href = '/login';
+   }
 }
+
+
 
 
 class App extends Component {

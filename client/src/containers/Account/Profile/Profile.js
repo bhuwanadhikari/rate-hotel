@@ -10,7 +10,7 @@ class Profile extends Component {
    }
 
    componentDidMount(){
-      this.props.getCurrentProfile();
+      getCurrentProfile();
    }
 
    render() {

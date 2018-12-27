@@ -23,7 +23,7 @@ class Login extends Component{
       this.setState({[e.target.name] : e.target.value})
    };
 
-   onClickHandler = (e) => {
+   onLoginHandler = (e) => {
       e.preventDefault(); //prevents from default submission
       const userData = {
          email: this.state.email,
@@ -73,7 +73,7 @@ class Login extends Component{
 
             </form>
 
-            <Button cls = "Success" clicked={this.onClickHandler} >Log In</Button>
+            <Button cls = "Success" clicked={this.onLoginHandler} >Log In</Button>
 
          </div>
       )
@@ -83,12 +83,12 @@ class Login extends Component{
 Login.propTypes = {
   loginUser : propTypes.func.isRequired,
   auth: propTypes.object.isRequired,
-  errors: propTypes.object.isRequired,
+  errors: propTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
    auth: state.auth,
-   errors: state.errors,
+   errors: state.errors
 });
 
 export default connect(mapStateToProps, { loginUser })(Login);

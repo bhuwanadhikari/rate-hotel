@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { logUserOut } from '../../../../../redux/actions/authActions';
+import { clearCurrentProfile } from '../../../../../redux/actions/profileActions';
 
 import Auxi from '../../../../../hoc/Auxi';
 
@@ -25,8 +26,9 @@ class NavAccount extends React.Component {
 
    onLogOutHandler = (e) => {
       e.preventDefault();
+      this.props.clearCurrentProfile();
       this.props.logUserOut();
-      window.location.reload();
+      // window.location.reload();
    };
 
 
@@ -107,6 +109,7 @@ class NavAccount extends React.Component {
 
 NavAccount.propTypes = {
    logUserOut: propTypes.func.isRequired,
+   clearCurrentProfile: propTypes.func.isRequired,
    auth: propTypes.object.isRequired
 
 };
@@ -115,4 +118,4 @@ const mapStateToProps = (state) => ({
    auth: state.auth
 });
 
-export default  connect(mapStateToProps, {logUserOut})(NavAccount);
+export default  connect(mapStateToProps, {logUserOut, clearCurrentProfile})(NavAccount);

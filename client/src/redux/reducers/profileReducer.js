@@ -30,20 +30,12 @@ export default function (state = initialState, action) {
             loading: false
          };
 
-      case GET_ERRORS:
-         return action.payload;
-
       case CLEAR_CURRENT_PROFILE:
          return {
             ...state,
             profile: null
          };
 
-      case GET_PROFILES:
-         return {
-            ...state,
-            profiles: action.payload
-         };
       default:
          return state;
    }
