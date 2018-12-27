@@ -20,14 +20,6 @@ const UserProfileSchema = new Schema({
     bio: {
         type: String
     },
-    nRating: {
-        type: Number,
-        default: 0
-    },
-    aRating: {
-        type: Number,
-        default: 0
-    },
     social: {
         twitter: {
             type: String

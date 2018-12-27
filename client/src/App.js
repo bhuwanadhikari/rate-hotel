@@ -17,7 +17,7 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './containers/Home/Home';
 import Hotels from './containers/Hotels/Hotels';
 import Search from './containers/Search/Search';
-import UserAccount from './containers/Account/UserAccount/UserAccount';
+import Profile from './containers/Account/Profile/Profile';
 import SettingsAndPrivacy from './containers/Account/SettingsAndPrivacy/SettingsAndPrivacy';
 import AboutUs from './containers/Account/AboutUs/AboutUs';
 import Help from './containers/Account/Help/Help';
@@ -63,10 +63,10 @@ class App extends Component {
                      <PublicRoute exact path = "/login" component = {Login} />
                      <Route exact path = "/about-us" component = {AboutUs} />
                      <Route exact path = "/help" component = {Help} />
-                     <ProtectedRoute exact path = "/home" component = {Home} />
+                     <PrivateRoute exact path = "/home" component = {Home} />
                      <PrivateRoute         path = "/hotels" component = {Hotels} />
                      <PrivateRoute   exact path = "/search" component = {Search} />
-                     <PrivateRoute   exact path = "/user-account" component = {UserAccount} />
+                     <PrivateRoute   exact path = "/profile" component = {Profile} />
                      <PrivateRoute   exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
                      <Route component = {Home}/>
                   </Switch>

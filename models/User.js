@@ -26,7 +26,11 @@ const UserSchema = new Schema({
     faculty: {
         type: String,
         required: true
-    }
+    },
+   ratingsDone: {
+      type: Schema.Types.Mixed,
+      default: []
+   }
 });
 
 

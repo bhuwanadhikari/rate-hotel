@@ -24,7 +24,7 @@ const User = require('../../models/User');
 // public
 // router.get('/handle/:handle', (req, res) => {
 //    const errors = {};
-//    UserProfile.findOne({handle: req.params.handle}) //handle in the params
+//    Profile.findOne({handle: req.params.handle}) //handle in the params
 //       .populate('user', ['name', 'avatar', 'faculty'])
 //       .then((profile) => {
 //          if(!profile){
@@ -90,7 +90,7 @@ router.get('/all', (req, res) => {
 router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
    const errors = {};
    UserProfile.findOne({user: req.user.id}) //req.user's user from stored token's payload
-      .populate('user', ['name', 'avatar', 'faculty'])
+      .populate('user', ['name', 'avatar', 'faculty', 'aRating', 'nRating'  ])
       .then((profile) => {
          if(!profile){
             errors.noProfile = 'There is no profile for this user';
@@ -123,8 +123,6 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
    if(req.body.location) profileFields.location = req.body.location;
    if(req.body.year) profileFields.year = req.body.year;
    if(req.body.bio) profileFields.bio = req.body.bio;
-   if(req.body.nRating) profileFields.nRating = req.body.nRating;
-   if(req.body.aRating) profileFields.aRating = req.body.aRating;
 
    profileFields.social = {};
 

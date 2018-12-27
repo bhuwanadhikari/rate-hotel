@@ -25,8 +25,8 @@ class NavAccount extends React.Component {
 
    onLogOutHandler = (e) => {
       e.preventDefault();
-      window.location.reload();
       this.props.logUserOut();
+      window.location.reload();
    };
 
 
@@ -53,7 +53,7 @@ class NavAccount extends React.Component {
 
       //styling the account if it is active?? may be not applicable later
       const path = window.location.pathname;
-      if(path === '/user-account'){
+      if(path === '/profile'){
          myClass = myClass + ' AccountIsActive';
       }
 
@@ -72,7 +72,7 @@ class NavAccount extends React.Component {
                <ul className="AccountNavSec">
 
                   <li className="AccountLinkList Normal">
-                     <NavLink className = "AccountLink " to = '/user-account'>Profile</NavLink>
+                     <NavLink className = "AccountLink " to = '/profile'>Profile</NavLink>
                   </li>
 
                   <li className="AccountLinkList Normal">

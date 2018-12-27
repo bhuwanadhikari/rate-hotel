@@ -17,7 +17,7 @@ class Modal  extends Component{
          if(this.props.alertReg.name){
             return(
                <div className="Modal">
-                  Hello {this.props.alertReg.name}! You are registered as a new User of CrowApp.
+                  Hello, {this.props.alertReg.name} ! You are registered as a new User of CrowApp.
                   <button className="ModalBtn" onClick= {this.onClickHandler}>Continue to Login</button>
                </div>
             )
