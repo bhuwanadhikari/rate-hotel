@@ -11,15 +11,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+
 }
 
 
+
+/* Declaration of variables*/
 
 :root {
     --theme: #fc4c02;
     --darkTheme: #b36200;
     --complementary: #ffab8e;
-    /*--complementary: #03b3fd;*/
+    --lightTheme: lavenderblush;
     --intro: #5A6F9B;
     --bio: #414A4C;
+
+
+
+
+    --danger: #000;
+    --warning: #666;
+
 }

@@ -20,7 +20,7 @@ class ProfileCard extends Component {
                   <Option/>
                </div>
                <div className="Avatar">
-                  <img src="https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg" alt="Avatar for user profile"/>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmghCm0SV4l6odB47zIsTuMaWoFbDaFC9M1u_Kyj72hSbe5IUX" alt="Avatar for user profile"/>
                </div>
             </div>
 
