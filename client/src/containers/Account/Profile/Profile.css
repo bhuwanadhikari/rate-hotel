@@ -9,7 +9,7 @@
 /*For DESKTOPS ONLY --60VW  */
 @media only screen and (min-width: 800px) {
     .Profile{
-        /*background-color: var(--complementary);*/
+        background-color: var(--complementary);
     }
 
 

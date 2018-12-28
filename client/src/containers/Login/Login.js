@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Button from '../../components/ui/button/Button';
 import loginIcon from '../../img/navImg/login-solid.svg';
 import './Login.css';
-import Modal from '../../components/ui/Modal/AlertRegistration';
+import Modal from '../../components/ui/AlertRegModal/AlertRegistration';
 
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';

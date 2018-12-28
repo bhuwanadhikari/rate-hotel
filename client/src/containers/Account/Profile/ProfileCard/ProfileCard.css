@@ -6,6 +6,7 @@
     background-color: var(--lightTheme);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    transition: all 0.5s ease-out;
 }
 
 .AvatarHolder {
@@ -49,7 +50,7 @@
 .Intro {
     text-align: center;
     font-family: Comfortaa, "Helvetica Neue", sans-serif;
-    width: 60%;
+    width: 90%;
     padding: 18px 5px 4px 5px ;
     margin: auto;
     font-weight: bold;
