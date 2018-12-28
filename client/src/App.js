@@ -68,19 +68,19 @@ class App extends Component {
          <Provider store = {store}>
             <Router>
                <div className="App">
-                  <Navigation />
+                  <Navigation/>
                   <Switch>
-                     <PublicRoute exact path = "/" component = {Landing} history = {this.props.history} />
-                     <Route exact path = "/all-hotels" component = {AllHotels} />
                      <PublicRoute exact path = "/sign-up" component = {SignUp} />
                      <PublicRoute exact path = "/login" component = {Login} />
+                     <PublicRoute exact path = "/" component = {Landing} history = {this.props.history} />
+                     <Route exact path = "/all-hotels" component = {AllHotels} />
                      <Route exact path = "/about-us" component = {AboutUs} />
                      <Route exact path = "/help" component = {Help} />
                      <PrivateRoute exact path = "/home" component = {Home} />
                      <PrivateRoute         path = "/hotels" component = {Hotels} />
-                     <PrivateRoute   exact path = "/search" component = {Search} />
-                     <PrivateRoute   exact path = "/profile" component = {Profile} />
-                     <PrivateRoute   exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
+                     <PrivateRoute exact path = "/search" component = {Search} />
+                     <PrivateRoute exact path = "/profile" component = {Profile} />
+                     <PrivateRoute exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
                      <Route component = {Home}/>
                   </Switch>
                   <Footer/>

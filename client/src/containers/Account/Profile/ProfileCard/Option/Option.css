@@ -1,0 +1,17 @@
+.OptionIcon {
+    position: relative;
+    top: 20px;
+    left: 80vw;
+    z-index: 10;
+}
+
+.OptionIcon img {
+    height: 20px;
+    width: 20px;
+    z-index: 50;
+    display: block;
+    cursor: pointer;
+}
+
+
+

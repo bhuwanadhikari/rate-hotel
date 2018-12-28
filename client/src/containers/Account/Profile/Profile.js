@@ -3,20 +3,21 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import { getCurrentProfile } from '../../../redux/actions/profileActions';
 
+import './Profile.css';
+import ProfileCard from './ProfileCard/ProfileCard';
+import Activity from './Activity/Activity';
+
 class Profile extends Component {
-   constructor(props){
-      super(props);
-      this.state = {};
-   }
 
    componentDidMount(){
-      getCurrentProfile();
+      this.props.getCurrentProfile();
    }
 
    render() {
       return (
-         <div>
-            This is profile
+         <div className="ProfileContainer">
+            <ProfileCard/>
+            <Activity/>
          </div>
       );
    }

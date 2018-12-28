@@ -1,9 +1,6 @@
 import {
    GET_PROFILE,
-   GET_PROFILES,
-   GET_ERRORS,
    PROFILE_LOADING,
-   PROFILE_NOT_FOUND,
    CLEAR_CURRENT_PROFILE
 } from '../actions/types';
 
@@ -11,7 +8,7 @@ import {
 const initialState = {
    profile: null,
    profiles: null,
-   loading: null
+   loading: false
 };
 
 export default function (state = initialState, action) {

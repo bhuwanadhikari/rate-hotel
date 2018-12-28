@@ -4,32 +4,26 @@ import axios from 'axios';
 import {
    CLEAR_CURRENT_PROFILE,
    GET_PROFILE,
-   PROFILE_LOADING,
-   PROFILE_NOT_FOUND,
-   GET_PROFILES,
-   GET_ERRORS
+   PROFILE_LOADING
 } from './types';
 
 //Get current Profile
 export const getCurrentProfile = () => dispatch => {
    dispatch(setProfileLoading());
-   axios.get('/api/userProfile')
-      .then(res => {
-         dispatch(() => {
-
-            console.log(res.data);
-            return {
-               type: GET_PROFILE,
-               payload: res.data
-            }
-         })
-      }).catch(err => {
+   axios
+      .get('/api/userProfile')
+      .then(res =>
          dispatch({
             type: GET_PROFILE,
-            payload: {}
+            payload: res.data
          })
-   })
-
+      )
+      .catch(err =>
+         dispatch({
+            type: GET_PROFILE,
+            payload: {notFound: 'Not found'}
+         })
+      );
 };
 
 

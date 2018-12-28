@@ -4,7 +4,7 @@ header{
     display: block;
     width: 100vw;
     height: 50px;
-    background:#fc4c02;
+    background:var(--theme);
 }
 
 .NavContainer {
