@@ -121,15 +121,14 @@ router.post('/',passport.authenticate('jwt', {session:false}), (req, res) => {
 
 
    if(req.body.location) profileFields.location = req.body.location;
-   if(req.body.year) profileFields.year = req.body.year;
    if(req.body.bio) profileFields.bio = req.body.bio;
 
    profileFields.social = {};
 
-   if(req.body.twitter) profileFields.social.twitter = req.body.twitter;
-   if(req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
-   if(req.body.github) profileFields.social.github = req.body.github;
    if(req.body.facebook) profileFields.social.facebook = req.body.facebook;
+   if(req.body.twitter) profileFields.social.twitter = req.body.twitter;
+   if(req.body.linkedIn) profileFields.social.linkedIn = req.body.linkedIn;
+   if(req.body.instagram) profileFields.social.instagram = req.body.instagram;
 
 
 

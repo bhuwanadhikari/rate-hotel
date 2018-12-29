@@ -1,0 +1,36 @@
+
+.InputField{
+    display: block;
+    width: 90%;
+    margin : 10px auto;
+    height: 30px;
+    border: 1px solid var(--theme);
+    border-radius: 3px;
+    color: #3D2B1F;
+    font-family: 'Muli', sans-serif;
+    padding: 4px;
+}
+
+
+
+.TextArea {
+    height: 90px;
+
+}
+
+.InputField:focus{
+    background-color: var(--lightTheme);
+    box-shadow: 0 0 2px var(--intro);
+}
+
+.errorFeedback {
+    position: relative;
+    top: -7px;
+    margin: auto;
+    width: 75vw;
+    font-size: 11px;
+    font-family: Comfortaa, sans-serif;
+    box-sizing: border-box;
+    color: var(--danger);
+
+}

@@ -13,7 +13,7 @@
 h1{
     text-align: center;
     font-family: 'PT Sans', sans-serif;
-    color: #fc4c02;
+    color: var(--theme);
 }
 
 .Form {
@@ -27,7 +27,7 @@ h1{
     width: 75vw;
     margin : 10px auto;
     height: 30px;
-    border: 1px solid #fc4c02;
+    border: 1px solid var(--theme);
     border-radius: 3px;
     color: #3D2B1F;
     font-family: 'Muli', sans-serif;
@@ -35,7 +35,7 @@ h1{
 }
 
 input:focus{
-    background-color: Lavenderblush;
+    background-color: var(--lightTheme);
 }
 
 .errorFeedback {
@@ -45,7 +45,7 @@ input:focus{
     width: 75vw;
     font-size: 0.65em;
     box-sizing: border-box;
-    color: red;
+    color: var(--danger);
 
 }
 
@@ -58,7 +58,7 @@ input:focus{
 /*For DESKTOPS*/
 @media only screen and (min-width: 800px) {
     .Input{
-        width: 25vw;;
+        width: 40%;;
     }
 }
 
@@ -66,6 +66,6 @@ input:focus{
 /*For TABS*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .Input{
-        width: 60vw;;
+        width: 60%;
     }
 }

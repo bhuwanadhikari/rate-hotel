@@ -7,7 +7,27 @@ import './Profile.css';
 import ProfileCard from './ProfileCard/ProfileCard';
 import Activity from './Activity/Activity';
 
+
+import Modal from '../../../components/ui/Modal/Modal';
+import EditProfile from './EditProfile/EditProfile';
+
 class Profile extends Component {
+   constructor(props){
+      super(props);
+      this.state = {
+         showModal: false
+      };
+   }
+
+   onBackDropClickHandler = (e) => {
+      e.preventDefault();
+      this.setState({showModal: false});
+   };
+
+   onOptionHandler = (e) => {
+      e.preventDefault();
+      this.setState({showModal: true});
+   };
 
    componentDidMount(){
       this.props.getCurrentProfile();
@@ -16,7 +36,12 @@ class Profile extends Component {
    render() {
       return (
          <div className="ProfileContainer">
-            <ProfileCard/>
+
+            <Modal show = {this.state.showModal} modalClosed = {this.onBackDropClickHandler}>
+               <EditProfile modalClosed = {this.onBackDropClickHandler}/>
+            </Modal>
+
+            <ProfileCard optioned = {this.onOptionHandler}/>
             <Activity/>
          </div>
       );

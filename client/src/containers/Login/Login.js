@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 
-import Button from '../../components/ui/button/Button';
+import Button from '../../components/ui/Button/Button';
 import loginIcon from '../../img/navImg/login-solid.svg';
 import './Login.css';
 import Modal from '../../components/ui/AlertRegModal/AlertRegistration';
+import InputField from '../../components/ui/InputField/InputField';
 
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../redux/actions/authActions';
+
+// import {removeErrFeedback} from '../../components/common/functions';
 
 class Login extends Component{
    constructor(){
@@ -20,7 +23,11 @@ class Login extends Component{
    }
 
    onChangeHandler = (e) => {
-      this.setState({[e.target.name] : e.target.value})
+      this.setState({[e.target.name] : e.target.value});
+
+      const newErr = {...this.state.errors};
+      newErr[e.target.name] = '';
+      this.setState({errors: newErr});
    };
 
    onLoginHandler = (e) => {
@@ -42,6 +49,7 @@ class Login extends Component{
 
    }
 
+
    render(){
       return (
          <div className= "FormBox">
@@ -50,27 +58,24 @@ class Login extends Component{
 
             <form className="Form" noValidate>
 
-               <input
+               <InputField
                   className="Input"
                   type="email"
                   placeholder = "Email"
-                  onChange = {this.onChangeHandler}
+                  changed = {this.onChangeHandler}
                   name = "email"
                   value = {this.state.email}
+                  errors = {this.state.errors}
                />
-
-               {this.state.errors.email? (<div className="errorFeedback">{this.state.errors.email}</div>):null}
-
-               <input
+               <InputField
                   className="Input"
                   type="password"
                   placeholder = "Password"
-                  onChange = {this.onChangeHandler}
+                  changed = {this.onChangeHandler}
                   name = "password"
                   value = {this.state.password}
+                  errors = {this.state.errors}
                />
-               {this.state.errors.password? (<div className="errorFeedback">{this.state.errors.password}</div>):null}
-
             </form>
 
             <Button cls = "Success" clicked={this.onLoginHandler} >Log In</Button>
@@ -81,9 +86,9 @@ class Login extends Component{
 }
 
 Login.propTypes = {
-  loginUser : propTypes.func.isRequired,
-  auth: propTypes.object.isRequired,
-  errors: propTypes.object.isRequired
+   loginUser : propTypes.func.isRequired,
+   auth: propTypes.object.isRequired,
+   errors: propTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({

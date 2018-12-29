@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 import {
-   CLEAR_CURRENT_PROFILE,
+   CLEAR_CURRENT_PROFILE, GET_ERRORS,
    GET_PROFILE,
    PROFILE_LOADING
 } from './types';
@@ -40,4 +40,19 @@ export const clearCurrentProfile = () => {
       type: CLEAR_CURRENT_PROFILE,
 
    };
+};
+
+//Edit current profile
+export const editCurrentProfile = (profileData) => (dispatch) => {
+  axios
+     .post('/api/userProfile', profileData)
+     .then((res) => dispatch({
+        type: GET_PROFILE,
+        payload: res.data
+     }))
+     .catch((err)=> dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+     })
+     );
 };

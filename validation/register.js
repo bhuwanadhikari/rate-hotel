@@ -8,7 +8,6 @@ module.exports = function validateRegisterInput(data){
     data.email = !isEmpty(data.email) ? data.email : '';
     data.password = !isEmpty(data.password) ? data.password : '';
     data.password2 = !isEmpty(data.password2) ? data.password2 : '';
-    data.faculty = !isEmpty(data.faculty) ? data.faculty : '';
 
     if(validator.isEmpty(data.name)){
         errors.name = 'Name field can not be empty';
@@ -42,9 +41,6 @@ module.exports = function validateRegisterInput(data){
     }
 
 
-    if(validator.isEmpty(data.faculty)){
-        errors.faculty = "Faculty field can not be empty";
-    }
 
 
 

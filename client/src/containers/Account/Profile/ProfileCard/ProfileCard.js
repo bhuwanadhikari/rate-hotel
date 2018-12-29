@@ -6,35 +6,20 @@ import { NavLink } from 'react-router-dom';
 import './ProfileCard.css';
 import Stat from './Stat/Stat';
 import Option from './Option/Option';
-import Modal from '../../../../components/ui/Modal/Modal';
-import EditProfile from '../EditProfile/EditProfile';
 
 import locationIcon from '../../../../img/forProfile/location.svg'
 
 class ProfileCard extends Component {
-   constructor(props){
-      super(props);
-      this.state = {
-         showModal: false
-      };
-   }
 
-   onOptionHandler = (e) => {
-      e.preventDefault();
-     this.setState({showModal: true});
-   };
 
    render() {
       return (
          <div className="ProfileCard">
 
-            <Modal show = {this.state.showModal} >
-               <EditProfile/>
-            </Modal>
 
             <div className="AvatarHolder">
                <div className="Transformable">
-                  <Option clicked = {this.onOptionHandler} />
+                  <Option clicked = {this.props.optioned} />
                </div>
                <div className="Avatar">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmghCm0SV4l6odB47zIsTuMaWoFbDaFC9M1u_Kyj72hSbe5IUX" alt="Avatar for user profile"/>

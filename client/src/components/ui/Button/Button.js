@@ -1,17 +1,18 @@
 import React from 'react';
 import './Button.css';
 
-const  Button = (props) => {
-   const myClasses = `${props.cls.toString()} Btn`;
+const  Button = ({clicked, children, cls}) => {
+   const myClasses = `${cls.toString()} Btn`;
    return (
       <button
          type="button"
          className={myClasses}
-         onClick={props.clicked}
+         onClick={clicked}
       >
-         {props.children}
+         {children}
       </button>
    )
 };
-
+Button.propTypes = {
+};
 export default Button;

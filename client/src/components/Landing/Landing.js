@@ -2,7 +2,7 @@ import React from 'react';
 import './Landing.css';
 import androidbg from '../../img/backImages/androidbg2.jpg';
 import desktopbg from '../../img/backImages/desktopbg2.jpg';
-import Button from '../ui/button/Button';
+import Button from '../ui/Button/Button';
 //import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'

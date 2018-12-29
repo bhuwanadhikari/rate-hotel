@@ -23,12 +23,24 @@ code {
     --darkTheme: #b36200;
     --complementary: #ffab8e;
     --lightTheme: lavenderblush;
+
     --intro: #5A6F9B;
     --bio: #414A4C;
-    --chhaya: #3d3d3d;
-    --seto: white;
 
-    --danger: #000;
+    --chhaya: var(--theme);
+    --themeDrop: rgba(185, 85, 32, 0.5);
+
+/*BUTTON CONDITIONS*/
+    --success: var(--theme);
+    --seto: white;
+    --danger: red;
     --warning: #666;
+
+    --successHover: white;
+    --warningHover: white;
+    --warningBg: gray;
+    --btnBg:rgba(255, 255, 255, 0.5);
+
+
 
 }

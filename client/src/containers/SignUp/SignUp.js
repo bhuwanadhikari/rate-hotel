@@ -5,7 +5,8 @@ import { withRouter } from 'react-router-dom';
 
 import { registerUser } from '../../redux/actions/authActions';
 
-import Button from '../../components/ui/button/Button';
+import Button from '../../components/ui/Button/Button';
+import InputField from '../../components/ui/InputField/InputField';
 import userIcon from '../../img/navImg/user-plus-solid.svg';
 import './SignUp.css';
 
@@ -19,7 +20,8 @@ class SignUp extends Component{
          password2: '',
          faculty: '',
          errors: {}
-      }
+      };
+
    };
 
    onChangeHandler = (e) => {
@@ -57,81 +59,80 @@ class SignUp extends Component{
             <img className="UserIcon" src={userIcon} alt="Sign Up Icon for CrowApp"/>
             <form className="Form" noValidate>
 
-               <input
+               <InputField
                   className="Input"
                   value = {this.state.name}
                   type="text"
                   placeholder = "Full Name"
                   name = "name"
-                  onChange={this.onChangeHandler}
+                  changed={this.onChangeHandler}
+                  errors = {this.state.errors}
                />
-               {this.state.errors.name? (<div className="errorFeedback">{this.state.errors.name}</div>):null      }
-               <input
+                <InputField
                   className="Input"
                   value = {this.state.email}
                   type="email"
                   placeholder = "Email"
                   name = "email"
-                  onChange={this.onChangeHandler}
+                  changed={this.onChangeHandler}
+                  errors = {this.state.errors}
                />
-               {this.state.errors.email? (<div className="errorFeedback">{this.state.errors.email}</div>):null      }
-               <input
+               <InputField
                   className="Input"
                   value = {this.state.password}
                   type="password"
                   placeholder = "Password"
                   name = "password"
-                  onChange={this.onChangeHandler}
+                  changed={this.onChangeHandler}
+                  errors = {this.state.errors}
                />
-               {this.state.errors.password? (<div className="errorFeedback">{this.state.errors.password}</div>):null      }
-               <input
+               <InputField
                   className="Input"
                   value = {this.state.password2}
                   type="password"
                   placeholder = "Confirm Password"
                   name = "password2"
-                  onChange={this.onChangeHandler}
+                  changed={this.onChangeHandler}
+                  errors = {this.state.errors}
                />
-               {this.state.errors.password2? (<div className="errorFeedback">{this.state.errors.password2}</div>):null      }
-            </form>
+                </form>
 
-            <select
-               className="Input"
-               value = {this.state.faculty}
-               form="signUpForm"
-               name="faculty"
-               onChange={this.onChangeHandler}
-            >
-
-
-               <option value="">
-                  Faculty
-               </option>
-               <option value="Computer">
-                  Computer Engineering
-               </option>
-               <option value="Civil">
-                  Civil Engineering
-               </option>
-               <option value="Mechanical">
-                  Mechanical Engineering
-               </option>
-               <option value="Electronics">
-                  Electronics Engineering
-               </option>
-               <option value="Electrical">
-                  Electrical Engineering
-               </option>
-               <option value="Geomatics">
-                  Geomatics Engineering
-               </option>
-               <option value="Automobile">
-                  Automobile Engineering
-               </option>
+            {/*<select*/}
+               {/*className="Input"*/}
+               {/*value = {this.state.faculty}*/}
+               {/*form="signUpForm"*/}
+               {/*name="faculty"*/}
+               {/*onChange={this.onChangeHandler}*/}
+            {/*>*/}
 
 
-            </select>
-            {this.state.errors.faculty? (<div className="errorFeedback">{this.state.errors.faculty}</div>):null      }
+               {/*<option value="">*/}
+                  {/*Faculty*/}
+               {/*</option>*/}
+               {/*<option value="Computer">*/}
+                  {/*Computer Engineering*/}
+               {/*</option>*/}
+               {/*<option value="Civil">*/}
+                  {/*Civil Engineering*/}
+               {/*</option>*/}
+               {/*<option value="Mechanical">*/}
+                  {/*Mechanical Engineering*/}
+               {/*</option>*/}
+               {/*<option value="Electronics">*/}
+                  {/*Electronics Engineering*/}
+               {/*</option>*/}
+               {/*<option value="Electrical">*/}
+                  {/*Electrical Engineering*/}
+               {/*</option>*/}
+               {/*<option value="Geomatics">*/}
+                  {/*Geomatics Engineering*/}
+               {/*</option>*/}
+               {/*<option value="Automobile">*/}
+                  {/*Automobile Engineering*/}
+               {/*</option>*/}
+
+
+            {/*</select>*/}
 
             <Button cls = "Success" clicked = {this.onClickHandler} >Sign Up</Button>
 
