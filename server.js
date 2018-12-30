@@ -53,9 +53,7 @@ app.use('/api/userProfile', userProfile);
 app.use('/api/hotels', hotels);
 app.use('/api/hotelProfile', hotelProfile);
 
-app.get('/', (req, res) => {
-   res.send("Hello world");
-});
+
 
 app.listen(port, () => console.log(`Server running in port ${port}`));
 
