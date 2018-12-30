@@ -14,7 +14,7 @@
 h1{
     text-align: center;
     font-family: 'PT Sans', sans-serif;
-    color: #fc4c02;
+    color: var(--theme);
 }
 
 .Form {
@@ -23,55 +23,4 @@ h1{
     padding: 0;
 }
 
-.Input {
-    display: block;
-    width: 75vw;
-    margin : 10px auto;
-    height: 30px;
-    border: 1px solid #fc4c02;
-    border-radius: 3px;
-    color: #3D2B1F;
-    font-family: 'Muli', sans-serif;
-    padding: 4px;
-}
 
-.Input:focus{
-    background-color: Lavenderblush;
-}
-
-select option {
-    color: #3D2B1F;
-}
-
-.errorFeedback {
-    position: relative;
-    top: -7px;
-    margin: auto;
-    width: 75vw;
-    text-align: center;
-    font-size: 0.65em;
-    box-sizing: border-box;
-    color: red;
-
-}
-
-
-
-/*For DESKTOPS*/
-@media only screen and (min-width: 800px) {
-    .Input{
-        width: 25vw;;
-    }
-    .errorFeedback {
-        width: 25vw;
-    }
-}
-
-/*For TABS*/
-@media only screen and (min-width: 450px) and (max-width: 800px) {
-    .Input{
-        width: 60vw;;
-    }.errorFeedback {
-         width: 60vw;
-     }
-}

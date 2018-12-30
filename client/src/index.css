@@ -1,15 +1,15 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 
 }
@@ -30,7 +30,7 @@ code {
     --chhaya: var(--theme);
     --themeDrop: rgba(185, 85, 32, 0.5);
 
-/*BUTTON CONDITIONS*/
+    /*BUTTON CONDITIONS*/
     --success: var(--theme);
     --seto: white;
     --danger: red;
@@ -41,6 +41,10 @@ code {
     --warningBg: gray;
     --btnBg:rgba(255, 255, 255, 0.5);
 
+
+
+    --lowWidth: 450px;
+    --highWidth: 800px;
 
 
 }

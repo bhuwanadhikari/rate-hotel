@@ -34,3 +34,27 @@
     color: var(--danger);
 
 }
+
+
+
+
+
+
+/*For DESKTOPS*/
+@media only screen and (min-width: 800px) {
+    .InputField{
+        width: 25vw;;
+    }
+    .errorFeedback {
+        width: 25vw;
+    }
+}
+
+/*For TABS*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .InputField{
+        width: 60vw;;
+    }.errorFeedback {
+         width: 60vw;
+     }
+}
