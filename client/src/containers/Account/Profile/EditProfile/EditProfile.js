@@ -12,13 +12,13 @@ class EditProfile extends Component {
    constructor(){
       super();
       this.state = {
-         handle: '',
-         location: '',
-         bio: '',
-         facebook: '',
-         twitter: '',
-         linkedIn: '',
-         instagram: '',
+         handle: "",
+         location: "",
+         bio: "",
+         facebook: "",
+         twitter: "",
+         linkedIn: "",
+         instagram: "",
          errors : {}
       }
    }
@@ -37,6 +37,7 @@ class EditProfile extends Component {
 
    onSaveHandler = (e) => {
       e.preventDefault();
+
       const profileData = {
          handle: this.state.handle,
          location: this.state.location,
@@ -47,6 +48,8 @@ class EditProfile extends Component {
          instagram: this.state.instagram
       };
       this.props.editCurrentProfile(profileData);
+
+    this.props.modalClosed(e);
    };
 
 
@@ -57,17 +60,16 @@ class EditProfile extends Component {
 
       const profile = nextProps.profile.profile;
 
-
-      if(profile) {
-         this.setState({handle: profile.handle});
+      const profileArr = ['handle', 'location', 'bio', 'facebook', 'twitter', 'linkedIn', 'instagram'];
+      for(let index in profileArr) {
+         const key = profileArr[index];
+         if (profile) {
+            if (profile[key]) {
+               this.setState({[key]: profile[key]});
+            }
+         }
       }
 
-
-      if(this.props.profile.profile !== nextProps.profile.profile){
-         // console.log('notEqual');
-         // console.log(this.props.profile.profile);
-         // console.log(nextProps.profile.profile);
-      }
    }
 
 

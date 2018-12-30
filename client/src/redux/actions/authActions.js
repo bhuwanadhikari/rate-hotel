@@ -1,6 +1,6 @@
 import {
    GET_ERRORS,
-   SET_CURRENT_USER,
+   SET_USER,
    ALERT_REGISTRATION,
    HIDE_REGMODAL
 } from './types';
@@ -49,7 +49,8 @@ export const loginUser = (userData) => dispatch => {
          //Decode token to get current user data
          const decoded = jwt_decode(token);
 
-         return dispatch(setCurrentUser(decoded));
+
+         return dispatch(setUser(decoded));
 
       })
       .catch(err =>
@@ -60,10 +61,10 @@ export const loginUser = (userData) => dispatch => {
 };
 
 
-//set current user function
-export const setCurrentUser = (decoded) => {
+//set user function
+export const setUser = (decoded) => {
    return {
-      type: SET_CURRENT_USER,
+      type: SET_USER,
       payload: decoded
    };
 };
@@ -76,7 +77,10 @@ export const logUserOut = () => dispatch => {
    //Remove auth header
    setAuthToken(false);
    //Set current user to {}
-   dispatch(setCurrentUser({})); //dispatch to update the store
+   dispatch(setUser({})); //dispatch to update the store
    //
 };
+
+
+
 

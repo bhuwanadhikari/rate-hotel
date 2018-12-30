@@ -102,10 +102,21 @@ router.post('/login', (req, res) => {
 // return current user
 // access private
 router.get('/current',passport.authenticate('jwt',{session:false}),(req, res)=>{
-   res.json({
-      id: req.user.id,
-      name: req.user.name,
-      email: req.user.email
+   const errors = {};
+   User.findOne({_id: req.user.id}).then(user => {
+      if(!user) {
+         errors.noProfile = 'There is no profile for this user';
+         return res.status(400).json(errors);
+      }
+      let currentUser = {
+         _id: user._id,
+         name: user.name,
+         avatar: user.avatar,
+         ratingsDone: user.ratingsDone
+      };
+      res.json(currentUser);
+   }).catch((err) => {
+      res.status(400).json(currentUser);
    });
 });
 

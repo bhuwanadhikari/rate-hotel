@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { registerUser } from '../../redux/actions/authActions';
@@ -142,9 +142,9 @@ class SignUp extends Component{
 }
 
 SignUp.propTypes = {
-   registerUser: propTypes.func.isRequired,
-   auth: propTypes.object.isRequired,
-   errors : propTypes.object.isRequired
+   registerUser: PropTypes.func.isRequired,
+   auth: PropTypes.object.isRequired,
+   errors : PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({

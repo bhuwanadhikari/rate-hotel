@@ -23,7 +23,7 @@ import AboutUs from './containers/Account/AboutUs/AboutUs';
 import Help from './containers/Account/Help/Help';
 
 import setAuthToken from './utils/setAuthToken';
-import {logUserOut, setCurrentUser} from './redux/actions/authActions';
+import {logUserOut, setUser} from './redux/actions/authActions';
 import { clearCurrentProfile } from './redux/actions/profileActions';
 
 import PrivateRoute from './hoc/PrivateRoute';
@@ -38,7 +38,7 @@ if(localStorage.jwtToken){
    //decode the token
    const decoded = jwt_decode(localStorage.jwtToken);
    //set user and is authenticated
-   store.dispatch(setCurrentUser(decoded));
+   store.dispatch(setUser(decoded));
 
    //check for expired jwt
    const currentTime = Date.now()/1000;

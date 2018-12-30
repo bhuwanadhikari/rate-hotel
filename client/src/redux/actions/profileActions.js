@@ -2,7 +2,10 @@ import axios from 'axios';
 
 
 import {
-   CLEAR_CURRENT_PROFILE, GET_ERRORS,
+   GET_CURRENT_USER,
+   CLEAR_CURRENT_USER,
+   CLEAR_CURRENT_PROFILE,
+   GET_ERRORS,
    GET_PROFILE,
    PROFILE_LOADING
 } from './types';
@@ -42,17 +45,38 @@ export const clearCurrentProfile = () => {
    };
 };
 
+//Clear current profile
+export const clearCurrentUser = () => {
+   return {
+      type: CLEAR_CURRENT_USER
+   };
+};
+
 //Edit current profile
 export const editCurrentProfile = (profileData) => (dispatch) => {
-  axios
-     .post('/api/userProfile', profileData)
-     .then((res) => dispatch({
-        type: GET_PROFILE,
-        payload: res.data
-     }))
-     .catch((err)=> dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-     })
-     );
+   axios
+      .post('/api/userProfile', profileData)
+      .then((res) => dispatch({
+         type: GET_PROFILE,
+         payload: res.data
+      }))
+      .catch((err)=> dispatch({
+            type: GET_ERRORS,
+            payload: err.response.data
+         })
+      );
+};
+
+//getting whole userData as of User model who is just logged in
+export const getCurrentUser = () => (dispatch) => {
+   axios
+      .get('api/users/current')
+      .then(res => dispatch({
+         type: GET_CURRENT_USER,
+         payload:res.data
+      })).catch(err => dispatch({
+         type: GET_ERRORS,
+         payload: err.response.data
+      })
+   )
 };

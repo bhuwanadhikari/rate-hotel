@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { getCurrentProfile, getCurrentUser } from '../../../../redux/actions/profileActions';
 
 
 import './ProfileCard.css';
@@ -10,9 +12,23 @@ import Option from './Option/Option';
 import locationIcon from '../../../../img/forProfile/location.svg'
 
 class ProfileCard extends Component {
+   constructor(){
+      super();
+      this.state = {};
+   }
+
+   componentDidMount(){
+      this.props.getCurrentUser();
+   }
 
 
    render() {
+      // const {profile} = this.props.profile;
+      let profile = {};
+
+
+
+
       return (
          <div className="ProfileCard">
 
@@ -27,14 +43,21 @@ class ProfileCard extends Component {
             </div>
 
 
-            <div className="Intro">Mahendra Bahadur Lopchan</div>
-            <div className="UserName">@sammy_hero</div>
+            <div className="Intro">{this.props.auth.name}</div>
+            {profile.handle?(<div className="UserName">@{profile.handle}</div>):null}
 
+
+            {profile.location?(
             <div className="LocationBox">
                <img src={locationIcon} alt="Location Icon in CrowApp"/>
-               <p className="Location">   Lamachaur, Pokhara</p>
-            </div>
-            <div className="Bio">Literature is in my blood. Interests in Basketball and Blogging. Student of Compter engineering</div>
+               <p className="Location">{profile.location}</p>
+            </div>):null}
+
+
+            {profile.bio ?
+               (<div className="Bio">Literature is in my blood. Interests in Basketball and Blogging. Student of Compter
+                  engineering</div>):null}
+
 
             <div className="StatHolder">
                <Stat name="Total Ratings Done" value="13" style = {{'border-right': '3px solid silver'}}/>
@@ -42,13 +65,8 @@ class ProfileCard extends Component {
             </div>
 
 
-            {/*<div className="Study">*/}
-               {/*<div className="Faculty">Mechanical Engineering</div>*/}
-               {/*<div className="Year">Fourth Year</div>*/}
-            {/*</div>*/}
 
             <div className="Media">
-
                <p>Social Media Links</p>
                <ul>
                   <li><NavLink to="/" ><i className="fa fa-facebook" aria-hidden="true"> </i></NavLink></li>
@@ -57,18 +75,24 @@ class ProfileCard extends Component {
                   <li><NavLink to="/" ><i className="fa fa-instagram" aria-hidden="true"> </i></NavLink></li>
                </ul>
             </div>
-
          </div>
       );
    }
 }
 
+ProfileCard.propTypes = {
+   getCurrentUser: PropTypes.func.isRequired,
+   getCurrentProfile: PropTypes.func.isRequired,
+  profile: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+
 function mapStateToProps(state) {
    return {
-      auth: state.auth
+      auth: state.auth,
+      profile: state.profile
    };
 }
 
-export default connect(
-   mapStateToProps,
-)(ProfileCard);
+export default connect(mapStateToProps, {getCurrentProfile, getCurrentUser})(ProfileCard);
