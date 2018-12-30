@@ -9,12 +9,12 @@ module.exports = function validateLoginInput(data){
 
 
     if(!validator.isEmail(data.email)){
-        errors.email = 'Email you entered is not valid';
+        errors.email = 'Invalid Email!';
     }
 
 
     if(validator.isEmpty(data.password)){
-        errors.password = 'Password field should not be empty';
+        errors.password = 'Password field can not be empty';
     }
 
     return {

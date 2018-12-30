@@ -23,10 +23,10 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now()
     },
-    faculty: {
-        type: String,
-        required: true
-    }
+   ratingsDone: {
+      type: Schema.Types.Mixed,
+      default: []
+   }
 });
 
 

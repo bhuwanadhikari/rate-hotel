@@ -1,0 +1,81 @@
+.AuthNavigationItem {
+    height: 50px;
+    width: 25%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.AuthNavigationItem .AuthNavLink {
+    display: block;
+    color: white;
+    text-decoration: none;
+    height: 47px;
+    width: 100%;
+}
+
+.AuthNavigationItem img {
+    display: block;
+    height: 22px;
+    padding: 12px auto 13px auto;
+    margin: auto;
+}
+
+
+
+.AuthNavigationItem .ActiveLink{
+    border-bottom: 3px solid lavenderblush;
+}
+
+
+.AccountIsActive {
+    box-sizing: border-box;
+    border-bottom: 3px solid lavenderblush;
+}
+
+.ActiveNavAccount {
+    background-color: lavenderblush;
+    box-sizing: padding-box;
+    box-shadow: -3px 3px 5px gray;
+}
+
+
+
+/*For DESKTOPS ONLY*/
+@media only screen and (min-width: 800px) {
+    .AuthNavigationItem .AuthNavLink:hover {
+        border-bottom: 3px solid lavenderblush ;
+    }
+
+    .AuthNavigationItem .ActiveLink{
+        border-bottom: 3px solid lavenderblush;
+    }
+
+    .NavigationItems{
+    }
+    .AuthNavigationItem {
+     }
+
+    .AuthNavigationItem .AuthNavLink {
+    }
+}
+
+/*For TABS ONLY*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .AuthNavigationItem .AuthNavLink:hover {
+        border-bottom: 3px solid lavenderblush ;
+    }
+
+    .AuthNavigationItem .ActiveLink{
+        border-bottom: 3px solid lavenderblush;
+    }
+
+    .NavigationItems{
+    }
+
+    .AuthNavigationItem {
+    }
+
+    .AuthNavigationItem .AuthNavLink {
+    }
+}

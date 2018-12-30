@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+
+}
+
+
+
+/* Declaration of variables*/
+
+:root {
+    --theme: #fc4c02;
+    --darkTheme: #b36200;
+    --complementary: #ffab8e;
+    --lightTheme: lavenderblush;
+
+    --intro: #5A6F9B;
+    --bio: #414A4C;
+
+    --chhaya: var(--theme);
+    --themeDrop: rgba(185, 85, 32, 0.5);
+
+    /*BUTTON CONDITIONS*/
+    --success: var(--theme);
+    --seto: white;
+    --danger: red;
+    --warning: #666;
+
+    --successHover: white;
+    --warningHover: white;
+    --warningBg: gray;
+    --btnBg:rgba(255, 255, 255, 0.5);
+
+
+
+    --lowWidth: 450px;
+    --highWidth: 800px;
+
+
+}

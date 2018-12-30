@@ -13,32 +13,20 @@ const UserProfileSchema = new Schema({
     location: {
         type: String
     },
-    year: {
-        type: String,
-        required: true
-    },
     bio: {
         type: String
     },
-    nRating: {
-        type: Number,
-        default: 0
-    },
-    aRating: {
-        type: Number,
-        default: 0
-    },
     social: {
+       facebook: {
+          type: String
+       },
         twitter: {
             type: String
         },
         linkedIn: {
             type: String
         },
-        github: {
-            type: String
-        },
-        facebook: {
+        instagram: {
             type: String
         }
     }

@@ -5,21 +5,21 @@ module.exports = function validateUserProfileInput(data){
     let errors = {};
 
     data.handle = !isEmpty(data.handle) ? data.handle : '';
-    data.year = !isEmpty(data.year) ? data.year : '';
 
 
 
     if(validator.isEmpty(data.handle)){
-        errors.handle = 'Handle is required';
+        errors.handle = 'Username is required';
     }
-    if(!validator.isLength(data.handle, {min: 2, max: 40})){
-        errors.handle = 'Handle\'s length should be between 2 and 40';
+
+    if(!isEmpty(data.handle)) {
+       if (!validator.isLength(data.handle, {min: 4, max: 40})) {
+          errors.handle = 'Username should be 4 to 40 characters long';
+       }
     }
 
 
-    if(validator.isEmpty(data.year)){
-        errors.year = 'Year is required';
-    }
+
 
     //check for the social links
     if(!isEmpty(data.facebook)){
@@ -32,14 +32,14 @@ module.exports = function validateUserProfileInput(data){
             errors.twitter = 'URL you entered is not valid';
         }
     }
-    if(!isEmpty(data.linkedin)){
-        if(!validator.isURL(data.linkedin)){
-            errors.linkedin = 'URL you entered is not valid';
+    if(!isEmpty(data.linkedIn)){
+        if(!validator.isURL(data.linkedIn)){
+            errors.linkedIn = 'URL you entered is not valid';
         }
     }
-    if(!isEmpty(data.github)){
-        if(!validator.isURL(data.github)){
-            errors.github = 'URL you entered is not valid';
+    if(!isEmpty(data.instagram)){
+        if(!validator.isURL(data.instagram)){
+            errors.instagram = 'URL you entered is not valid';
         }
     }
 

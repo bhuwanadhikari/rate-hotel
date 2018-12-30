@@ -1,0 +1,13 @@
+.Modal {
+    position: absolute;
+    height: auto;
+    z-index: 35;
+    background-color: var(--seto);
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 25px var(--chhaya);
+    padding: 20px 0;
+    left: 5%;
+    top: 10%;
+    transition: all 0.45s ease-out;
+}

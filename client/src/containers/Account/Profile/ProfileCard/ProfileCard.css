@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Bitter|Lato|Mukta|Open+Sans|Quicksand|Raleway|Ubuntu');
+
+.ProfileCard {
+    width: 100vw;
+    margin: auto;
+    background-color: var(--lightTheme);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 0.5s ease-out;
+}
+
+.AvatarHolder {
+    width: 100%;
+    margin: auto;
+    height: 195px;
+
+}
+
+.Transformable {
+    width: 100%;
+    background-color: var(--complementary);
+    height: 100px;
+}
+.Transformable::after{
+    content: '';
+    position: absolute;
+    top: 100px;
+    height: 100px;
+    width: 100vw;
+    transform: skewY(-10deg);
+    background-color: var(--complementary);
+}
+
+.Avatar {
+    height: 85px;
+    width: 85px;
+    margin: auto;
+    position: absolute;
+    top: calc(150px);
+    left: calc(50% - 50px);
+}
+
+.Avatar img {
+    height: 100px;
+    margin: auto;
+    border-radius: 100px;
+    border: 2px solid var(--theme)
+}
+
+.Intro {
+    text-align: center;
+    font-family: Comfortaa, "Helvetica Neue", sans-serif;
+    width: 90%;
+    padding: 18px 5px 4px 5px ;
+    margin: auto;
+    font-weight: bold;
+    color: var(--intro);
+    font-size: 1.1em;
+}
+
+.UserName {
+    text-align: center;
+    font-family: Comfortaa, "Helvetica Neue", sans-serif;
+    width:50%;
+    margin: auto;
+    font-weight: bold;
+    color: var(--intro);
+    font-size: 0.65em;
+    filter: opacity(80%);
+}
+
+
+.LocationBox {
+    font-family: 'Open Sans', sans-serif;
+    width: 160px;
+    margin: auto;
+}
+
+.LocationBox img {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+}
+
+.LocationBox p {
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.9em;
+}
+
+
+.Bio {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
+    color: var(--bio);
+}
+
+.StatHolder {
+    width: 100%;
+    margin: auto;
+}
+
+.Stat {
+    width: 50%;
+    display: inline-block;
+    height: 70px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+
+.Stat .StatValue {
+    text-align: center;
+    font-family: Candara, sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: black;
+}
+
+
+.Stat .StatName {
+    text-align: center;
+    font-family:'Muli' , sans-serif;
+    color: var(--theme);
+    font-size: 0.8em;
+    margin-top: 4px;
+}
+
+
+
+
+
+.Media {
+    border-top: 1px solid silver;
+    padding: 5px 0 25px 0;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+.Media p {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    font-family: "PT Sans", sans-serif;
+}
+
+.Media ul {
+    padding: 0;
+    display:flex;
+    width: 100%;
+    margin: auto;
+}
+
+.Media ul li {
+    list-style: none;
+    margin: 0 calc((100% - 200px) / 8);
+}
+
+.Media ul li a {
+    width:50px;
+    height:50px;
+    display:block;
+    text-align:center;
+    border-radius: 50%;
+    padding: 2px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+}
+
+.Media ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.Media ul li a .fa {
+    width: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:20px;
+    color: #262626;
+    transition: .5s;
+}
+
+
+.Media ul li:nth-child(1) a i {
+    color: #3b5998;
+}
+
+.Media ul li:nth-child(2) a i {
+    color: #00aced;
+}
+
+.Media ul li:nth-child(3) a i {
+    color: #007bb6;
+}
+
+.Media ul li:nth-child(4) a i {
+    color: deeppink;
+}
+
+
+
+
+.Media ul li:nth-child(1) a:hover .fa {
+    color: #3b5998;
+}
+
+.Media ul li:nth-child(2) a:hover .fa {
+    color: #00aced;
+}
+
+.Media ul li:nth-child(3) a:hover .fa {
+    color: #007bb6;
+}
+
+.Media ul li:nth-child(4) a:hover .fa {
+    color: deeppink;
+}
+
+
+
+
+
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+    .ProfileCard{
+        width: 65vw;
+        margin: auto;
+        background-color: transparent;
+    }
+
+    .Transformable {
+        height: 150px;
+        background-color: transparent;
+    }
+
+    .Transformable::after{
+        height: 0;
+        width: 0;
+    }
+
+    .Avatar img {
+        border: 2px solid var(--theme)
+    }
+
+
+    .StatHolder, .Media, .Bio {
+        width: 70%;
+    }
+
+
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .ProfileCard{
+        width: 80vw;
+        margin: auto;
+        background-color: transparent;
+    }
+
+    .Avatar img {
+        border: 2px solid var(--theme)
+    }
+
+    .Transformable {
+        height: 150px;
+        background-color: transparent;
+    }
+
+    .Transformable::after{
+        height: 0;
+        width: 0;
+    }
+
+    .StatHolder, .Media, .Bio {
+        width: 80%;
+    }
+
+}

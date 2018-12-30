@@ -1,0 +1,26 @@
+.FormBox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.UserIcon{
+    display: block;
+    width: 100px;
+    margin: 30px auto;
+}
+
+h1{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    color: var(--theme);
+}
+
+.Form {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+}
+
+

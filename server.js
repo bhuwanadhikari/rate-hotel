@@ -7,6 +7,7 @@ const users = require('./routes/api/users');
 const userProfile = require('./routes/api/userProfile');
 const hotels = require('./routes/api/hotels');
 const hotelProfile = require('./routes/api/hotelProfile');
+const path = require('path');
 
 
 const app = express();
@@ -17,6 +18,16 @@ app.use(bodyParser.json());
 
 //database
 const db = require('./config/keys').mongoURL;
+
+//serve static assets if in production
+if(process.env.NODE_ENV === 'production'){
+   //set static folder
+   app.use(express.static('client/build'));
+
+   app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+   });
+}
 
 //connection to database
 mongoose
@@ -43,7 +54,6 @@ app.use('/api/hotels', hotels);
 app.use('/api/hotelProfile', hotelProfile);
 
 
-app.get('/', (req, res) => res.send("Hello World"));
 
 app.listen(port, () => console.log(`Server running in port ${port}`));
 

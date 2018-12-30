@@ -1,0 +1,15 @@
+.AuthNavigationItem {
+    height: 50px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+
+
+.AuthNavigationItem img {
+    display: block;
+    height: 26px;
+    padding: 13px 13px 13px 13px;
+}
+

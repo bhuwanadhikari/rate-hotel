@@ -24,7 +24,7 @@ router.get('/all', (req, res) => {
 });
 
 
-//@route /api/hotelProfile/hotelid
+//@route /api/hotelProfile/id/hotelid
 //get hotel by id
 //public
 router.get('/id/:hotel_id', (req, res) => {

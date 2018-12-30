@@ -9,7 +9,7 @@ const Rating = require('../../models/Rating');
 
 const router = express.Router();
 
-//Load Input Validation;
+//Load Splash Validation;
 const ValidateRegisterInput = require('../../validation/hotel');
 
 //@route /api/hotels/register
@@ -107,7 +107,7 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
             rating.rates[key].unshift(object);
          }
       }
-      
+
 
 
       rating.save().then(rating => {
@@ -123,32 +123,3 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
 
 module.exports = router;
 
-
-
-
-
-
-
-
-
-/*
-
-const ratingsObject = new Rating({
-   meal
-});
-if(req.body.dal){ratingsObject.meal.dal[] = req.body.dal}
-if(req.body.rice){ratingsObject.meal.rice = req.body.rice}
-if(req.body.curry){ratingsObject.meal.curry = req.body.curry}
-if(req.body.chutney){ratingsObject.meal.chutney = req.body.chutney}
-if(req.body.salad){ratingsObject.meal.salad = req.body.salad}
-if(req.body.sideDish){ratingsObject.meal.sideDish = req.body.sideDish}
-if(req.body.lunch){ratingsObject.lunch = req.body.lunch}
-if(req.body.tea){ratingsObject.tea = req.body.tea}
-if(req.body.expensiveness){ratingsObject.expensiveness = req.body.expensiveness}
-if(req.body.vif){ratingsObject.vif = req.body.vif}
-if(req.body.comfortability){ratingsObject.comfortability = req.body.comfortability}
-if(req.body.hygiene){ratingsObject.hygiene = req.body.hygiene}
-if(req.body.serving){ratingsObject.serving = req.body.serving}
-if(req.body.freshness){ratingsObject.freshness = req.body.freshness}
-
-*/

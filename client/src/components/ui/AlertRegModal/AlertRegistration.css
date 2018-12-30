@@ -1,0 +1,46 @@
+.Modal {
+    width: 80vw;
+    height: 20vh;
+    color: #3D2B1F;
+    position: fixed;
+    z-index: 500;
+    background-color: Lavenderblush;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 3px #ccc;
+    text-align: center;
+    padding: 16px;
+    top: 20%;
+    font-family: Comfortaa, sans-serif;
+    font-size: 0.85em;
+    left: 10vw;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+.ModalBtn {
+    padding: 5px 15px;
+    display: block;
+    margin: 3px auto;
+
+}
+
+
+
+/*For DESKTOPS*/
+@media only screen and (min-width: 800px) {
+    .Modal {
+        width: 30vw;
+        height: 20vh;
+        left: 35vw;
+    }
+}
+
+/*For TABS*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .Modal {
+        width: 50vw;
+        height: 20vw;
+        left: 25vw;
+
+    }
+}
