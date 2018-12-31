@@ -17,18 +17,13 @@ class ProfileCard extends Component {
       this.state = {};
    }
 
-   componentDidMount(){
-      this.props.getCurrentUser();
-   }
+
 
 
    render() {
       // const {profile} = this.props.profile;
-      let profile = {};
-
-
-
-
+      const {currentUser, profile} = this.props.data;
+      const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
       return (
          <div className="ProfileCard">
 
@@ -43,20 +38,21 @@ class ProfileCard extends Component {
             </div>
 
 
-            <div className="Intro">{this.props.auth.name}</div>
+            <div className="Intro">{currentUser.name}</div>
             {profile.handle?(<div className="UserName">@{profile.handle}</div>):null}
 
 
             {profile.location?(
-            <div className="LocationBox">
-               <img src={locationIcon} alt="Location Icon in CrowApp"/>
-               <p className="Location">{profile.location}</p>
-            </div>):null}
+               <div className="LocationBox">
+                  <div className="LocationWrapper">
+                     <img src={locationIcon} alt="Location Icon in CrowApp"/>
+                     <p className="Location">{profile.location}</p>
+                  </div>
+               </div>):null}
 
 
             {profile.bio ?
-               (<div className="Bio">Literature is in my blood. Interests in Basketball and Blogging. Student of Compter
-                  engineering</div>):null}
+               (<div className="Bio">{profile.bio}</div>):null}
 
 
             <div className="StatHolder">
@@ -65,16 +61,17 @@ class ProfileCard extends Component {
             </div>
 
 
-
-            <div className="Media">
-               <p>Social Media Links</p>
-               <ul>
-                  <li><NavLink to="/" ><i className="fa fa-facebook" aria-hidden="true"> </i></NavLink></li>
-                  <li><NavLink to="/" ><i className="fa fa-twitter" aria-hidden="true"> </i></NavLink></li>
-                  <li><NavLink to="/" ><i className="fa fa-linkedin" aria-hidden="true"> </i></NavLink></li>
-                  <li><NavLink to="/" ><i className="fa fa-instagram" aria-hidden="true"> </i></NavLink></li>
-               </ul>
-            </div>
+            {mediaState?(
+               <div className="Media">
+                  <p>Social Media Links</p>
+                  <ul>
+                     <li><NavLink ><i className="fa fa-facebook" aria-hidden="true"> </i></NavLink></li>
+                     <li><NavLink ><i className="fa fa-twitter" aria-hidden="true"> </i></NavLink></li>
+                     <li><NavLink ><i className="fa fa-linkedin" aria-hidden="true"> </i></NavLink></li>
+                     <li><NavLink ><i className="fa fa-instagram" aria-hidden="true"> </i></NavLink></li>
+                  </ul>
+               </div>):null
+            }
          </div>
       );
    }
@@ -83,8 +80,8 @@ class ProfileCard extends Component {
 ProfileCard.propTypes = {
    getCurrentUser: PropTypes.func.isRequired,
    getCurrentProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+   profile: PropTypes.object.isRequired,
+   auth: PropTypes.object.isRequired
 };
 
 

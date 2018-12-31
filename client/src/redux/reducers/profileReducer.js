@@ -11,7 +11,7 @@ const initialState = {
    currentUser: null,
    profile: null,
    profiles: null,
-   loading: false
+   loading: 0
 };
 
 export default function (state = initialState, action) {
@@ -20,14 +20,14 @@ export default function (state = initialState, action) {
       case PROFILE_LOADING:
          return {
             ...state,
-            loading: true
+            loading: state.loading+1
          };
 
       case GET_PROFILE:
          return {
             ...state,
             profile: action.payload,
-            loading: false
+            loading: state.loading+1
          };
 
       case CLEAR_CURRENT_PROFILE:
@@ -39,7 +39,8 @@ export default function (state = initialState, action) {
       case GET_CURRENT_USER:
          return{
             ...state,
-            currentUser: action.payload
+            currentUser: action.payload,
+            loading: state.loading+1
          };
 
       case CLEAR_CURRENT_USER:

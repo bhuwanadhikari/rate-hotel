@@ -15,11 +15,14 @@ export const getCurrentProfile = () => dispatch => {
    dispatch(setProfileLoading());
    axios
       .get('/api/userProfile')
-      .then(res =>
+      .then(res => {
+
          dispatch({
-            type: GET_PROFILE,
-            payload: res.data
-         })
+               type: GET_PROFILE,
+               payload: convertProfileObject(res.data)
+
+         }
+         )}
       )
       .catch(err =>
          dispatch({
@@ -56,10 +59,16 @@ export const clearCurrentUser = () => {
 export const editCurrentProfile = (profileData) => (dispatch) => {
    axios
       .post('/api/userProfile', profileData)
-      .then((res) => dispatch({
-         type: GET_PROFILE,
-         payload: res.data
-      }))
+      .then((res) => {
+         dispatch({
+            type: GET_PROFILE,
+            payload: res.data
+         });
+         dispatch({
+            type: GET_ERRORS,
+            payload: {msg: 'cleared'} //just for the errors to be cleared
+         });
+      })
       .catch((err)=> dispatch({
             type: GET_ERRORS,
             payload: err.response.data
@@ -69,6 +78,7 @@ export const editCurrentProfile = (profileData) => (dispatch) => {
 
 //getting whole userData as of User model who is just logged in
 export const getCurrentUser = () => (dispatch) => {
+   setProfileLoading();
    axios
       .get('api/users/current')
       .then(res => dispatch({
@@ -79,4 +89,12 @@ export const getCurrentUser = () => (dispatch) => {
          payload: err.response.data
       })
    )
+};
+
+
+//convert profile object
+export const convertProfileObject = (oldObj) => {
+   const newObj = {...oldObj, ...oldObj.social};
+   delete newObj.social;
+   return newObj;
 };

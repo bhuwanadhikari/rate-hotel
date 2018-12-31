@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import { getCurrentProfile } from '../../../redux/actions/profileActions';
+import { getCurrentProfile, getCurrentUser } from '../../../redux/actions/profileActions';
 
 import './Profile.css';
 import ProfileCard from './ProfileCard/ProfileCard';
@@ -9,6 +9,7 @@ import Activity from './Activity/Activity';
 
 
 import Modal from '../../../components/ui/Modal/Modal';
+import Spinner from '../../../components/ui/Spinnner/Spinner';
 import EditProfile from './EditProfile/EditProfile';
 
 class Profile extends Component {
@@ -19,9 +20,8 @@ class Profile extends Component {
       };
    }
 
-   onBackDropClickHandler = (e) => {
-      e.preventDefault();
-      this.setState({showModal: false});
+   onBackDropClickHandler = () => {
+         this.setState({showModal: false});
    };
 
    onOptionHandler = (e) => {
@@ -30,26 +30,33 @@ class Profile extends Component {
    };
 
    componentDidMount(){
+      this.props.getCurrentUser();
       this.props.getCurrentProfile();
    }
 
    render() {
-      return (
-         <div className="ProfileContainer">
+      const {profile, loading, currentUser} = this.props.profile;
+      if(profile === null || loading < 3 || currentUser === null){
+         return <Spinner/>
+      }else {
+         return (
+            <div className="ProfileContainer">
 
-            <Modal show = {this.state.showModal} modalClosed = {this.onBackDropClickHandler}>
-               <EditProfile modalClosed = {this.onBackDropClickHandler}/>
-            </Modal>
+               <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler}>
+                  <EditProfile modalClosed={this.onBackDropClickHandler}/>
+               </Modal>
 
-            <ProfileCard optioned = {this.onOptionHandler}/>
-            <Activity/>
-         </div>
-      );
+               <ProfileCard data={this.props.profile} optioned={this.onOptionHandler}/>
+               <Activity/>
+            </div>
+         );
+      }
    }
 }
 
 
 Profile.propTypes = {
+   getCurrentUser: PropTypes.func.isRequired,
    getCurrentProfile: PropTypes.func.isRequired,
    profile: PropTypes.object.isRequired
 };
@@ -62,4 +69,4 @@ function mapStateToProps(state) {
 
 
 
-export default connect(mapStateToProps,{ getCurrentProfile})(Profile);
+export default connect(mapStateToProps,{getCurrentUser, getCurrentProfile})(Profile);

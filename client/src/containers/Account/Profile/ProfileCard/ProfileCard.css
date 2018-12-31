@@ -71,19 +71,28 @@
 
 
 .LocationBox {
+    display: block;
     font-family: 'Open Sans', sans-serif;
-    width: 160px;
+    width: 100%;
+    margin:auto;
+}
+
+.LocationWrapper {
+    display: block;
+    padding: 0 auto;
     margin: auto;
+
 }
 
 .LocationBox img {
     width: 1em;
     height: 1em;
-    display: inline-block;
+    display: inline;
 }
 
 .LocationBox p {
-    display: inline-block;
+    display: inline;
+    margin: 0;
     margin-left: 3px;
     font-size: 0.9em;
 }

@@ -90,7 +90,6 @@ router.get('/all', (req, res) => {
 router.get('/',passport.authenticate('jwt', {session:false}), (req, res) => {
    const errors = {};
    UserProfile.findOne({user: req.user.id}) //req.user's user from stored token's payload
-      .populate('user', ['name', 'avatar', 'faculty'  ])
       .then((profile) => {
          if(!profile){
             errors.noProfile = 'There is no profile for this user';
