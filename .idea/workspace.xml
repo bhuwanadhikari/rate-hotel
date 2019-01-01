@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/components/ui/Spinnner/Spinner.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/img/spinner.gif" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js" afterPath="$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js" afterPath="$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.css" afterPath="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.css" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js" afterPath="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/actions/profileActions.js" afterPath="$PROJECT_DIR$/client/src/redux/actions/profileActions.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js" afterPath="$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js" />
-      <change beforePath="$PROJECT_DIR$/routes/api/userProfile.js" afterPath="$PROJECT_DIR$/routes/api/userProfile.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,13 +23,13 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7855204">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Profile.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
+                <state relative-caret-position="412">
                   <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
@@ -47,11 +41,19 @@
           <file leaf-file-name="ProfileCard.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="571">
-                  <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="14">
+                  <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProfileCard.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="524">
+                  <caret line="305" column="23" lean-forward="false" selection-start-line="305" selection-start-column="23" selection-end-line="305" selection-end-column="23" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -59,7 +61,7 @@
           <file leaf-file-name="profileReducer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
+                <state relative-caret-position="504">
                   <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#140#0" expanded="true" />
@@ -71,7 +73,7 @@
           <file leaf-file-name="profileActions.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/redux/actions/profileActions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="398">
+                <state relative-caret-position="392">
                   <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
@@ -95,11 +97,11 @@
           <file leaf-file-name="EditProfile.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="104">
-                  <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+                <state relative-caret-position="188">
+                  <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
-                    <element signature="e#1996#4271#0" expanded="false" />
+                    <element signature="e#1952#4227#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -144,7 +146,7 @@
           <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/index.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="490">
+                <state relative-caret-position="448">
                   <caret line="35" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                   <folding />
                 </state>
@@ -289,7 +291,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -418,6 +419,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -562,12 +564,13 @@
       <workItem from="1546158503432" duration="3345000" />
       <workItem from="1546167845573" duration="1381000" />
       <workItem from="1546236350191" duration="17044000" />
-      <workItem from="1546281170762" duration="6970000" />
+      <workItem from="1546281170762" duration="7201000" />
+      <workItem from="1546321649142" duration="8581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="717176000" />
+    <option name="totallyTimeSpent" value="725988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -590,7 +593,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4313433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.251932" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="0" y="291" width="1366" height="155" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.2522388" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="0" y="291" width="1366" height="155" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -903,7 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +962,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
+        <state relative-caret-position="448">
           <caret line="35" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
@@ -968,7 +970,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/redux/actions/profileActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="392">
           <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -978,7 +980,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="504">
           <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding>
             <element signature="e#0#140#0" expanded="true" />
@@ -988,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="412">
           <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -998,30 +1000,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+        <state relative-caret-position="188">
+          <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#1996#4271#0" expanded="false" />
+            <element signature="e#1952#4227#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="89" selection-end-column="20" />
+        <state relative-caret-position="524">
+          <caret line="305" column="23" lean-forward="false" selection-start-line="305" selection-start-column="23" selection-end-line="305" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="14">
+          <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -66,7 +66,6 @@ class EditProfile extends Component {
 
 componentDidMount(){
    const profile = this.props.profile.profile;
-   console.log(this.props.profile.profile);
 
    const proArr = ['handle','location','bio','facebook','twitter','linkedIn','instagram'];
 

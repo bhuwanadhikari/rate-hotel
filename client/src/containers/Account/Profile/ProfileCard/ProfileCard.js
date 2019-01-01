@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getCurrentProfile, getCurrentUser } from '../../../../redux/actions/profileActions';
 
@@ -19,14 +18,44 @@ class ProfileCard extends Component {
 
 
 
-
    render() {
-      // const {profile} = this.props.profile;
+      //extract from the redux store
       const {currentUser, profile} = this.props.data;
+      //to check media
       const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
+      //setup the social media links
+      const social = {};
+      social.facebook = profile.facebook? profile.facebook :"";
+      social.twitter = profile.twitter? profile.twitter :"";
+      social.linkedin = profile.linkedIn? profile.linkedin :"";
+      social.instagram = profile.instagram? profile.instagram :"";
+
+
+      let transformedLinks = Object.keys(social)
+         .map(soKey => {
+            if(social[soKey] !== "") {
+               console.log(soKey);
+               return (
+                  <li key={soKey}>
+                     <a className="Anchor" href = {`${social[soKey]}`} >
+                        <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
+                     </a>
+                  </li>
+               );
+            } else {
+               console.log("empthy");
+               return (
+                  <li key={soKey} >
+                     <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>
+                        <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
+                     </div>
+                  </li>
+               );
+            }
+         });
+
       return (
          <div className="ProfileCard">
-
 
             <div className="AvatarHolder">
                <div className="Transformable">
@@ -65,10 +94,7 @@ class ProfileCard extends Component {
                <div className="Media">
                   <p>Social Media Links</p>
                   <ul>
-                     <li><NavLink ><i className="fa fa-facebook" aria-hidden="true"> </i></NavLink></li>
-                     <li><NavLink ><i className="fa fa-twitter" aria-hidden="true"> </i></NavLink></li>
-                     <li><NavLink ><i className="fa fa-linkedin" aria-hidden="true"> </i></NavLink></li>
-                     <li><NavLink ><i className="fa fa-instagram" aria-hidden="true"> </i></NavLink></li>
+                     {transformedLinks}
                   </ul>
                </div>):null
             }
