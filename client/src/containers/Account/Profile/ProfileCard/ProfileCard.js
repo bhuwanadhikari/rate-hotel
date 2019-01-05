@@ -30,6 +30,18 @@ class ProfileCard extends Component {
       social.linkedin = profile.linkedIn? profile.linkedin :"";
       social.instagram = profile.instagram? profile.instagram :"";
 
+      //for dynamic width of location
+      let customWidth, custom;
+      if(profile.location !== null || profile.location !== ''){
+         const length = profile.location.length;
+         customWidth = (length+29)+'px';
+
+         custom = {
+            width: customWidth
+         };
+
+      }
+
 
       let transformedLinks = Object.keys(social)
          .map(soKey => {
@@ -43,7 +55,7 @@ class ProfileCard extends Component {
                   </li>
                );
             } else {
-               console.log("empthy");
+               console.log("empty");
                return (
                   <li key={soKey} >
                      <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>
@@ -72,7 +84,7 @@ class ProfileCard extends Component {
 
 
             {profile.location?(
-               <div className="LocationBox">
+               <div className="LocationBox" >
                   <div className="LocationWrapper">
                      <img src={locationIcon} alt="Location Icon in CrowApp"/>
                      <p className="Location">{profile.location}</p>
