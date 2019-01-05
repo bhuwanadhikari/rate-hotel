@@ -16,31 +16,31 @@ class ProfileCard extends Component {
    }
 
 
-
    render() {
       //extract from the redux store
       const {currentUser, profile} = this.props.data;
       //to check media
       const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
       //setup the social media links
-      console.log(profile);
+
       const social = {};
       social.facebook = profile.facebook? profile.facebook :"";
       social.twitter = profile.twitter? profile.twitter :"";
       social.linkedin = profile.linkedIn? profile.linkedin :"";
       social.instagram = profile.instagram? profile.instagram :"";
 
-console.log(social);
 
       let transformedLinks = Object.keys(social)
          .map(soKey => {
             if(social[soKey] !== "") {
-               console.log(soKey);
                return (
                   <li key={soKey}>
-                     <a className="Anchor" href = {`${soKey}`} >
+                     <div className="Anchor" onClick = {
+                        (e) => {window.location.href = social[soKey];
+                        console.log(social[soKey])}
+                     } >
                         <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
-                     </a>
+                     </div>
                   </li>
                );
             } else {
