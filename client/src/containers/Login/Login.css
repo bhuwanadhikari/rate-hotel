@@ -22,50 +22,5 @@ h1{
     padding: 0;
 }
 
-.Input{
-    display: block;
-    width: 75vw;
-    margin : 10px auto;
-    height: 30px;
-    border: 1px solid var(--theme);
-    border-radius: 3px;
-    color: #3D2B1F;
-    font-family: 'Muli', sans-serif;
-    padding: 4px;
-}
-
-input:focus{
-    background-color: var(--lightTheme);
-}
-
-.errorFeedback {
-    position: relative;
-    top: -7px;
-    margin: auto;
-    width: 75vw;
-    font-size: 0.65em;
-    box-sizing: border-box;
-    color: var(--danger);
-
-}
 
 
-
-
-
-
-
-/*For DESKTOPS*/
-@media only screen and (min-width: 800px) {
-    .Input{
-        width: 40%;;
-    }
-}
-
-
-/*For TABS*/
-@media only screen and (min-width: 450px) and (max-width: 800px) {
-    .Input{
-        width: 60%;
-    }
-}

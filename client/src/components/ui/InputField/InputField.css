@@ -28,7 +28,8 @@
     top: -7px;
     margin: auto;
     width: 75vw;
-    font-size: 11px;
+    text-align: center;
+    font-size: 9.5px;
     font-family: Comfortaa, sans-serif;
     box-sizing: border-box;
     color: var(--danger);
@@ -42,19 +43,24 @@
 
 /*For DESKTOPS*/
 @media only screen and (min-width: 800px) {
+
     .InputField{
         width: 25vw;;
     }
+
     .errorFeedback {
-        width: 25vw;
+        width: 100%;
     }
 }
 
 /*For TABS*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
+
     .InputField{
         width: 60vw;;
-    }.errorFeedback {
-         width: 60vw;
+    }
+
+    .errorFeedback {
+         width: 100%;
      }
 }
