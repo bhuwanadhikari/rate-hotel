@@ -62,7 +62,7 @@ export const editCurrentProfile = (profileData) => (dispatch) => {
       .then((res) => {
          dispatch({
             type: GET_PROFILE,
-            payload: res.data
+            payload: convertProfileObject(res.data)
          });
          dispatch({
             type: GET_ERRORS,

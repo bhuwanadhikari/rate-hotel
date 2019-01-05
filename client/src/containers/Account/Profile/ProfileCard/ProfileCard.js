@@ -8,7 +8,6 @@ import './ProfileCard.css';
 import Stat from './Stat/Stat';
 import Option from './Option/Option';
 
-import locationIcon from '../../../../img/forProfile/location.svg'
 
 class ProfileCard extends Component {
    constructor(){
@@ -24,24 +23,14 @@ class ProfileCard extends Component {
       //to check media
       const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
       //setup the social media links
+      console.log(profile);
       const social = {};
       social.facebook = profile.facebook? profile.facebook :"";
       social.twitter = profile.twitter? profile.twitter :"";
       social.linkedin = profile.linkedIn? profile.linkedin :"";
       social.instagram = profile.instagram? profile.instagram :"";
 
-      //for dynamic width of location
-      let customWidth, custom;
-      if(profile.location !== null || profile.location !== ''){
-         const length = profile.location.length;
-         customWidth = (length+29)+'px';
-
-         custom = {
-            width: customWidth
-         };
-
-      }
-
+console.log(social);
 
       let transformedLinks = Object.keys(social)
          .map(soKey => {
@@ -49,7 +38,7 @@ class ProfileCard extends Component {
                console.log(soKey);
                return (
                   <li key={soKey}>
-                     <a className="Anchor" href = {`${social[soKey]}`} >
+                     <a className="Anchor" href = {`${soKey}`} >
                         <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
                      </a>
                   </li>
@@ -85,10 +74,8 @@ class ProfileCard extends Component {
 
             {profile.location?(
                <div className="LocationBox" >
-                  <div className="LocationWrapper">
-                     <img src={locationIcon} alt="Location Icon in CrowApp"/>
-                     <p className="Location">{profile.location}</p>
-                  </div>
+                  <p className="Location" >
+                     <i className="material-icons" style={{fontSize:'16px', color:'gray'}} >&#xe55f; </i>{profile.location}</p>
                </div>):null}
 
 
@@ -97,7 +84,7 @@ class ProfileCard extends Component {
 
 
             <div className="StatHolder">
-               <Stat name="Total Ratings Done" value="13" style = {{'border-right': '3px solid silver'}}/>
+               <Stat name="Total Ratings Done" value="13" />
                <Stat name="Average Rating Done" value="3.7"/>
             </div>
 
