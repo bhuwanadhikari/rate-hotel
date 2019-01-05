@@ -1,21 +1,62 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { getCurrentProfile, getCurrentUser } from '../../../../redux/actions/profileActions';
 
 
 import './ProfileCard.css';
 import Stat from './Stat/Stat';
 import Option from './Option/Option';
 
-import locationIcon from '../../../../img/forProfile/location.svg'
 
 class ProfileCard extends Component {
+   constructor(){
+      super();
+      this.state = {};
+   }
 
 
    render() {
+      //extract from the redux store
+      const {currentUser, profile} = this.props.data;
+      //to check media
+      const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
+      //setup the social media links
+
+      const social = {};
+      social.facebook = profile.facebook? profile.facebook :"";
+      social.twitter = profile.twitter? profile.twitter :"";
+      social.linkedin = profile.linkedIn? profile.linkedin :"";
+      social.instagram = profile.instagram? profile.instagram :"";
+
+
+      let transformedLinks = Object.keys(social)
+         .map(soKey => {
+            if(social[soKey] !== "") {
+               return (
+                  <li key={soKey}>
+                     <div className="Anchor" onClick = {
+                        (e) => {window.location.href = social[soKey];
+                        console.log(social[soKey])}
+                     } >
+                        <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
+                     </div>
+                  </li>
+               );
+            } else {
+               console.log("empty");
+               return (
+                  <li key={soKey} >
+                     <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>
+                        <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
+                     </div>
+                  </li>
+               );
+            }
+         });
+
       return (
          <div className="ProfileCard">
-
 
             <div className="AvatarHolder">
                <div className="Transformable">
@@ -27,48 +68,53 @@ class ProfileCard extends Component {
             </div>
 
 
-            <div className="Intro">Mahendra Bahadur Lopchan</div>
-            <div className="UserName">@sammy_hero</div>
+            <div className="Intro">{currentUser.name}</div>
+            {profile.handle?(<div className="UserName">@{profile.handle}</div>):null}
 
-            <div className="LocationBox">
-               <img src={locationIcon} alt="Location Icon in CrowApp"/>
-               <p className="Location">   Lamachaur, Pokhara</p>
-            </div>
-            <div className="Bio">Literature is in my blood. Interests in Basketball and Blogging. Student of Compter engineering</div>
+
+            {profile.location?(
+               <div className="LocationBox" >
+                  <p className="Location" >
+                     <i className="material-icons" style={{fontSize:'16px', color:'gray'}} >&#xe55f; </i>{profile.location}</p>
+               </div>):null}
+
+
+            {profile.bio ?
+               (<div className="Bio">{profile.bio}</div>):null}
+
 
             <div className="StatHolder">
-               <Stat name="Total Ratings Done" value="13" style = {{'border-right': '3px solid silver'}}/>
+               <Stat name="Total Ratings Done" value="13" />
                <Stat name="Average Rating Done" value="3.7"/>
             </div>
 
 
-            {/*<div className="Study">*/}
-               {/*<div className="Faculty">Mechanical Engineering</div>*/}
-               {/*<div className="Year">Fourth Year</div>*/}
-            {/*</div>*/}
-
-            <div className="Media">
-
-               <p>Social Media Links</p>
-               <ul>
-                  <li><NavLink to="/" ><i className="fa fa-facebook" aria-hidden="true"> </i></NavLink></li>
-                  <li><NavLink to="/" ><i className="fa fa-twitter" aria-hidden="true"> </i></NavLink></li>
-                  <li><NavLink to="/" ><i className="fa fa-linkedin" aria-hidden="true"> </i></NavLink></li>
-                  <li><NavLink to="/" ><i className="fa fa-instagram" aria-hidden="true"> </i></NavLink></li>
-               </ul>
-            </div>
-
+            {mediaState?(
+               <div className="Media">
+                  <p>Social Media Links</p>
+                  <ul>
+                     {transformedLinks}
+                  </ul>
+               </div>):null
+            }
          </div>
       );
    }
 }
 
+ProfileCard.propTypes = {
+   getCurrentUser: PropTypes.func.isRequired,
+   getCurrentProfile: PropTypes.func.isRequired,
+   profile: PropTypes.object.isRequired,
+   auth: PropTypes.object.isRequired
+};
+
+
 function mapStateToProps(state) {
    return {
-      auth: state.auth
+      auth: state.auth,
+      profile: state.profile
    };
 }
 
-export default connect(
-   mapStateToProps,
-)(ProfileCard);
+export default connect(mapStateToProps, {getCurrentProfile, getCurrentUser})(ProfileCard);

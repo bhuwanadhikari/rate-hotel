@@ -11,3 +11,25 @@
     top: 10%;
     transition: all 0.45s ease-out;
 }
+
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+    .Modal{
+        width: 60vw;
+        left: 20vw;
+    }
+
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .Modal{
+        width: 75vw;
+        left: 12.5vw;
+    }
+
+
+}
+
