@@ -19,7 +19,7 @@ export const getCurrentProfile = () => dispatch => {
 
          dispatch({
                type: GET_PROFILE,
-               payload: res.data
+               payload: convertProfileObject(res.data)
 
          }
          )}
@@ -62,11 +62,11 @@ export const editCurrentProfile = (profileData) => (dispatch) => {
       .then((res) => {
          dispatch({
             type: GET_PROFILE,
-            payload: res.data
+            payload: convertProfileObject(res.data)
          });
          dispatch({
             type: GET_ERRORS,
-            payload: {} //just for the errors to be cleared
+            payload: {msg: 'cleared'} //just for the errors to be cleared
          });
       })
       .catch((err)=> dispatch({
