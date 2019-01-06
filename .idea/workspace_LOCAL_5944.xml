@@ -1,0 +1,1768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+=======
+>>>>>>> hotelDev
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js" afterPath="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Rating App">
+      <favorite_root url="file://$PROJECT_DIR$/routes/api/lecturerProfile.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.41321498">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="keys.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/keys.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="42">
+                  <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.11776062">
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.9">
+>>>>>>> hotelDev
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Profile.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js">
+              <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+                <state relative-caret-position="490">
+                  <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+>>>>>>> hotelDev
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="14">
+                  <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+                  <folding />
+=======
+          <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Login/Login.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="700">
+                  <caret line="60" column="26" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+>>>>>>> hotelDev
+=======
+          <file leaf-file-name="Profile.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="350">
+                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                  <folding />
+>>>>>>> hotelDev
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="keys.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/keys.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="42">
+                  <caret line="3" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
+                  <folding />
+=======
+          <file leaf-file-name="EditProfile.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js">
+=======
+          <file leaf-file-name="ProfileCard.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js">
+>>>>>>> hotelDev
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                    <element signature="e#1941#2348#0" expanded="false" />
+                  </folding>
+>>>>>>> hotelDev
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/server.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="224">
+                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                  <folding />
+=======
+          <file leaf-file-name="InputField.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/ui/InputField/InputField.js">
+=======
+          <file leaf-file-name="EditProfile.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js">
+>>>>>>> hotelDev
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="776">
+                  <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                    <element signature="e#1952#4227#0" expanded="false" />
+                  </folding>
+>>>>>>> hotelDev
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="98">
+                  <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+=======
+          <file leaf-file-name="InputField.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/components/ui/InputField/InputField.css">
+=======
+          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/App.js">
+>>>>>>> hotelDev
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="686">
+                  <caret line="82" column="107" lean-forward="true" selection-start-line="82" selection-start-column="107" selection-end-line="82" selection-end-column="107" />
+                  <folding>
+                    <element signature="e#631#673#0" expanded="true" />
+                    <element signature="e#1400#1957#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/index.css">
+              <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="48">
+                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+>>>>>>> hotelDev
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
+          <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/User.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="448">
+                  <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="60" />
+                  <folding>
+                    <marker date="1546162066410" expanded="true" signature="484:488" ph="{&quot;type&quot;: Schema.Types.Mixed...}" />
+=======
+          <file leaf-file-name="SignUp.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/containers/SignUp/SignUp.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="31" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+>>>>>>> hotelDev
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+<<<<<<< HEAD
+=======
+          <file leaf-file-name="keys.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/keys.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="70">
+                  <caret line="5" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/server.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="644">
+                  <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="12" column="113" lean-forward="false" selection-start-line="12" selection-start-column="113" selection-end-line="12" selection-end-column="113" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="keys_dev.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/keys_dev.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="14">
+                  <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="75" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="keys_prod.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/keys_prod.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="28">
+                  <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/User.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="448">
+                  <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="60" />
+=======
+                <state relative-caret-position="328">
+                  <caret line="35" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+>>>>>>> hotelDev
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+>>>>>>> hotelDev
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>handle</find>
+      <find>Profile</find>
+      <find>store</find>
+      <find>auth</find>
+      <find>NavigationItem</find>
+      <find>2px</find>
+      <find>SearchForm</find>
+      <find>float</find>
+      <find>class=</find>
+      <find>.container</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>GuestNavigationItem</replace>
+      <replace>1px</replace>
+      <replace>.SearchForm</replace>
+      <replace>className=</replace>
+      <replace>.containered</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/routes/api/lecturer.js" />
+        <option value="$PROJECT_DIR$/routes/api/user.js" />
+        <option value="$PROJECT_DIR$/config/keys.js" />
+        <option value="$PROJECT_DIR$/config/passport.js" />
+        <option value="$PROJECT_DIR$/validation/login.js" />
+        <option value="$PROJECT_DIR$/validation/is-empty.js" />
+        <option value="$PROJECT_DIR$/validation/register.js" />
+=======
+        <option value="$PROJECT_DIR$/client/src/redux/reducers/errorReducer.js" />
+        <option value="$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/Activity/ActivityCard.js" />
+        <option value="$PROJECT_DIR$/client/src/img/pencil-edit-button.svg" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Details/Details.css" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Details/Details.js" />
+        <option value="$PROJECT_DIR$/client/src/img/forProfile/location.svg" />
+        <option value="$PROJECT_DIR$/client/src/App.css" />
+        <option value="$PROJECT_DIR$/client/src/App.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Stat/Stat.js" />
+=======
+>>>>>>> hotelDev
+        <option value="$PROJECT_DIR$/client/src/components/Navigation/Navigation.css" />
+        <option value="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.css" />
+        <option value="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/AuthNavigationItem.css" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Option/Option.css" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/button/Button.css" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/BackDrop/BackDrop.js" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/BackDrop/BackDrop.css" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/InputField/Input.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Login/Login.css" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/Button/Button.css" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Option/Option.js" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/Button/Button.js" />
+        <option value="$PROJECT_DIR$/client/src/validation/edit-profile.js" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/client/src/components/ui/Modal/Modal.css" />
+>>>>>>> hotelDev
+=======
+>>>>>>> hotelDev
+        <option value="$PROJECT_DIR$/models/UserProfile.js" />
+        <option value="$PROJECT_DIR$/validation/userProfile.js" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/Modal/Modal.js" />
+        <option value="$PROJECT_DIR$/client/src/components/common/functions.js" />
+        <option value="$PROJECT_DIR$/validation/register.js" />
+        <option value="$PROJECT_DIR$/models/User.js" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/InputField/InputField.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Login/Login.js" />
+        <option value="$PROJECT_DIR$/config/keys_prod.js" />
+        <option value="$PROJECT_DIR$/config/keys.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/SignUp/SignUp.css" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/InputField/InputField.css" />
+        <option value="$PROJECT_DIR$/client/src/index.css" />
+        <option value="$PROJECT_DIR$/server.js" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/routes/api/Rating.js" />
+        <option value="$PROJECT_DIR$/models/Hotel.js" />
+        <option value="$PROJECT_DIR$/routes/api/hotelProfile.js" />
+        <option value="$PROJECT_DIR$/routes/api/userProfile.js" />
+        <option value="$PROJECT_DIR$/models/Rating.js" />
+        <option value="$PROJECT_DIR$/routes/api/hotels.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/package.json" />
+<<<<<<< HEAD
+>>>>>>> hotelDev
+=======
+        <option value="$PROJECT_DIR$/config/keys_dev.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/reset" />
+        <option value="$PROJECT_DIR$/client/src/containers/SignUp/SignUp.js" />
+        <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/client/src/redux/reducers/authReducer.js" />
+        <option value="$PROJECT_DIR$/client/src/redux/actions/types.js" />
+        <option value="$PROJECT_DIR$/client/src/redux/actions/authActions.js" />
+        <option value="$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.js" />
+        <option value="$PROJECT_DIR$/routes/api/userProfile.js" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/Spinnner/Spinner.js" />
+        <option value="$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js" />
+        <option value="$PROJECT_DIR$/client/public/index.html" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.css" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.css" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.css" />
+        <option value="$PROJECT_DIR$/client/src/components/ui/Modal/Modal.css" />
+        <option value="$PROJECT_DIR$/client/src/redux/actions/profileActions.js" />
+        <option value="$PROJECT_DIR$/client/src/hoc/ExternalLink.js" />
+        <option value="$PROJECT_DIR$/client/src/App.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js" />
+>>>>>>> hotelDev
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/client/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/client/package.json" />
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-3" />
+    <option name="width" value="754" />
+    <option name="height" value="397" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+      <pane id="Scratches" />
+>>>>>>> hotelDev
+=======
+>>>>>>> hotelDev
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+            </path>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> hotelDev
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+<<<<<<< HEAD
+=======
+>>>>>>> hotelDev
+=======
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="Modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Account" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Account" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+              <item name="EditProfile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hoc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rating App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rating App" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> hotelDev
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> hotelDev
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Docs/mernstack/Rating App/client/src/App.css" />
+    <property name="ToolWindowStructure.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript 1.8" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< HEAD
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+>>>>>>> hotelDev
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Docs\mernstack\Rating App\client\src\img\forProfile" />
+      <recent name="D:\Docs\mernstack\Rating App\client\src\containers\Account\Profile\ProfileCard" />
+      <recent name="D:\Docs\mernstack\Rating App\client\src\containers\Account\Profile" />
+      <recent name="D:\Docs\mernstack\Rating App\client\src\hoc" />
+      <recent name="E:\Docs\mernstack\Rating App\client\src\containers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Docs\mernstack\Rating App\client\src\img" />
+      <recent name="D:\Docs\mernstack\Rating App\client\src\img\forProfile" />
+      <recent name="D:\Docs\mernstack\Rating App\client\src\img\navImg" />
+      <recent name="E:\Docs\mernstack\Rating App\client\src\img\navImg" />
+      <recent name="E:\Docs\mernstack\Rating App\client\src\img\backImages" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c364d26a-9d85-43ff-a141-ece18c56472c" name="Default" comment="" />
+      <created>1542294756372</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542294756372</updated>
+      <workItem from="1542294758009" duration="259000" />
+      <workItem from="1542295044777" duration="1848000" />
+      <workItem from="1542353863447" duration="1931000" />
+      <workItem from="1542357657607" duration="143000" />
+      <workItem from="1542357882732" duration="84000" />
+      <workItem from="1542358581594" duration="9000" />
+      <workItem from="1542358733204" duration="1000" />
+      <workItem from="1542358802856" duration="5000" />
+      <workItem from="1542359068379" duration="8788000" />
+      <workItem from="1542424650220" duration="22522000" />
+      <workItem from="1542508778269" duration="2462000" />
+      <workItem from="1542550723143" duration="3085000" />
+      <workItem from="1542615849039" duration="15354000" />
+      <workItem from="1542677886070" duration="4585000" />
+      <workItem from="1542710409912" duration="10116000" />
+      <workItem from="1542764536489" duration="6102000" />
+      <workItem from="1542795639236" duration="5045000" />
+      <workItem from="1542870603548" duration="5492000" />
+      <workItem from="1542939454958" duration="16003000" />
+      <workItem from="1542970819480" duration="6125000" />
+      <workItem from="1542980320584" duration="3438000" />
+      <workItem from="1543021078775" duration="637000" />
+      <workItem from="1543038996910" duration="8885000" />
+      <workItem from="1543137677717" duration="2964000" />
+      <workItem from="1543157368868" duration="1911000" />
+      <workItem from="1543159570273" duration="2219000" />
+      <workItem from="1543195347686" duration="1083000" />
+      <workItem from="1543224975164" duration="14817000" />
+      <workItem from="1543285835471" duration="3570000" />
+      <workItem from="1543319180917" duration="14880000" />
+      <workItem from="1543372206547" duration="11919000" />
+      <workItem from="1543417632713" duration="11049000" />
+      <workItem from="1543478301931" duration="6968000" />
+<<<<<<< HEAD
+      <workItem from="1543491003310" duration="4620000" />
+      <workItem from="1546166543611" duration="374000" />
+=======
+      <workItem from="1543491003310" duration="5339000" />
+      <workItem from="1543598784193" duration="1310000" />
+      <workItem from="1543600181286" duration="1145000" />
+      <workItem from="1543634452160" duration="9036000" />
+      <workItem from="1543737563845" duration="12285000" />
+      <workItem from="1543847421413" duration="339000" />
+      <workItem from="1543848947109" duration="12562000" />
+      <workItem from="1543916452432" duration="9921000" />
+      <workItem from="1543939925919" duration="6253000" />
+      <workItem from="1544008451601" duration="2961000" />
+      <workItem from="1544090397917" duration="1941000" />
+      <workItem from="1544175400640" duration="1809000" />
+      <workItem from="1544256267201" duration="15791000" />
+      <workItem from="1544423499394" duration="13841000" />
+      <workItem from="1544724911027" duration="203000" />
+      <workItem from="1544756266026" duration="6294000" />
+      <workItem from="1544788025973" duration="10030000" />
+      <workItem from="1544869616912" duration="8306000" />
+      <workItem from="1544885375987" duration="14364000" />
+      <workItem from="1544953847578" duration="15344000" />
+      <workItem from="1545017723828" duration="1319000" />
+      <workItem from="1545038122135" duration="3878000" />
+      <workItem from="1545045496166" duration="16967000" />
+      <workItem from="1545115871803" duration="2344000" />
+      <workItem from="1545127630738" duration="12268000" />
+      <workItem from="1545181402162" duration="5491000" />
+      <workItem from="1545198287533" duration="4406000" />
+      <workItem from="1545271920065" duration="2504000" />
+      <workItem from="1545387678767" duration="1238000" />
+      <workItem from="1545389442622" duration="20045000" />
+      <workItem from="1545458767460" duration="803000" />
+      <workItem from="1545534069931" duration="3242000" />
+      <workItem from="1545555397411" duration="6172000" />
+      <workItem from="1545619961608" duration="316000" />
+      <workItem from="1545620311763" duration="358000" />
+      <workItem from="1545620698413" duration="2828000" />
+      <workItem from="1545650925290" duration="4610000" />
+      <workItem from="1545661993500" duration="6617000" />
+      <workItem from="1545703807476" duration="13521000" />
+      <workItem from="1545728080169" duration="1961000" />
+      <workItem from="1545730225532" duration="18148000" />
+      <workItem from="1545788807402" duration="1969000" />
+      <workItem from="1545817919689" duration="18872000" />
+      <workItem from="1545877513079" duration="4634000" />
+      <workItem from="1545896264432" duration="23099000" />
+      <workItem from="1545931373807" duration="2844000" />
+      <workItem from="1545975670141" duration="23946000" />
+      <workItem from="1546005532989" duration="19392000" />
+      <workItem from="1546055338394" duration="16431000" />
+      <workItem from="1546093332108" duration="18453000" />
+      <workItem from="1546154760937" duration="2705000" />
+      <workItem from="1546158503432" duration="3345000" />
+<<<<<<< HEAD
+>>>>>>> hotelDev
+=======
+      <workItem from="1546167845573" duration="1381000" />
+      <workItem from="1546236350191" duration="17044000" />
+      <workItem from="1546281170762" duration="7201000" />
+      <workItem from="1546321649142" duration="9224000" />
+      <workItem from="1546619087876" duration="3933000" />
+      <workItem from="1546677156254" duration="13649000" />
+>>>>>>> hotelDev
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="203402000" />
+=======
+    <option name="totallyTimeSpent" value="668868000" />
+=======
+    <option name="totallyTimeSpent" value="744213000" />
+>>>>>>> hotelDev
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+>>>>>>> hotelDev
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24479167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="219" y="119" width="303" height="670" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2408492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="219" y="119" width="303" height="670" />
+>>>>>>> hotelDev
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14934114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="219" y="119" width="303" height="670" />
+>>>>>>> hotelDev
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.39567232" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="0" y="291" width="1366" height="155" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4313433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.21791045" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="0" y="291" width="1366" height="155" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> hotelDev
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4313433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> hotelDev
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.js</url>
+          <line>58</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/hoc/PrivateRoute.js</url>
+          <line>10</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/api/users.js</url>
+          <line>103</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/containers/Login/Login.js</url>
+          <line>43</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="23" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Stat/Stat.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="108">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+=======
+        <state relative-caret-position="112">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="576">
+          <caret line="32" column="52" lean-forward="false" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+=======
+        <state relative-caret-position="140">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="11" selection-end-column="34" />
+>>>>>>> hotelDev
+=======
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Option/Option.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/BackDrop/BackDrop.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="522">
+          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+=======
+        <state relative-caret-position="364">
+          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="84">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/Button/Button.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="666">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        </state>
+=======
+        <state relative-caret-position="14">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Details/Details.css" />
+    <entry file="file://$PROJECT_DIR$/client/src/img/forProfile/pencil-edit-button.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+>>>>>>> hotelDev
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Navigation/Navigation.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="108">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+=======
+        <state relative-caret-position="966">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="62">
+          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/Option/Option.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/Button/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="576">
+          <caret line="32" column="52" lean-forward="false" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+=======
+        <state relative-caret-position="126">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="14">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/BackDrop/BackDrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="1008">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+=======
+        <state relative-caret-position="168">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="98">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/hotel.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="666">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/validation/edit-profile.js" />
+    <entry file="file://$PROJECT_DIR$/validation/userProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="432">
+          <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="140">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/Modal/Modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="1440">
+          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+=======
+        <state relative-caret-position="28">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="112">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/common/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="108">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+=======
+        <state relative-caret-position="132">
+          <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="14">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="576">
+          <caret line="32" column="52" lean-forward="false" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+=======
+        <state relative-caret-position="280">
+          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="126">
+          <caret line="9" column="68" lean-forward="false" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Login/Login.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="666">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+=======
+        <state relative-caret-position="84">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="426">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/SignUp/SignUp.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="468">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+=======
+        <state relative-caret-position="728">
+          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="224">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/keys_prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+=======
+        <state relative-caret-position="62">
+          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="28">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="36" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/keys_dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="72">
+          <caret line="4" column="54" lean-forward="false" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+=======
+        <state relative-caret-position="140">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="28">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/keys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+        <state relative-caret-position="210">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+=======
+        <state relative-caret-position="207">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/keys.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="14">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="70">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reset" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+=======
+        <state relative-caret-position="98">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="28">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+        <state relative-caret-position="322">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="571">
+          <caret line="60" column="26" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="210">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+        <state relative-caret-position="84">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="476">
+          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/InputField/InputField.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+=======
+        <state relative-caret-position="126">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="70">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="47" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/InputField/InputField.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+        <state relative-caret-position="56">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="356">
+          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/UserProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+=======
+        <state relative-caret-position="238">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="98">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+        <state relative-caret-position="729">
+          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="350">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="14" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+=======
+        <state relative-caret-position="140">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="552">
+          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/authReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+        <state relative-caret-position="14">
+          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="140">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/authActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="18">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+=======
+        <state relative-caret-position="112">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="770">
+          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Navigation/NavigationItems/AuthNavigationItem/NavAccount/NavAccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+=======
+        <state relative-caret-position="14">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="1512">
+          <caret line="108" column="1" lean-forward="false" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="72">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+=======
+        <state relative-caret-position="42">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/SignUp/SignUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="342">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/userProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+=======
+        <state relative-caret-position="448">
+          <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="60" />
+          <folding />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="266">
+          <caret line="94" column="36" lean-forward="true" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="342">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+=======
+        <state relative-caret-position="126">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/errorReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="28">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="154">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/Spinnner/Spinner.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+        <state relative-caret-position="700">
+          <caret line="60" column="26" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="26" />
+=======
+        <state relative-caret-position="168">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+>>>>>>> hotelDev
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/img/spinner.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
+        <state relative-caret-position="426">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="328">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/profileReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="598">
+          <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="37" />
+=======
+        <state relative-caret-position="1806">
+          <caret line="137" column="27" lean-forward="false" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
+=======
+        <state relative-caret-position="504">
+          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+>>>>>>> hotelDev
+          <folding>
+            <element signature="e#0#140#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="224">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="196">
+          <caret line="14" column="90" lean-forward="false" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="448">
+          <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="60" />
+          <folding>
+            <marker date="1546162066410" expanded="true" signature="484:488" ph="{&quot;type&quot;: Schema.Types.Mixed...}" />
+          </folding>
+=======
+        <state relative-caret-position="28">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="342">
+          <caret line="87" column="24" lean-forward="false" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="1360">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+=======
+        <state relative-caret-position="440">
+          <caret line="53" column="61" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="61" />
+=======
+        <state relative-caret-position="84">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+>>>>>>> hotelDev
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ui/Modal/Modal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/profileActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="102">
+          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+=======
+        <state relative-caret-position="14">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="75" />
+          <folding />
+>>>>>>> hotelDev
+=======
+        <state relative-caret-position="790">
+          <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="343">
+          <caret line="128" column="3" lean-forward="false" selection-start-line="128" selection-start-column="3" selection-end-line="132" selection-end-column="0" />
+=======
+        <state relative-caret-position="28">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="36" />
+=======
+        <state relative-caret-position="490">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+>>>>>>> hotelDev
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/hoc/ExternalLink.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="527">
+          <caret line="87" column="20" lean-forward="false" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+=======
+        <state relative-caret-position="168">
+          <caret line="12" column="113" lean-forward="false" selection-start-line="12" selection-start-column="113" selection-end-line="12" selection-end-column="113" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> hotelDev
+          <folding />
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="360">
+          <caret line="109" column="6" lean-forward="false" selection-start-line="109" selection-start-column="6" selection-end-line="109" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/keys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="224">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+=======
+        <state relative-caret-position="644">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+>>>>>>> hotelDev
+          <folding />
+=======
+        <state relative-caret-position="686">
+          <caret line="82" column="107" lean-forward="true" selection-start-line="82" selection-start-column="107" selection-end-line="82" selection-end-column="107" />
+          <folding>
+            <element signature="e#631#673#0" expanded="true" />
+            <element signature="e#1400#1957#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/EditProfile/EditProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1952#4227#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Account/Profile/ProfileCard/ProfileCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1941#2348#0" expanded="false" />
+          </folding>
+>>>>>>> hotelDev
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
