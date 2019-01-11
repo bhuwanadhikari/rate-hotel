@@ -1,0 +1,181 @@
+.AllHotelsBox {
+    width: 100vw;
+    margin: 0;
+    height: auto;
+}
+
+.SmallHotelCardBox{
+    width: 96%;
+    margin: 10px auto;
+    box-shadow: 0 0 8px var(--chhaya2);
+    height: 100px;
+    border-radius: 5px;
+}
+
+.HotelName {
+    margin: 0;
+}
+
+.HotelLink {
+    text-decoration: none;
+    color: var(--bio);
+}
+
+.HotelLink:hover {
+    color: var(--darkTheme);
+}
+
+.ImageBox {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.ImageBox img {
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 4px 0 0 4px;
+    margin: 0;
+    float: left;
+
+}
+
+.DetailBox{
+    width: calc(100% - 100px);
+    float: right;
+    padding: 5px;
+    box-sizing: border-box;
+
+}
+
+.HotelLocation{
+    font-size: 0.8em;
+}
+
+.RateContainer {
+    width: 100%;
+    display: block;
+    height: 22px;
+    margin-top: 5px;
+}
+
+.RateBox{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 116px;
+    display: inline-block;
+    height: 22px;
+    float: left;
+}
+
+.RateSpan {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    margin: 2px;
+    background-color: white;
+    float: left;
+    border-radius: 15px;
+    border: 1px solid var(--rateColor);
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.RateField {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 13px;
+    width: 13px;
+    display: block;
+    background-color: transparent;
+    border-radius: 13px;
+    border: 2px solid var(--rateColor);
+    z-index: 30;
+    box-sizing: border-box;
+}
+
+
+.RateElement {
+    position: relative;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 9px;
+    width: 5px;
+    background-color: var(--rateColor);
+
+}
+
+
+
+
+
+
+
+
+
+.AvgRatingBox {
+    display: inline-block;
+    width: 3em;
+    height: 22px;
+}
+
+.AvgRating  {
+    display: block;
+    font-size: 0.825em;
+    font-weight: bold;
+    color: var(--bio);
+    margin: 4px auto;
+    text-align: center;
+    line-height: 0.825em;
+
+}
+
+.HotelCardFooter{
+    margin-top: 5px;
+
+}
+
+.ReviewNumber{
+    display: inline;
+    width: 80px;
+    font-size: 0.85em;
+    text-align: center;
+    margin-right:5%;
+    font-weight: bold;
+    color: var(--bio);
+}
+
+
+
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+
+    .AllHotelsBox {
+        width: 449px;
+        margin: auto;
+    }
+
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+
+    .AllHotelsBox {
+        width: 449px;
+        margin: auto;
+    }
+
+}
+

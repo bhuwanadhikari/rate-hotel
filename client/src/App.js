@@ -10,6 +10,9 @@ import SignUp from './containers/SignUp/SignUp';
 import Login from './containers/Login/Login';
 import Landing from './components/Landing/Landing';
 import AllHotels from './components/AllHotels/AllHotels';
+
+import Hotel from './containers/Hotel/Hotel';
+
 import Footer from './components/Footer/Footer';
 import Navigation from './components/Navigation/Navigation';
 
@@ -73,6 +76,7 @@ class App extends Component {
                      <PublicRoute exact path = "/sign-up" component = {SignUp} />
                      <PublicRoute exact path = "/login" component = {Login} />
                      <PublicRoute exact path = "/" component = {Landing} history = {this.props.history} />
+                     <PublicRoute exact path = "/hotel/:id" component = {Hotel}/>
                      <Route exact path = "/all-hotels" component = {AllHotels} />
                      <Route exact path = "/about-us" component = {AboutUs} />
                      <Route exact path = "/help" component = {Help} />
@@ -81,7 +85,7 @@ class App extends Component {
                      <PrivateRoute exact path = "/search" component = {Search} />
                      <PrivateRoute exact path = "/profile" component = {Profile} />
                      <PrivateRoute exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
-                     <Route component = {Home}/>
+                     <PrivateRoute component = {Home}/>
                   </Switch>
                   <Footer/>
                </div>

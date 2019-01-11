@@ -2,7 +2,6 @@ const express = require('express');
 const gravatar = require('gravatar');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
-const mongoose = require('mongoose');
 
 const Hotel = require('../../models/Hotel');
 const Rating = require('../../models/Rating');
@@ -27,45 +26,35 @@ router.post('/register', (req, res) => {
             errors.email = 'Email already exists';
             return res.status(400).json(errors);
          }else{
-            Hotel.findOne({handle: req.body.handle})
-               .then(hotel => {
-                  if(hotel){
-                     errors.handle = 'Handle is taken';
-                     return res.status(400).json(errors);
-                  }else{
-                     const avatar = gravatar.url(req.body.email,{
-                        s:'200',
-                        r: 'pg',
-                        d: 'mm'
-                     });
+            const avatar = gravatar.url(req.body.email,{
+               s:'200',
+               r: 'pg',
+               d: 'mm'
+            });
 
 
-                     const newHotel = new Hotel({
+            const newHotel = new Hotel({
 
-                        name: req.body.name,
-                        email: req.body.email,
-                        avatar,
-                        handle: req.body.handle,
-                        bio: req.body.bio,
-                        location: req.body.location
-                     });
+               name: req.body.name,
+               email: req.body.email,
+               avatar,
+               bio: req.body.bio,
+               location: req.body.location
+            });
 
-                     //First register the hotel
-                     newHotel.save().then(hotel =>{
+            //First register the hotel
+            newHotel.save().then(hotel =>{
 
-                        const newRating = new Rating({
-                           hotel: hotel._id
-                        });
+               const newRating = new Rating({
+                  hotel: hotel._id
+               });
 
-                        newRating.save().then(rating =>{
-                           const hotelProfile = {hotel, rating};
-                           res.json(hotelProfile);
-                        }).catch(err => res.json(err));
+               newRating.save().then(rating =>{
+                  const hotelProfile = {hotel, rating};
+                  res.json(hotelProfile);
+               }).catch(err => res.json(err));
 
-                     }).catch(err => res.json(err));
-
-                  }
-               }).catch();
+            }).catch(err => res.json(err));
          }
       }).catch();
 
@@ -95,7 +84,7 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
          key = key.toString();
          if ((rating.rates[key].filter(rate => rate.user.toString() === req.user.id).length > 0) && req.body[key]) {
 
-             errors[key] = `You have already rated ${key}`;
+            errors[key] = `You have already rated ${key}`;
 
             rating.rates[key] = rating.rates[key].filter(rate=>rate.user.toString() !== req.user.id);
          }

@@ -8,7 +8,6 @@ const HotelSchema = new Schema({
    name:{type: String, required: true},
    email: {type: String, required: true},
    avatar: {type: String},
-   handle: {type: String, required: true},
    bio: {type: String},
    location: {type: String},
    date: {type: Date, default: Date.now()}

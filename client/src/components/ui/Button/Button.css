@@ -27,7 +27,8 @@
     border-color:var(--theme);
     box-sizing:border-box;
     border-style:solid;
-    width:1em;height:1em;
+    width:1em;
+    height:1em;
     transition:all 0.3s ease-in-out
 }
 .Btn:before {
@@ -97,11 +98,8 @@
     border-color:var(--warning);
 }
 
-.InlineBtn {
-    display: inline;
-    padding: 0.8em 1em;
-    margin: 0 1em;
-}
+
+
 
 /*For DESKTOPS*/
 @media only screen and (min-width: 800px) {
@@ -127,4 +125,11 @@
 
 .InlineBtn::before, .InlineBtn::after {
     border: 0;
+}
+
+
+.Smaller {
+    height: 2em;
+    font-size: 0.7em;
+    line-height:1px;
 }

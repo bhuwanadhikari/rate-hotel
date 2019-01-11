@@ -24,12 +24,11 @@ router.get('/all', (req, res) => {
 });
 
 
-//@route /api/hotelProfile/id/hotelid
+//@route /api/hotelProfile/id/hotel_id
 //get hotel by id
 //public
 router.get('/id/:hotel_id', (req, res) => {
    const errors = {};
-
    Rating.findOne({hotel: req.params.hotel_id})
       .populate('hotel')
       .then(hotelProfile => {

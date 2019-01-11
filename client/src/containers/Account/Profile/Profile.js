@@ -58,12 +58,14 @@ class Profile extends Component {
 Profile.propTypes = {
    getCurrentUser: PropTypes.func.isRequired,
    getCurrentProfile: PropTypes.func.isRequired,
-   profile: PropTypes.object.isRequired
+   profile: PropTypes.object.isRequired,
+   errors: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
    return {
-      profile: state.profile
+      profile: state.profile,
+      errors: state.errors
    };
 }
 

@@ -44,7 +44,6 @@ class ProfileCard extends Component {
                   </li>
                );
             } else {
-               console.log("empty");
                return (
                   <li key={soKey} >
                      <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>

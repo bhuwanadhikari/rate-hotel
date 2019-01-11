@@ -24,10 +24,12 @@ code {
     --complementary: #ffab8e;
     --lightTheme: lavenderblush;
 
+    /*COLOR FOR PROFILE*/
     --intro: #5A6F9B;
     --bio: #414A4C;
 
     --chhaya: var(--theme);
+    --chhaya2: gray;
     --themeDrop: rgba(185, 85, 32, 0.5);
 
     /*BUTTON CONDITIONS*/
@@ -46,5 +48,21 @@ code {
     --lowWidth: 450px;
     --highWidth: 800px;
 
+    /*COLOR FOR RATE FIELD*/
+    --rateColor: green;
 
 }
+
+
+
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+
+}
+
