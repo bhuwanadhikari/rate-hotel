@@ -62,7 +62,7 @@ router.post('/register', (req, res) => {
 
 });
 
-//@route /api/hotels/rate
+//@route /api/hotels/rate/:id
 //rate the hotel
 //private
 router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, res) => {

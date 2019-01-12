@@ -15,7 +15,7 @@ export const GET_PROFILES = 'GET_PROFILE';
 
 
 export const GET_HOTEL = 'GET_HOTEL';
-export const GET_HOTELS = 'GET_HOTELS';
+export const GET_ALL_HOTELS = 'GET_HOTELS';
 export const HOTEL_NOT_FOUND = 'HOTEL_NOT_FOUND';
 export const CLEAR_HOTEL = 'CLEAR_HOTEL';
 export const HOTEL_LOADING = 'HOTEL_LOADING';

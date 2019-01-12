@@ -1,6 +1,6 @@
 import {
    GET_HOTEL,
-   GET_HOTELS,
+   GET_ALL_HOTELS,
    HOTEL_LOADING,
    HOTEL_NOT_FOUND
 } from '../actions/types';
@@ -8,7 +8,7 @@ import {
 
 const initialState = {
    hotel: null,
-   hotels: null,
+   allHotels: null,
    loading: false
 };
 
@@ -27,11 +27,11 @@ export default function(state = initialState, action){
             ...state,
             loading: true
          };
-      case GET_HOTELS:
+      case GET_ALL_HOTELS:
          return {
             ...state,
            loading: false,
-           hotels: action.payload
+           allHotels: action.payload
          };
 
       default:

@@ -15,11 +15,25 @@ router.get('/all', (req, res) => {
 
    Rating.find()
       .populate('hotel')
-      .then(hotelProfile => {
-      if(!hotelProfile){
+      .then(allHotels => {
+      if(!allHotels){
          errors.noHotels = 'There are no hotels at all';
       }
-      res.status(200).json(hotelProfile);
+
+      const newHotelArr = allHotels.map((hotelProfile) => {
+         const reviews = hotelProfile.reviews.length;
+         return {
+            averageRating: (Math.random()*5).toFixed(1),
+            _id: hotelProfile.hotel.id,
+            name: hotelProfile.hotel.name,
+            avatar: hotelProfile.hotel.avatar,
+            location: hotelProfile.hotel.location,
+            reviews: (Math.random()*1000).toFixed(0)
+         };
+      });
+
+      res.status(200).json(newHotelArr);
+
    })
 });
 
@@ -45,28 +59,31 @@ router.get('/id/:hotel_id', (req, res) => {
 });
 
 
+
+//@route /api/hotels
+
+
 //@route /api/hotelProfile/hotelid
 //get hotel by id
 //public
-router.get('/handle/:handle', (req, res) => {
-   const errors = {};
-
-
-   Rating.findOne({handle: req.params.handle})
-      .populate('hotel')
-      .then(hotel => {
-         if(!hotel){
-            errors.noHotel = 'There is no hotel for this handle';
-            return res.status(400).json(errors);
-         }
-         res.status(200).json(hotel);
-      }).catch(e =>{
-      errors.noHotel = 'There is no hotel for this hotel';
-      res.status(400).json(errors);
-
-   });
-});
-
+// router.get('/handle/:handle', (req, res) => {
+//    const errors = {};
+//
+//
+//    Rating.findOne({handle: req.params.handle})
+//       .populate('hotel')
+//       .then(hotel => {
+//          if(!hotel){
+//             errors.noHotel = 'There is no hotel for this handle';
+//             return res.status(400).json(errors);
+//          }
+//          res.status(200).json(hotel);
+//       }).catch(e =>{
+//       errors.noHotel = 'There is no hotel for this hotel';
+//       res.status(400).json(errors);
+//
+//    });
+// });
 
 
 module.exports = router;

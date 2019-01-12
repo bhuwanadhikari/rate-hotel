@@ -81,11 +81,10 @@ const RatingSchema = new Schema(
             date: {type: Date, default: Date.now()}
          }]
       },
-      comments: [{ //or say compliments in frontend
+      reviews: [{ //or say compliments in frontend
          writer: {type: String},
          user: {type: Schema.Types.ObjectId, ref: 'users'},
-         commentUp: {type: String},
-         commentDown: {type: String},
+         review: {type: String},
          avatar: {type: String},
          date: {type: Date, default: Date.now()}
       }]

@@ -1,6 +1,6 @@
 import {
    GET_HOTEL,
-   GET_HOTELS,
+   GET_ALL_HOTELS,
    HOTEL_LOADING,
    HOTEL_NOT_FOUND
 } from './types';
@@ -27,12 +27,12 @@ export const getAllHotels = () => (dispatch) => {
    dispatch(setHotelLoading());
    axios.get('/api/hotelProfile/all')
       .then(res => dispatch({
-         type: GET_HOTELS,
+         type: GET_ALL_HOTELS,
          payload: res.data
          })
       )
       .catch(err => dispatch({
-         type: GET_HOTELS,
+         type: GET_ALL_HOTELS,
          payload: {notFound: 'notFound'}
       }));
 

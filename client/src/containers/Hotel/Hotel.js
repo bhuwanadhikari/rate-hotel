@@ -12,7 +12,7 @@ class Hotel extends Component {
 
 
    componentWillReceiveProps(nextProps) {
-      console.log(nextProps.hotel.hotel);
+      // console.log(nextProps.hotel.hotel);
    }
 
 
