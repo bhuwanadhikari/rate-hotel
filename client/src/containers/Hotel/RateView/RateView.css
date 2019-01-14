@@ -1,0 +1,24 @@
+.RateViewBox{
+
+}
+
+.RateViewHeader {
+    display: inline;
+
+}
+
+.RateName {
+    display: inline;
+    font-size: 1.1em;
+    color: var(--bio);
+    font-weight: bold;
+
+}
+
+.ButtonBox {
+    display: inline;
+}
+
+.RateViewBox > .AverageRating {
+    font-size: 1.5em;
+}

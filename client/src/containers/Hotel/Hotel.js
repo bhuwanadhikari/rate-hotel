@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {getHotelById} from '../../redux/actions/hotelActions';
+
 import Spinner from '../../components/ui/Spinnner/Spinner';
+
+import AllRatings from './AllRatings/AllRatings';
 
 class Hotel extends Component {
 
@@ -12,7 +15,7 @@ class Hotel extends Component {
 
 
    componentWillReceiveProps(nextProps) {
-      // console.log(nextProps.hotel.hotel);
+      console.log(nextProps.hotel.hotel);
    }
 
 
@@ -21,7 +24,14 @@ class Hotel extends Component {
          return <Spinner/>;
       } else {
          return (
-            <div>loadieed</div>
+            <div className="HotelBox">
+               <div className="HotelCard"> </div>
+               <div className="HotelDetails">
+                  <h4 className= "DetailsHeader">Ratings and Reviews</h4>
+                  <AllRatings/>
+                  <div className= "AllReviewsBox"> </div>
+               </div>
+            </div>
          );
       }
    }
