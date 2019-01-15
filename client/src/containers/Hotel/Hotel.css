@@ -1,0 +1,44 @@
+.HotelBox {
+    width: 100vw;
+}
+
+
+.HotelCard {
+    width: 100%;
+    background-color: silver;
+}
+
+
+.HotelDetails {
+    width: 96%;
+    margin: auto;
+}
+
+.DetailsHeader {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--bio);
+    text-align: center;
+}
+
+
+
+.AllReviewsBox {
+    background-color: silver;
+}
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+    .HotelBox {
+        width: 60vw;
+    }
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .HotelBox {
+        width: 75vw;
+    }
+}
+
+

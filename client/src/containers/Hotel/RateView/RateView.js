@@ -8,25 +8,35 @@ import PropTypes from 'prop-types';
 
 class RateView extends React.Component {
 
-   onDoRatingHander = () => {
+   onDoRatingHandler = () => {
 
    };
    render() {
       return (
          <div className="RateViewBox">
+
+
             <div className="RateViewHeader">
-               <div className="RateName">LUNCH</div>
-               <div className="ButtonBox">
+               <div className="RateName">Variability in Items</div>
+               <div className="noOfRatings">(34 Ratings)</div>
+            </div>
+
+            <div className="RateViewFooter">
+               <div className="RateOnlyWrapper">
+                  <RateOnly averageRating="4.4"/>
+               </div>
+               <div className="ButtonWrapper">
                   <Button
                      cls="Success InlineBtn Smaller"
                      clicked={this.onDoRatingHandler}
                   >Rate Lunch</Button>
                </div>
             </div>
-            <RateOnly averageRating="4.4"/>
+
+
          </div>
       );
    }
-};
+}
 
 export default RateView;

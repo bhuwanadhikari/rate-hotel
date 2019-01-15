@@ -1,24 +1,46 @@
 .RateViewBox{
-
+ border : 1px solid silver;
+    margin: 10px auto;
+    padding: 4px 4px 4px 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 3px var(--chhaya);
 }
 
 .RateViewHeader {
-    display: inline;
-
+    width: 100%;
+    border-bottom: 1px solid silver;
+    padding-bottom: 5px;
 }
 
 .RateName {
     display: inline;
-    font-size: 1.1em;
+    font-size: 1.05em;
     color: var(--bio);
     font-weight: bold;
 
 }
+.noOfRatings {
+    font-size: 0.8em;
+    display: inline;
+    margin: 0 16px 0 6px;
+    color: gray;
+}
 
-.ButtonBox {
+.RateViewFooter {
+   margin: 5px 0
+}
+
+.ButtonWrapper {
     display: inline;
 }
 
-.RateViewBox > .AverageRating {
+.RateOnlyWrapper {
+    display: inline;
+    margin: 2px auto 3px auto;
+    width: 180px;
+    float: left;
+}
+
+.AverageRating {
     font-size: 1.5em;
 }
