@@ -1,7 +1,8 @@
+
 .RateContainer {
+
     width: 180px;
     height: 22px;
-    margin-top: 5px;
 }
 
 .RateBox{
@@ -12,33 +13,6 @@
     display: inline-block;
     height: 22px;
     float: left;
-}
-
-.RateSpan {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    margin: 1.5px;
-    background-color: white;
-    float: left;
-    border-radius: 20px;
-    border: 1px solid var(--rateColor);
-    box-sizing: border-box;
-    z-index: 0;
-}
-
-.RateField {
-    position: relative;
-    top: 2px;
-    left: 2px;
-    height: 14px;
-    width: 14px;
-    display: block;
-    background-color: transparent;
-    border-radius: 14px;
-    border: 2px solid var(--rateColor);
-    z-index: 30;
-    box-sizing: border-box;
 }
 
 
@@ -57,4 +31,34 @@
     text-align: center;
     line-height: 0.825em;
 
+}
+
+
+.stars-outer {
+    position: relative;
+    display: inline-block;
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.stars-outer::before {
+    content: "\f005\f005\f005\f005\f005";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-size: 17px;
+    color: #ccc;
+    margin: 1px;
+}
+
+.stars-inner::before {
+    content: "\f005\f005\f005\f005\f005";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    color: var(--theme);
+    font-size: 17px;
+    margin: 1px;
 }

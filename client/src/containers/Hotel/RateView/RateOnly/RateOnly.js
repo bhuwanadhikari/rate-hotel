@@ -1,82 +1,26 @@
 import React from 'react';
 import './RateOnly.css';
 
+// import '../../../../assets/bootstrap/css/bootstrap.css';
+
+
+
 
 // takes averageRating as props
 const RateOnly = (props) => {
 
-   const averageRating = props.averageRating;
-   const avgRateArr = [];
-   if(averageRating>=1) {
-      let mode = (Math.floor(averageRating))%5;
-      console.log("mode 1: ", mode);
-      for (let i = 1; i <= mode; i++) {
-         avgRateArr.push(10);
-      }
-
-      let mode2 = Math.ceil((averageRating*10)%10);
-      console.log("mode 2: ", mode2);
-      for(let i = mode+1; i <= 5; i++){
-         if(i === mode+1){
-            avgRateArr.push(mode2);
-         }else {
-            avgRateArr.push(0);
-         }
-      }
-
-   }else {
-
-      avgRateArr.push(averageRating*10, 0, 0, 0, 0);
-   }
-
-   console.log(avgRateArr);
-   const rateElementBasicStyles = {
-      position: 'relative',
-      zIndex: 3,
-      top: 0,
-      left: 0,
-      display: 'block',
-      height: '10px',
-      backgroundColor: 'green'};
-
-   const styles = {
-      one:{...rateElementBasicStyles, width:avgRateArr[0]},
-      two:{...rateElementBasicStyles, width:avgRateArr[1]},
-      three:{...rateElementBasicStyles, width:avgRateArr[2]},
-      four:{...rateElementBasicStyles, width:avgRateArr[3]},
-      five:{...rateElementBasicStyles, width:avgRateArr[4]}
-   };
+   const widthValue = (props.averageRating*20).toString()+'%';
    return(
       <div className="RateContainer">
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous"/>
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous"/>
          <div className="RateBox">
-
-            <div className="RateSpan" >
-               <div className="RateField">
-                  <div className="RateElement" style = {styles.one}> </div>
-               </div>
-            </div>
-            <div className="RateSpan">
-               <div className="RateField">
-                  <div className="RateElement" style = {styles.two}> </div>
-               </div>
-            </div>
-            <div className="RateSpan">
-               <div className="RateField">
-                  <div className="RateElement" style = {styles.three}> </div>
-               </div>
-            </div>
-            <div className="RateSpan">
-               <div className="RateField">
-                  <div className="RateElement" style = {styles.four}> </div>
-               </div>
-            </div>
-            <div className="RateSpan">
-               <div className="RateField">
-                  <div className="RateElement" style = {styles.five}> </div>
-               </div>
+            <div className="stars-outer">
+               <div className="stars-inner" style= {{width: widthValue}} > </div>
             </div>
          </div>
          <div className="AvgRatingBox"><div className="AvgRating">{props.averageRating}</div></div>
+
       </div>
    )
 };

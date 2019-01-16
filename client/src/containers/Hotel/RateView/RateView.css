@@ -3,7 +3,7 @@
     margin: 10px auto;
     padding: 4px 4px 4px 10px;
     border-radius: 3px;
-    box-shadow: 0 0 3px var(--chhaya);
+    box-shadow: 0 0 5px gray;
 }
 
 .RateViewHeader {
@@ -36,8 +36,8 @@
 
 .RateOnlyWrapper {
     display: inline;
-    margin: 2px auto 3px auto;
-    width: 180px;
+    margin: 2px auto 15px auto;
+    width: 170px;
     float: left;
 }
 

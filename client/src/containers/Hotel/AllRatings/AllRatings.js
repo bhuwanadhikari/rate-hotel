@@ -14,7 +14,6 @@ class AllRatings extends Component {
             <RateView/>
             <RateView/>
             <RateView/>
-            <RateView/>
             </div>
          </div>
       );

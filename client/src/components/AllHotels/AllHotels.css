@@ -58,10 +58,11 @@
     font-size: 0.8em;
 }
 
-
+.RateOnlyWrapper {
+    display: inline;
+}
 
 .HotelCardFooter{
-    margin-top: 5px;
 
 }
 
@@ -70,7 +71,6 @@
     width: 80px;
     font-size: 0.85em;
     text-align: center;
-    margin-right:5%;
     font-weight: bold;
     color: var(--bio);
 }

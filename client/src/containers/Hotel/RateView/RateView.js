@@ -29,9 +29,10 @@ class RateView extends React.Component {
                   <Button
                      cls="Success InlineBtn Smaller"
                      clicked={this.onDoRatingHandler}
-                  >Rate Lunch</Button>
+                  >Rate</Button>
                </div>
             </div>
+
 
 
          </div>

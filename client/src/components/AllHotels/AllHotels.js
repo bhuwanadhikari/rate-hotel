@@ -56,7 +56,10 @@ class AllHotels extends Component {
                         <div className="HotelLocation">{hotel.location}</div>
                      ):(<div className="HotelLocation">Pokhara Nepal</div>)}
 
-                     {<RateOnly averageRating = {averageRating}/>}
+                     <div className="RateOnlyWrapper">
+                        <RateOnly averageRating = {averageRating}/>
+                     </div>
+
 
 
                      <div className="HotelCardFooter">
