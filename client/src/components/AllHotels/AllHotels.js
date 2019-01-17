@@ -42,40 +42,39 @@ class AllHotels extends Component {
             const averageRating = hotel.averageRating;
 
             return (
-               <div className="SmallHotelCardBox" key = {hotel._id}>
+               <div className="SmallHotelCardBox" key={hotel._id}>
                   <div className="ImageBox">
                      <img src={imag} alt="Thumbnail for Hotel"/>
                   </div>
                   <div className="DetailBox">
                      <h5 className="HotelName">
-                        <NavLink className = "HotelLink" to = {`hotel/${hotel._id}`}>
-                           {hotel.name?hotel.name:null}
+                        <NavLink className="HotelLink" to={`hotel/${hotel._id}`}>
+                           {hotel.name ? hotel.name : null}
                         </NavLink>
                      </h5>
-                     {hotel.location?(
+                     {hotel.location ? (
                         <div className="HotelLocation">{hotel.location}</div>
-                     ):(<div className="HotelLocation">Pokhara Nepal</div>)}
+                     ) : (<div className="HotelLocation">Pokhara Nepal</div>)}
 
                      <div className="RateOnlyWrapper">
-                        <RateOnly averageRating = {averageRating}/>
+                        <RateOnly averageRating={averageRating}/>
                      </div>
-
-
 
                      <div className="HotelCardFooter">
                         <div className="ReviewNumber">{hotel.reviews} reviews</div>
+                        <div className="ButtonWrapper">
+                           <Button
+                              cls="Success InlineBtn Smaller"
+                              dataMessage={hotel._id}
+                              clicked={this.onRateClickHandler}
+                           >
+                              Rate Me!
+                           </Button>
+                        </div>
 
-                        <Button
-                           cls = "Success InlineBtn Smaller"
-                           dataMessage = {hotel._id}
-                           clicked = {this.onRateClickHandler}
-                        >
-                           Rate Me!
-                        </Button>
                      </div>
                   </div>
-               </div>
-            )
+               </div>)
          });
          return (
             <div className="AllHotelsBox">

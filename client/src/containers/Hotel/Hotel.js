@@ -27,7 +27,7 @@ class Hotel extends Component {
             <div className="HotelBox">
                <div className="HotelCard">This is hotel card </div>
                <div className="HotelDetails">
-                  <div className= "DetailsHeader">Ratings and Reviews</div>
+                  <div className= "DetailsHeader">RATINGS AND REVIEWS</div>
                   <AllRatings/>
                   <div className= "AllReviewsBox"> All Reviews Here</div>
                </div>

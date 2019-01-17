@@ -54,16 +54,18 @@
 
 }
 
-.HotelLocation{
+.SmallHotelCardBox .HotelLocation{
     font-size: 0.8em;
+
 }
 
-.RateOnlyWrapper {
-    display: inline;
+.SmallHotelCardBox .RateOnlyWrapper {
+    margin: 5px 0;
 }
 
 .HotelCardFooter{
-
+    position: relative;
+    width: 100%;
 }
 
 .ReviewNumber{
@@ -73,6 +75,12 @@
     text-align: center;
     font-weight: bold;
     color: var(--bio);
+}
+
+.SmallHotelCardBox .ButtonWrapper {
+    display: inline;
+    margin-left: 10%;
+
 }
 
 
@@ -98,4 +106,6 @@
     }
 
 }
+
+
 

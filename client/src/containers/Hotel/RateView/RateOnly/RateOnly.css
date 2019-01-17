@@ -9,7 +9,7 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 116px;
+    width: 100px;
     display: inline-block;
     height: 22px;
     float: left;
@@ -18,7 +18,7 @@
 
 .AvgRatingBox {
     display: inline-block;
-    width: 3em;
+    width: 2.2em;
     height: 22px;
 }
 

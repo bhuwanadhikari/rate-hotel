@@ -42,7 +42,7 @@ class Profile extends Component {
          return (
             <div className="ProfileContainer">
 
-               <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler}>
+               <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler} fromTop = '5%'>
                   <EditProfile modalClosed={this.onBackDropClickHandler}/>
                </Modal>
 
