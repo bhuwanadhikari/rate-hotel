@@ -29,7 +29,7 @@ class RateView extends React.Component {
    render() {
       return (
          <Auxi>
-            <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler} fromTop = '40%'>
+            <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler} fromTop = '30%'>
                <DoRating/>
             </Modal>
             <div className="RateViewBox">

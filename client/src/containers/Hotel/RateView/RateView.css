@@ -20,7 +20,7 @@
     font-size: 1.05em;
     color: var(--bio);
     font-weight: bold;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 
 }
 .noOfRatings {

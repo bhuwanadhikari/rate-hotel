@@ -47,7 +47,7 @@ class ProfileCard extends Component {
                return (
                   <li key={soKey} >
                      <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>
-                        <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
+                        <i className={`fa fa-${soKey}`} > </i>
                      </div>
                   </li>
                );

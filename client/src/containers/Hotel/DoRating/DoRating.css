@@ -1,3 +1,49 @@
 .DoRatingBox {
-    margin-top: 200px;
+    height: auto;
+}
+
+.DoRatingHeader {
+    color: var(--bio);
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto 10px auto;
+}
+
+.MainBox {
+    width:100%;
+    margin: 10px;
+    height: 50px;
+}
+
+.StarBox {
+    width: 20%;
+    display: inline;
+    float: left;
+}
+
+.Star {
+    display: inline;
+    width: 100%;
+    margin: auto;
+}
+.Star::before {
+    content: "\f005";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-size: 20px;
+    width: 20px;
+    margin: auto;
+    text-align: center;
+    display: inline;
+}
+
+.StarLabel {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+    padding-top: 10px;
+}
+
+.DoRatingButtonWrapper {
+    margin: auto;
 }

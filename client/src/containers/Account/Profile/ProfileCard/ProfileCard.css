@@ -194,9 +194,16 @@
     color: #262626;
     transition: .5s;
 }
+.fa::after{
+    content: "\f099";
+}
 
 
 .Media ul li:nth-child(1) .Anchor i {
+    color: #3b5998;
+}
+
+.Media ul li:nth-child(1) .Anchor i::after {
     color: #3b5998;
 }
 
