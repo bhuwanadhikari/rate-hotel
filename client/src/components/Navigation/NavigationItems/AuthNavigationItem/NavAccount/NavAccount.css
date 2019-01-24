@@ -15,11 +15,11 @@
 .AccountLinkList {
     display: block;
     list-style-type: none;
-    height: 30px;
+    height: 50px;
     border-bottom:  1px solid gray;
     text-align: center;
     color: #fc4c02;
-    line-height: 30px;
+    line-height: 50px;
     z-index: 25;
     transition: font-size 0.2s ease-in;
 
@@ -68,11 +68,13 @@
     .AccountNavSec {
         width: 25vw;
     }
+
 }
 
 /*For TABS ONLY*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
-.AccountNavSec {
-    width: 35vw;
-}
+    .AccountNavSec {
+        width: 35vw;
+    }
+
 }
