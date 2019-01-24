@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './DoRating.css';
-import index from "../../../redux/reducers";
+
 
 import Button from '../../../components/ui/Button/Button';
 

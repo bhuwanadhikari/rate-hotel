@@ -49,7 +49,6 @@ export const loginUser = (userData) => dispatch => {
          //Decode token to get current user data
          const decoded = jwt_decode(token);
 
-
          return dispatch(setUser(decoded));
 
       })

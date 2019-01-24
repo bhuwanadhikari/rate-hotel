@@ -2,7 +2,8 @@ import {
    GET_HOTEL,
    GET_ALL_HOTELS,
    HOTEL_LOADING,
-   HOTEL_NOT_FOUND
+   HOTEL_NOT_FOUND,
+   HOLD_HOTEL
 } from './types';
 
 import axios from 'axios';
@@ -37,6 +38,20 @@ export const getAllHotels = () => (dispatch) => {
       }));
 
 };
+
+//Hold hotel
+export const holdHotelId = (hotelId) => (dispatch) => dispatch({
+      type: HOLD_HOTEL,
+      payload: hotelId
+   });
+
+
+//Release hotel
+export const releaseHotelId = () => (dispatch) => dispatch({
+   type: HOLD_HOTEL,
+   payload: null
+});
+
 
 export const setHotelLoading = () => {
    return {

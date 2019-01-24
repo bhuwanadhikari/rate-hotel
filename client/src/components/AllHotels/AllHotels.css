@@ -84,7 +84,11 @@
 }
 
 
-
+.AlertMessage {
+    text-align: center;
+    color: var(--bio);
+    margin: 10px auto 20px auto;
+}
 
 /*For DESKTOPS ONLY --60VW  */
 @media only screen and (min-width: 800px) {

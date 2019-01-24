@@ -8,35 +8,45 @@ import './AllHotels.css';
 import Button from '../ui/Button/Button';
 import Spinnner from '../ui/Spinnner/Spinner';
 import RateOnly from '../../containers/Hotel/RateView/RateOnly/RateOnly';
+import Modal from '../ui/Modal/Modal';
 
-import {getAllHotels} from '../../redux/actions/hotelActions'
+import {getAllHotels, holdHotelId, releaseHotelId} from '../../redux/actions/hotelActions';
 
 class AllHotels extends Component {
 
    constructor(){
       super();
       this.state = {
-         allHotels: null
+         allHotels: null,
+         showModal: false
+
       };
    }
 
    onRateClickHandler = (e) => {
-      this.props.history.push(`/hotel/${e.target.dataset.message}`)
+      if(this.props.auth.isAuthenticated){
+         this.props.history.push(`/hotel/${e.target.dataset.message}`);
+      }else {
+         this.setState({showModal: true});
+         this.props.holdHotelId(e.target.dataset.message);
+         console.log(e.target.dataset.message);
+      }
    };
 
 
    componentDidMount() {
       this.props.getAllHotels();
+      // this.props.holdHotelId(35);
    }
 
    componentWillReceiveProps(nextProps) {
       const newAllHotels = nextProps.hotel.allHotels;
+
       this.setState({allHotels: newAllHotels});
    }
 
 
    render() {
-
       if(this.props.hotel.allHotels !== null ) {
          const allHotelView = this.props.hotel.allHotels.map(hotel => {
             const averageRating = hotel.averageRating;
@@ -71,14 +81,30 @@ class AllHotels extends Component {
                               Rate Me!
                            </Button>
                         </div>
-
                      </div>
                   </div>
                </div>)
          });
          return (
             <div className="AllHotelsBox">
+
+               <Modal show={this.state.showModal} modalClosed={() => {
+                  this.setState({showModal: false});
+                  this.props.releaseHotelId();
+
+               }} fromTop = '35%'>
+                  <div className="AlertMessage">You have to Login to access Hotel Profiles</div>
+                  <Button
+                     cls = "Success InlineBtn"
+                     clicked = {() => {
+                        this.setState({showModal: false});
+                        this.props.history.push('/login');
+                     }}
+                  >Continue to Login</Button>
+               </Modal>
+
                {allHotelView}
+
             </div>
          )
       }
@@ -90,13 +116,17 @@ class AllHotels extends Component {
 
 AllHotels.propTypes = {
    hotel: PropTypes.object.isRequired,
-   getAllHotels: PropTypes.func.isRequired
+   getAllHotels: PropTypes.func.isRequired,
+   holdHotelId: PropTypes.func.isRequired,
+   releaseHotelId: PropTypes.func.isRequired
+
 };
 
 
 const mapStateToProps = (state) => ({
-   hotel: state.hotel
+   hotel: state.hotel,
+   auth: state.auth
 });
 
 
-export default connect(mapStateToProps, {getAllHotels})(withRouter(AllHotels));
+export default connect(mapStateToProps, {getAllHotels, holdHotelId, releaseHotelId})(withRouter(AllHotels));

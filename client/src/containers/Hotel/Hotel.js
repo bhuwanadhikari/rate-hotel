@@ -11,6 +11,7 @@ class Hotel extends Component {
 
    componentDidMount() {
       this.props.getHotelById(this.props.match.params.id);
+      
    }
 
 

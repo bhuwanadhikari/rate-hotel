@@ -19,3 +19,7 @@ export const GET_ALL_HOTELS = 'GET_HOTELS';
 export const HOTEL_NOT_FOUND = 'HOTEL_NOT_FOUND';
 export const CLEAR_HOTEL = 'CLEAR_HOTEL';
 export const HOTEL_LOADING = 'HOTEL_LOADING';
+
+export const HOLD_HOTEL = 'HOLD_HOTEL';
+
+export const DO_RATING = 'DO_RATING';

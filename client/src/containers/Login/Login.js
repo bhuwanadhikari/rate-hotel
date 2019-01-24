@@ -6,9 +6,10 @@ import './Login.css';
 import Modal from '../../components/ui/AlertRegModal/AlertRegistration';
 import InputField from '../../components/ui/InputField/InputField';
 
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../redux/actions/authActions';
+import { releaseHotelId } from '../../redux/actions/hotelActions';
 
 // import {removeErrFeedback} from '../../components/common/functions';
 
@@ -41,7 +42,9 @@ class Login extends Component{
 
    componentWillReceiveProps(nextProps){
       if(nextProps.auth.isAuthenticated) {
-         this.props.history.push('/home');
+
+            this.props.history.push('/home');
+
       }
       if(nextProps.errors){
          this.setState({errors: nextProps.errors});
@@ -86,14 +89,17 @@ class Login extends Component{
 }
 
 Login.propTypes = {
-   loginUser : propTypes.func.isRequired,
-   auth: propTypes.object.isRequired,
-   errors: propTypes.object.isRequired
+   loginUser : PropTypes.func.isRequired,
+   auth: PropTypes.object.isRequired,
+   errors: PropTypes.object.isRequired,
+   hotel: PropTypes.object.isRequired,
+   releaseHotelId: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
    auth: state.auth,
-   errors: state.errors
+   errors: state.errors,
+   hotel: state.hotel
 });
 
-export default connect(mapStateToProps, { loginUser })(Login);
+export default connect(mapStateToProps, { loginUser, releaseHotelId })(Login);

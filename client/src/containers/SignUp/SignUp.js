@@ -96,44 +96,6 @@ class SignUp extends Component{
                   errors = {this.state.errors}
                />
                 </form>
-
-            {/*<select*/}
-               {/*className="Input"*/}
-               {/*value = {this.state.faculty}*/}
-               {/*form="signUpForm"*/}
-               {/*name="faculty"*/}
-               {/*onChange={this.onChangeHandler}*/}
-            {/*>*/}
-
-
-               {/*<option value="">*/}
-                  {/*Faculty*/}
-               {/*</option>*/}
-               {/*<option value="Computer">*/}
-                  {/*Computer Engineering*/}
-               {/*</option>*/}
-               {/*<option value="Civil">*/}
-                  {/*Civil Engineering*/}
-               {/*</option>*/}
-               {/*<option value="Mechanical">*/}
-                  {/*Mechanical Engineering*/}
-               {/*</option>*/}
-               {/*<option value="Electronics">*/}
-                  {/*Electronics Engineering*/}
-               {/*</option>*/}
-               {/*<option value="Electrical">*/}
-                  {/*Electrical Engineering*/}
-               {/*</option>*/}
-               {/*<option value="Geomatics">*/}
-                  {/*Geomatics Engineering*/}
-               {/*</option>*/}
-               {/*<option value="Automobile">*/}
-                  {/*Automobile Engineering*/}
-               {/*</option>*/}
-
-
-            {/*</select>*/}
-
             <Button cls = "Success" clicked = {this.onClickHandler} >Sign Up</Button>
 
          </div>

@@ -2,6 +2,7 @@ import {
    GET_HOTEL,
    GET_ALL_HOTELS,
    HOTEL_LOADING,
+   HOLD_HOTEL,
    HOTEL_NOT_FOUND
 } from '../actions/types';
 
@@ -9,7 +10,8 @@ import {
 const initialState = {
    hotel: null,
    allHotels: null,
-   loading: false
+   loading: false,
+   holdHotelId: null
 };
 
 export default function(state = initialState, action){
@@ -27,11 +29,18 @@ export default function(state = initialState, action){
             ...state,
             loading: true
          };
+
       case GET_ALL_HOTELS:
          return {
             ...state,
            loading: false,
            allHotels: action.payload
+         };
+
+      case HOLD_HOTEL:
+         return {
+            ...state,
+            holdHotelId: action.payload
          };
 
       default:
