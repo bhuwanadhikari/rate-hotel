@@ -1,5 +1,5 @@
 .Modal {
-    position: absolute;
+    position: fixed;
     height: auto;
     z-index: 35;
     background-color: var(--seto);

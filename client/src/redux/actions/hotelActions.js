@@ -39,6 +39,13 @@ export const getAllHotels = () => (dispatch) => {
 
 };
 
+//Do Rating of the hotel
+export const rateItem = () => dispatch => {
+   //Either use promise or await to show loading in button when rate button in clicked
+
+};
+
+
 //Hold hotel
 export const holdHotelId = (hotelId) => (dispatch) => dispatch({
       type: HOLD_HOTEL,

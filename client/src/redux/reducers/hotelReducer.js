@@ -10,7 +10,7 @@ import {
 const initialState = {
    hotel: null,
    allHotels: null,
-   loading: false,
+   loading: 0,
    holdHotelId: null
 };
 
@@ -21,7 +21,7 @@ export default function(state = initialState, action){
          return {
             ...state,
             hotel: action.payload,
-            loading: false
+            loading: 1
          };
 
       case HOTEL_LOADING:
@@ -33,7 +33,7 @@ export default function(state = initialState, action){
       case GET_ALL_HOTELS:
          return {
             ...state,
-           loading: false,
+           loading: 11,
            allHotels: action.payload
          };
 

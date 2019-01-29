@@ -77,23 +77,22 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
       //check if user already exists in array of objects
 
 
-      const keyArr =['dal', 'rice', 'curry', 'chutney', 'salad', 'sideDish', 'lunch', 'tea', 'expensiveness', 'vif', 'comfortability', 'hygiene', 'serving', 'freshness'];
+      const ratingItems =['dal', 'rice', 'curry', 'chutney', 'salad', 'sideDish', 'lunch', 'tea', 'expensiveness', 'vif', 'comfortability', 'hygiene', 'serving', 'freshness'];
 
-      for(let key in keyArr) {
-         key = keyArr[key];
+      for(let key in ratingItems) {
+         key = ratingItems[key];
          key = key.toString();
          if ((rating.rates[key].filter(rate => rate.user.toString() === req.user.id).length > 0) && req.body[key]) {
-
             errors[key] = `You have already rated ${key}`;
-
+            //edit rates as you have already rated
             rating.rates[key] = rating.rates[key].filter(rate=>rate.user.toString() !== req.user.id);
          }
 
          if (req.body[key]) {
-            const object = {};
-            object.user = req.user.id;
-            object.value = req.body[key];
-            rating.rates[key].unshift(object);
+            const rateData = {};
+            rateData.user = req.user.id;
+            rateData.value = req.body[key];
+            rating.rates[key].unshift(rateData);
          }
       }
 

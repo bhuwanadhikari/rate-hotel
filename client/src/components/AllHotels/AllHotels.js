@@ -47,7 +47,7 @@ class AllHotels extends Component {
 
 
    render() {
-      if(this.props.hotel.allHotels !== null ) {
+      if(this.props.hotel.allHotels !== null ) { //or check the loading state to be 11
          const allHotelView = this.props.hotel.allHotels.map(hotel => {
             const averageRating = hotel.averageRating;
 

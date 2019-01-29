@@ -13,24 +13,33 @@ class DoRating extends Component {
             colors: ['silver' ,'silver' ,'silver' ,'silver' ,'silver']
          },
          isRated: false,
-         dataValue: null
+         rateData: {
+            rateItem: null,
+            user: null,
+            value: 0
+         }
       };
    }
 
-   onDoneHandler = (e) => {
-      e.preventDefault();
-      console.log("done");
+
+   componentDidMount() {
+   }
+
+
+   onDoneHandler = () => {
+      console.log("Rate data: ", this.state.rateData);
    };
 
+
    render() {
-      const starLabel = ['Hate', 'Dislike', 'It\'s Okay', 'Like', 'Love'];
-      const doRatingMain = starLabel.map((label) => {
+      const starLabels = ['Hate', 'Dislike', 'It\'s Okay', 'Like', 'Love'];
+      const doRatingMain = starLabels.map((starLabel, index) => {
          return (
-            <div className="StarBox" key = {label}
+            <div className="StarBox" key = {starLabel}
                  onClick={() => {
                     const colorArray = [];
                     for(let i = 1; i <= 5; i++){
-                       if(i <= starLabel.indexOf(label)+1){
+                       if(i <= index+1){
                           colorArray.push('var(--theme)');
                        }else {
                           colorArray.push('silver')
@@ -39,22 +48,25 @@ class DoRating extends Component {
                     this.setState({
                        styles:{colors: colorArray},
                        isRated: true,
-                       dataValue: starLabel.indexOf(label)+1
+                       rateData: {
+                          user: this.props.auth.user.id,
+                          value: index+1,
+                          rateItem: this.props.name}
                     });
                  }}
             >
-               <div className="Star" style = {{'color': this.state.styles.colors[starLabel.indexOf(label)]}}> </div>
-               <div className="StarLabel">{label}</div>
+               <div className="Star" style = {{'color': this.state.styles.colors[index]}}> </div>
+               <div className="StarLabel">{starLabel}</div>
             </div>
          );
       });
 
 
-      console.log("Data: ", this.state);
+      // console.log("Data: ", this.state);
 
       return (
          <div className= "DoRatingBox">
-            <div className="DoRatingHeader">Tap the star you want to rate for</div>
+            <div className="DoRatingHeader">Tap the star you want to rate</div>
             <div className="MainBox">
                {doRatingMain}
             </div>
@@ -70,7 +82,9 @@ class DoRating extends Component {
 }
 
 function mapStateToProps(state) {
-   return {};
+   return {
+      auth: state.auth
+   };
 }
 
 export default connect(mapStateToProps)(DoRating);
