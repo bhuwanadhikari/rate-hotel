@@ -3,7 +3,10 @@ import {
    GET_ALL_HOTELS,
    HOTEL_LOADING,
    HOTEL_NOT_FOUND,
-   HOLD_HOTEL
+   HOLD_HOTEL,
+   GET_ERRORS,
+   DO_RATE_LOADING,
+   DONE_RATING
 } from './types';
 
 import axios from 'axios';
@@ -40,8 +43,18 @@ export const getAllHotels = () => (dispatch) => {
 };
 
 //Do Rating of the hotel
-export const rateItem = () => dispatch => {
-   //Either use promise or await to show loading in button when rate button in clicked
+export const doRating = (hotelId, rateData) => dispatch => {
+   dispatch({type: DO_RATE_LOADING});
+   axios.post(`/api/hotels/rate/${hotelId}`, rateData)
+      .then((res) => dispatch({
+            type: DONE_RATING,
+            payload: res.data
+         })
+      )
+      .catch((err) => dispatch({
+         type: GET_ERRORS,
+         payload: err.response.data
+      }))
 
 };
 

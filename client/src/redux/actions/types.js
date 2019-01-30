@@ -22,4 +22,9 @@ export const HOTEL_LOADING = 'HOTEL_LOADING';
 
 export const HOLD_HOTEL = 'HOLD_HOTEL';
 
-export const DO_RATING = 'DO_RATING';
+//on clicking [Done] done rate loading comes to be true and after 200 response, done rating is triggered
+export const DO_RATE_LOADING = 'DO_RATING';
+export const DONE_RATING = 'DONE_RATING';
+
+
+

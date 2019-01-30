@@ -28,18 +28,23 @@ class RateView extends React.Component {
    };
    render() {
 
-      const averageValue= (this.props.data.rateValue/this.props.data.frequency).toFixed(1);
+      const averageValue=
+         this.props.data.frequency>0?(this.props.data.rateValue/this.props.data.frequency).toFixed(1):0;
       return (
          <Auxi>
+
+
             <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler} fromTop = '30%'>
-               <DoRating name={this.props.name}/>
+               <DoRating name={this.props.name} modalClosed={this.onBackDropClickHandler}/>
             </Modal>
+
+
             <div className="RateViewBox">
 
 
                <div className="RateViewHeader">
                   <div className="RateName">{this.props.label}</div>
-                  <div className="noOfRatings">({this.props.data.length} Ratings)</div>
+                  <div className="noOfRatings">({this.props.data.frequency===1?`1 Rating`:`${this.props.data.frequency} Ratings`})</div>
                </div>
 
                <div className="RateViewFooter">

@@ -3,7 +3,6 @@ import store from '../redux/store/store';
 
 export const   convertRates = (rates, userId) => {
    const ratingItems = Object.keys(rates);
-   console.log("inside",userId);
 
    const outputRates ={};
    let i = 0;
@@ -12,7 +11,7 @@ export const   convertRates = (rates, userId) => {
          alreadyRated: false,
          users: [],
          rateValue: 0,
-         frequency: 1
+         frequency: rates[item].length
       };
          for (let rateData of rates[item]) {
             if(userId === rateData.user){
@@ -24,7 +23,8 @@ export const   convertRates = (rates, userId) => {
 
 
       i++;
-
    }
+
+   // console.log(outputRates);
    return outputRates;
 };

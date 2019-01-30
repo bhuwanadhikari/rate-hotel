@@ -99,7 +99,7 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
 
 
       rating.save().then(rating => {
-         res.status(200).json({rating, errors});
+         res.status(200).json({rates:rating.rates});
       }).catch((e) => {
          errors.msg = 'Cannot do the rating';
          res.status(400).json(errors);

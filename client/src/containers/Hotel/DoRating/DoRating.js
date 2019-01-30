@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
+import {doRating} from '../../../redux/actions/hotelActions';
+
 import './DoRating.css';
-
-
 import Button from '../../../components/ui/Button/Button';
 
 class DoRating extends Component {
@@ -13,11 +15,7 @@ class DoRating extends Component {
             colors: ['silver' ,'silver' ,'silver' ,'silver' ,'silver']
          },
          isRated: false,
-         rateData: {
-            rateItem: null,
-            user: null,
-            value: 0
-         }
+         rateData: {}
       };
    }
 
@@ -28,7 +26,14 @@ class DoRating extends Component {
 
    onDoneHandler = () => {
       console.log("Rate data: ", this.state.rateData);
+      this.props.doRating(this.props.hotel.hotel.hotel._id ,this.state.rateData);
+      this.props.modalClosed();
    };
+
+
+   componentWillReceiveProps(nextProps) {
+
+   }
 
 
    render() {
@@ -48,10 +53,7 @@ class DoRating extends Component {
                     this.setState({
                        styles:{colors: colorArray},
                        isRated: true,
-                       rateData: {
-                          user: this.props.auth.user.id,
-                          value: index+1,
-                          rateItem: this.props.name}
+                       rateData:{[this.props.name]: index+1}
                     });
                  }}
             >
@@ -73,7 +75,7 @@ class DoRating extends Component {
             <div className="DoRatingButtonWrapper">
                {this.state.isRated?(<Button
                   cls = "InlineBtn Success"
-                  clicked = {this.onDoneHandler}
+                  clicked = {() => this.onDoneHandler()}
                >Done</Button>):null}
             </div>
          </div>
@@ -81,10 +83,15 @@ class DoRating extends Component {
    }
 }
 
+DoRating.propTypes = {
+   doRating: PropTypes.func.isRequired,
+};
+
 function mapStateToProps(state) {
    return {
-      auth: state.auth
+      auth: state.auth,
+      hotel: state.hotel
    };
 }
 
-export default connect(mapStateToProps)(DoRating);
+export default connect(mapStateToProps, {doRating})(DoRating);

@@ -3,15 +3,18 @@ import {
    GET_ALL_HOTELS,
    HOTEL_LOADING,
    HOLD_HOTEL,
-   HOTEL_NOT_FOUND
+   HOTEL_NOT_FOUND,
+   DO_RATE_LOADING,
+   DONE_RATING
 } from '../actions/types';
 
 
 const initialState = {
    hotel: null,
    allHotels: null,
-   loading: 0,
-   holdHotelId: null
+   loading: 0, //loading of all hotels and loading of one hotel
+   holdHotelId: null,
+   isRateLoading: false
 };
 
 export default function(state = initialState, action){
@@ -33,8 +36,8 @@ export default function(state = initialState, action){
       case GET_ALL_HOTELS:
          return {
             ...state,
-           loading: 11,
-           allHotels: action.payload
+            loading: 11,
+            allHotels: action.payload
          };
 
       case HOLD_HOTEL:
@@ -42,6 +45,16 @@ export default function(state = initialState, action){
             ...state,
             holdHotelId: action.payload
          };
+      case DO_RATE_LOADING:
+         return { ...state, isRateLoading: true };
+      case DONE_RATING:
+         return { ...state,
+            hotel:{
+               ...state.hotel,
+               rates:action.payload.rates
+
+            },
+            isRateLoading: false };
 
       default:
          return state;
