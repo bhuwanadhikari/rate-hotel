@@ -23,6 +23,10 @@
     font-family: 'Poppins', sans-serif;
 
 }
+.MealRateView {
+    background-color: var(--lightTheme);
+}
+
 .noOfRatings {
     font-size: 0.8em;
     display: inline;

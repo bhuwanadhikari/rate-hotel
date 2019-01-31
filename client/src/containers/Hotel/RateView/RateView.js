@@ -39,7 +39,7 @@ class RateView extends React.Component {
             </Modal>
 
 
-            <div className="RateViewBox">
+            <div className={`RateViewBox ${this.props.extraClass}`}>
 
 
                <div className="RateViewHeader">
@@ -56,10 +56,10 @@ class RateView extends React.Component {
                         cls="Success InlineBtn Smaller"
                         clicked={this.onDoRatingHandler}
                      >{this.props.data.alreadyRated
-                     ?"Edit Rate":"Rate this Item"}</Button>
+                        ?"Edit Rate"
+                        :"Rate this Item"}</Button>
                   </div>
                </div>
-
 
 
             </div>

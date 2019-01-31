@@ -1,6 +1,19 @@
 .AllRatingsBox {
     width: 100%;
     margin: auto;
+    transition: width 2s ease-in;
+}
+
+.MealRatingsBox {
+    transition: all 2s ease-in;
+}
+
+.MealRateViewBox {
+    background-color: var(--lightTheme);
+}
+
+.MealRatingsMain {
+    transform: translateX(10px);
 }
 
 
