@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const Hotel = require('../../models/Hotel');
 const Rating = require('../../models/Rating');
+const {convertToAverageRating} = require('../../helpers/backendHelpers');
 
 const router = express.Router();
 
@@ -106,6 +107,98 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
       })
    }).catch();
 });
+
+
+//@route /api/hotelProfile/top-rated
+//register new hotel
+//public
+// router.get('/top-rated', (req, res) => {
+//    const errors = {};
+//
+//    Rating.find()
+//       .populate('hotel')
+//       .then(allHotels => {
+//          if(!allHotels){
+//             errors.noHotels = 'There are no hotels at all';
+//          }
+//
+//          const newHotelArr = allHotels.map((hotelProfile) => {
+//             const reviews = hotelProfile.reviews.length;
+//             return {
+//                hotelAverageRating: convertToAverageRating(hotelProfile.rates),
+//                _id: hotelProfile.hotel.id,
+//                name: hotelProfile.hotel.name,
+//                avatar: hotelProfile.hotel.avatar,
+//                location: hotelProfile.hotel.location,
+//                reviews: hotelProfile.reviews.length
+//             };
+//          });
+//
+//          res.status(200).json(newHotelArr);
+//
+//       })
+// });
+
+//@route /api/hotelProfile/newest
+//register new hotel
+//public
+// router.get('/all', (req, res) => {
+//    const errors = {};
+//
+//    Rating.find()
+//       .populate('hotel')
+//       .then(allHotels => {
+//          if(!allHotels){
+//             errors.noHotels = 'There are no hotels at all';
+//          }
+//
+//          const newHotelArr = allHotels.map((hotelProfile) => {
+//             const reviews = hotelProfile.reviews.length;
+//             return {
+//                averageRating: (Math.random()*5).toFixed(1),
+//                _id: hotelProfile.hotel.id,
+//                name: hotelProfile.hotel.name,
+//                avatar: hotelProfile.hotel.avatar,
+//                location: hotelProfile.hotel.location,
+//                reviews: (Math.random()*1000).toFixed(0)
+//             };
+//          });
+//
+//          res.status(200).json(newHotelArr);
+//
+//       })
+// });
+
+
+//@route /api/hotelProfile/recommended
+//hotels to display in home
+//public
+// router.get('/all', (req, res) => {
+//    const errors = {};
+//
+//    Rating.find()
+//       .populate('hotel')
+//       .then(allHotels => {
+//          if(!allHotels){
+//             errors.noHotels = 'There are no hotels at all';
+//          }
+//
+//          const newHotelArr = allHotels.map((hotelProfile) => {
+//             const reviews = hotelProfile.reviews.length;
+//             return {
+//                averageRating: (Math.random()*5).toFixed(1),
+//                _id: hotelProfile.hotel.id,
+//                name: hotelProfile.hotel.name,
+//                avatar: hotelProfile.hotel.avatar,
+//                location: hotelProfile.hotel.location,
+//                reviews: (Math.random()*1000).toFixed(0)
+//             };
+//          });
+//
+//          res.status(200).json(newHotelArr);
+//
+//       })
+// });
 
 
 

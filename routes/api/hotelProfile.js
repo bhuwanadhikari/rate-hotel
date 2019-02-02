@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const Hotel = require('../../models/Hotel');
 const Rating = require('../../models/Rating');
 
+const {convertToAverageRating} = require('../../helpers/backendHelpers');
+
 
 const router = express.Router();
 
@@ -15,20 +17,21 @@ router.get('/all', (req, res) => {
 
    Rating.find()
       .populate('hotel')
+      .lean()
       .then(allHotels => {
       if(!allHotels){
          errors.noHotels = 'There are no hotels at all';
       }
-
-      const newHotelArr = allHotels.map((hotelProfile) => {
+      const newHotelArr = allHotels.map((hotelProfile, index) => {
          const reviews = hotelProfile.reviews.length;
+         const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
          return {
-            averageRating: (Math.random()*5).toFixed(1),
-            _id: hotelProfile.hotel.id,
+            averageRating: hotelAverageRating.toFixed(1),
+            _id: hotelProfile.hotel._id,
             name: hotelProfile.hotel.name,
             avatar: hotelProfile.hotel.avatar,
             location: hotelProfile.hotel.location,
-            reviews: (Math.random()*1000).toFixed(0)
+            reviews: reviews
          };
       });
 

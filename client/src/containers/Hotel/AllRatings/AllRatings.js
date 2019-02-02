@@ -16,7 +16,8 @@ class AllRatings extends Component {
       super(props);
       this.state = {
          expandMeal: false,
-         transformValue: 0
+         transformValue: 0,
+         mealCss: {}
       };
    }
 
@@ -40,7 +41,13 @@ tea: Array []
 vif: Array []
 */
    onMoreDetailsHandler = () => {
-      this.setState({expandMeal: !this.state.expandMeal});
+      this.setState({
+         expandMeal: !this.state.expandMeal,
+         mealCss: {
+            height: !this.state.expandMeal?'650px':0
+         }
+      });
+
 
    };
 
@@ -51,12 +58,14 @@ vif: Array []
 
       const rates = this.props.hotelData.rates;
       const usefulRates = convertRates(rates, this.props.auth.user.id);
-      // console.log("Output Useful Rate: ",usefulRates);
 
-      let mealAverageRating = 0;
+      let mealTotalValue = 0, mealTotalFrequency = 0;
       const MealRatings = Object.keys(usefulRates).map((item, index) => {
          if(index <= 5) {
-            mealAverageRating = (usefulRates[item].rateValue/usefulRates[item].frequency+ mealAverageRating)/2;
+            if(usefulRates[item].frequency>0) {
+               mealTotalValue += usefulRates[item].rateValue;
+            }
+            mealTotalFrequency += usefulRates[item].frequency;
             return (
                <div className="RateViewWrapper" key={index}>
                   <RateView
@@ -71,7 +80,7 @@ vif: Array []
       });
 
       const OtherRatings = Object.keys(usefulRates).map((item, index) => {
-         if(index > 5) {
+         if(index > 5 && index <= 12) {
             return (
                <div className="RateViewWrapper" key={index}>
                   <RateView data={usefulRates[item]} label={ratingLabels[index]} name={item}/></div>
@@ -86,15 +95,15 @@ vif: Array []
             <div className="MealRatingsBox">
 
                <div className="MealItemBox">
-                  <div className="RateViewBox MealRateViewBox">
+                  <div className="RateViewBox MealHeaderViewBox">
                      <div className="RateViewHeader">
                         <div className="RateName">Meal</div>
-                        <div className="noOfRatings">(322 Rating References)</div>
+                        <div className="noOfRatings">({mealTotalFrequency} Rating References)</div>
                      </div>
 
                      <div className="RateViewFooter">
                         <div className="RateOnlyWrapper">
-                           <RateOnly averageRating={mealAverageRating.toFixed(1)}/>
+                           <RateOnly averageRating={mealTotalFrequency>0?(mealTotalValue/mealTotalFrequency).toFixed(1):0}/>
                         </div>
                         <div className="ButtonWrapper">
                            <Button
@@ -106,9 +115,7 @@ vif: Array []
                   </div>
                </div>
 
-               {this.state.expandMeal
-                  ?(<div className="MealRatingsMain" style={{transform: `translateX(${this.state.transformValue}px)`}}>{MealRatings}</div>)
-                  :null}
+               <div className="MealRatingsMain" style={this.state.mealCss}>{MealRatings}</div>
 
             </div>
             <div className="OtherRatingsBox" >

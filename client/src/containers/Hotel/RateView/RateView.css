@@ -5,6 +5,7 @@
     border-radius: 3px;
     box-shadow: 0 0 5px gray;
     width: 300px;
+    display: inline-table;
     box-sizing: border-box;
 
 }
@@ -24,6 +25,7 @@
 
 }
 .MealRateView {
+    margin-top: 0;
     background-color: var(--lightTheme);
 }
 

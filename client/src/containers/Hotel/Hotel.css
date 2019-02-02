@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Acme|Bitter|Lato|Mukta|Open+Sans|Quicksand|Raleway|Ubuntu');
 .HotelBox {
     width: 100vw;
 }
@@ -5,7 +7,26 @@
 
 .HotelCard {
     width: 100%;
-    background-color: silver;
+}
+
+.HotelProfileCard {
+    background-color: white;
+}
+.HotelAvatarHolder {
+}
+
+.HotelAvatar {
+    width: 220px;
+    height: 170px;
+    margin: 50px auto 5px auto;
+}
+
+.HotelAvatar img {
+    width: 220px;
+    height: 170px;
+    object-fit: cover;
+    border: 2px solid var(--theme);
+    margin: auto;
 }
 
 
@@ -19,7 +40,12 @@
     font-weight: bold;
     color: var(--bio);
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+.AllRatingsWrapperHotel {
+    width: 300px;
+    margin: auto;
 }
 
 
@@ -31,14 +57,17 @@
 /*For DESKTOPS ONLY --60VW  */
 @media only screen and (min-width: 800px) {
     .HotelBox {
-        width: 60vw;
+        /*width: 60vw;*/
+    }
+    .AllRatingsWrapperHotel {
+        width: 620px;
     }
 }
 
 /*For TABS ONLY -- 75VW  */
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .HotelBox {
-        width: 75vw;
+        /*width: 75vw;*/
     }
 }
 

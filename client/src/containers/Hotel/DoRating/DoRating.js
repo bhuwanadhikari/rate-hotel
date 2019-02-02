@@ -25,7 +25,7 @@ class DoRating extends Component {
 
 
    onDoneHandler = () => {
-      console.log("Rate data: ", this.state.rateData);
+      // console.log("Rate data: ", this.state.rateData);
       this.props.doRating(this.props.hotel.hotel.hotel._id ,this.state.rateData);
       this.props.modalClosed();
    };

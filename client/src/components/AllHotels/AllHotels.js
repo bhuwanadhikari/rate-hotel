@@ -40,9 +40,11 @@ class AllHotels extends Component {
    }
 
    componentWillReceiveProps(nextProps) {
-      const newAllHotels = nextProps.hotel.allHotels;
+      if(nextProps.hotel.allHotels) {
+         const newAllHotels = nextProps.hotel.allHotels;
 
-      this.setState({allHotels: newAllHotels});
+         this.setState({allHotels: newAllHotels});
+      }
    }
 
 

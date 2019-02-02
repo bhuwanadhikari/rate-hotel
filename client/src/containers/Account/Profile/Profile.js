@@ -16,12 +16,13 @@ class Profile extends Component {
    constructor(props){
       super(props);
       this.state = {
-         showModal: false
+         showModal: false,
+         profileData: null
       };
    }
 
    onBackDropClickHandler = () => {
-         this.setState({showModal: false});
+      this.setState({showModal: false});
    };
 
    onOptionHandler = (e) => {
@@ -34,9 +35,18 @@ class Profile extends Component {
       this.props.getCurrentProfile();
    }
 
+
+   componentWillReceiveProps(nextProps){
+      if(nextProps.profile){
+         this.setState({profileData: nextProps.profile});
+      }
+
+   }
+
+
    render() {
-      const {profile, loading, currentUser} = this.props.profile;
-      if(profile === null || loading < 3 || currentUser === null){
+      const { loading, currentUser} = this.props.profile;
+      if(this.state.profileData === null || loading < 3 || currentUser === null){
          return <Spinner/>
       }else {
          return (

@@ -1,9 +1,9 @@
 .AccountNavSec {
-    width: 60vw;
+    width: 70vw;
     float: right;
     z-index: 25;
     padding: 0;
-    background-color: lavenderblush;
+    background-color: var(--lightTheme);
     font-family: Poppins,  Roboto, sans-serif;
     position: relative;
     font-size: 1em;
@@ -18,7 +18,7 @@
     height: 50px;
     border-bottom:  1px solid gray;
     text-align: center;
-    color: #fc4c02;
+    color: var(--theme);
     line-height: 50px;
     z-index: 25;
     transition: font-size 0.2s ease-in;
@@ -59,14 +59,14 @@
 .LogOut {
     display: block;
     cursor: pointer;
-    color: #097eff;
+    color: var(--bio);
 }
 
 
 /*For DESKTOPS ONLY*/
 @media only screen and (min-width: 800px) {
     .AccountNavSec {
-        width: 25vw;
+        width: 35vw;
     }
 
 }
@@ -74,7 +74,7 @@
 /*For TABS ONLY*/
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .AccountNavSec {
-        width: 35vw;
+        width: 55vw;
     }
 
 }
