@@ -26,7 +26,7 @@ class NavHotels extends Component{
 
          let myClasses = 'AuthNavLink';
          const testPath = testPathArray.join("");
-         if(testPath === 'hotels'){
+         if(testPath === 'hotels' || 'hotel' && (testPath !== 'home')){
             myClasses = 'AuthNavLink MyActiveLink';
          }
          return myClasses;

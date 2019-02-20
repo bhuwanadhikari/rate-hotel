@@ -1,6 +1,8 @@
 import {
    GET_HOTEL,
    GET_ALL_HOTELS,
+   GET_TOP_RATED_HOTELS,
+   GET_NEWEST_HOTELS,
    HOTEL_LOADING,
    HOLD_HOTEL,
    HOTEL_NOT_FOUND,
@@ -12,6 +14,8 @@ import {
 const initialState = {
    hotel: null,
    allHotels: null,
+   topRatedHotels: null,
+   newestHotels: null,
    loading: 0, //loading of all hotels and loading of one hotel
    holdHotelId: null,
    isRateLoading: false
@@ -38,6 +42,20 @@ export default function(state = initialState, action){
             ...state,
             loading: 11,
             allHotels: action.payload
+         };
+
+      case GET_TOP_RATED_HOTELS:
+         return {
+            ...state,
+            loading: 112,
+            topRatedHotels: action.payload
+         };
+
+      case GET_NEWEST_HOTELS:
+         return {
+            ...state,
+            loading: 113,
+            newestHotels: action.payload
          };
 
       case HOLD_HOTEL:

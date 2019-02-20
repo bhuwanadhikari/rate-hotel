@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import imag from '../../img/backImages/hotelBackgroung.jpg';
 import './AllHotels.css';
 import Button from '../ui/Button/Button';
-import Spinnner from '../ui/Spinnner/Spinner';
+import Spinner from '../ui/Spinnner/Spinner';
 import RateOnly from '../../containers/Hotel/RateView/RateOnly/RateOnly';
 import Modal from '../ui/Modal/Modal';
 
-import {getAllHotels, holdHotelId, releaseHotelId} from '../../redux/actions/hotelActions';
+import {getAllHotels, holdHotelId, releaseHotelId, getTopRatedHotels} from '../../redux/actions/hotelActions';
 
 class AllHotels extends Component {
 
@@ -36,6 +36,8 @@ class AllHotels extends Component {
 
    componentDidMount() {
       this.props.getAllHotels();
+      this.props.getTopRatedHotels();
+
       // this.props.holdHotelId(35);
    }
 
@@ -112,7 +114,7 @@ class AllHotels extends Component {
       }
 
 
-      return (<Spinnner/>);
+      return (<Spinner/>);
    }
 }
 
@@ -120,7 +122,8 @@ AllHotels.propTypes = {
    hotel: PropTypes.object.isRequired,
    getAllHotels: PropTypes.func.isRequired,
    holdHotelId: PropTypes.func.isRequired,
-   releaseHotelId: PropTypes.func.isRequired
+   releaseHotelId: PropTypes.func.isRequired,
+   getTopRatedHotels: PropTypes.func.isRequired,
 
 };
 
@@ -131,4 +134,4 @@ const mapStateToProps = (state) => ({
 });
 
 
-export default connect(mapStateToProps, {getAllHotels, holdHotelId, releaseHotelId})(withRouter(AllHotels));
+export default connect(mapStateToProps, {getAllHotels, holdHotelId, releaseHotelId, getTopRatedHotels})(withRouter(AllHotels));

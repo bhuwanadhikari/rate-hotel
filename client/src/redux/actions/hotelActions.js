@@ -1,6 +1,8 @@
 import {
    GET_HOTEL,
    GET_ALL_HOTELS,
+   GET_TOP_RATED_HOTELS,
+   GET_NEWEST_HOTELS,
    HOTEL_LOADING,
    HOTEL_NOT_FOUND,
    HOLD_HOTEL,
@@ -15,14 +17,14 @@ import axios from 'axios';
 //Get single hotel profile from id
 export const getHotelById = (id) => (dispatch) => {
    dispatch(setHotelLoading());
-  axios.get(`/api/hotelProfile/id/${id}`)
-     .then(res => dispatch({
-        type: GET_HOTEL,
-        payload: res.data
-     })).catch(err => dispatch({
-     type: GET_HOTEL,
-     payload: {notFound: 'notFound'}
-  }))
+   axios.get(`/api/hotelProfile/id/${id}`)
+      .then(res => dispatch({
+         type: GET_HOTEL,
+         payload: res.data
+      })).catch(err => dispatch({
+      type: GET_HOTEL,
+      payload: {notFound: 'notFound'}
+   }))
 };
 
 
@@ -31,12 +33,48 @@ export const getAllHotels = () => (dispatch) => {
    dispatch(setHotelLoading());
    axios.get('/api/hotelProfile/all')
       .then(res => dispatch({
-         type: GET_ALL_HOTELS,
-         payload: res.data
+            type: GET_ALL_HOTELS,
+            payload: res.data
          })
       )
       .catch(err => dispatch({
          type: GET_ALL_HOTELS,
+         payload: {notFound: 'notFound'}
+      }));
+
+};
+
+//Get top rated hotels
+export const getTopRatedHotels = () => (dispatch) => {
+   dispatch(setHotelLoading());
+   axios.get('/api/hotelProfile/top-rated')
+      .then(res => {
+            dispatch({
+               type: GET_TOP_RATED_HOTELS,
+               payload: res.data
+            })
+         }
+      )
+      .catch(err => dispatch({
+         type: GET_TOP_RATED_HOTELS,
+         payload: {notFound: 'notFound'}
+      }));
+
+};
+
+//Get newest hotels
+export const getNewestHotels = () => (dispatch) => {
+   dispatch(setHotelLoading());
+   axios.get('/api/hotelProfile/newest')
+      .then(res => {
+            dispatch({
+               type: GET_NEWEST_HOTELS,
+               payload: res.data
+            })
+         }
+      )
+      .catch(err => dispatch({
+         type: GET_NEWEST_HOTELS,
          payload: {notFound: 'notFound'}
       }));
 
@@ -61,9 +99,9 @@ export const doRating = (hotelId, rateData) => dispatch => {
 
 //Hold hotel
 export const holdHotelId = (hotelId) => (dispatch) => dispatch({
-      type: HOLD_HOTEL,
-      payload: hotelId
-   });
+   type: HOLD_HOTEL,
+   payload: hotelId
+});
 
 
 //Release hotel

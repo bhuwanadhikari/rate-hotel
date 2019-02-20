@@ -1,16 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const passport = require('passport');
 
 const Hotel = require('../../models/Hotel');
 const Rating = require('../../models/Rating');
 
-const {convertToAverageRating} = require('../../helpers/backendHelpers');
+const {convertToAverageRating, sortByTopRate, sortByDate} = require('../../helpers/backendHelpers');
 
 
 const router = express.Router();
 
 //@route /api/hotelProfile/all
-//register new hotel
+//get all of the hotels
 //public
 router.get('/all', (req, res) => {
    const errors = {};
@@ -63,7 +64,70 @@ router.get('/id/:hotel_id', (req, res) => {
 
 
 
-//@route /api/hotels
+//@route /api/hotelProfile/topRated
+//get sorted hotels
+//private
+router.get('/top-rated', passport.authenticate('jwt', {session: false}), (req, res) => {
+   const errors = {};
+
+   Rating.find()
+      .populate('hotel')
+      .lean()
+      .then(allHotels => {
+         if(!allHotels){
+            errors.noHotels = 'There are no hotels at all';
+         }
+         const newHotelArr = allHotels.map((hotelProfile, index) => {
+            const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
+            return {
+               averageRating: hotelAverageRating.toFixed(1),
+               _id: hotelProfile.hotel._id,
+               name: hotelProfile.hotel.name,
+               avatar: hotelProfile.hotel.avatar,
+               location: hotelProfile.hotel.location,
+               reviews: hotelProfile.reviews.length
+            };
+         });
+         const sortedArray = sortByTopRate(newHotelArr);
+         res.status(200).json(sortedArray);
+
+      })
+});
+
+
+
+
+//@route /api/hotelProfile/newest
+//get sorted hotels
+//private
+router.get('/newest', passport.authenticate('jwt', {session: false}), (req, res) => {
+   const errors = {};
+
+   Rating.find()
+      .populate('hotel')
+      .lean()
+      .then(allHotels => {
+         if(!allHotels){
+            errors.noHotels = 'There are no hotels at all';
+         }
+         console.log("these are all hotels:", allHotels);
+         const newHotelArr = allHotels.map((hotelProfile, index) => {
+            const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
+            return {
+               averageRating: hotelAverageRating.toFixed(1),
+               date: hotelProfile.hotel.date,
+               _id: hotelProfile.hotel._id,
+               name: hotelProfile.hotel.name,
+               avatar: hotelProfile.hotel.avatar,
+               location: hotelProfile.hotel.location,
+               reviews: hotelProfile.reviews.length
+            };
+         });
+         const sortedArray = sortByDate(newHotelArr);
+         res.status(200).json(sortedArray);
+
+      })
+});
 
 
 //@route /api/hotelProfile/hotelid
