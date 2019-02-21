@@ -20,13 +20,21 @@ class NavHotels extends Component{
 
       //Style border of hotelIcon according to the path of the url
       const styleBorder = (pathName) => {
-         const pathArray = pathName.split("");
+         const pathArray = pathName.split("/");
+         // console.log(pathArray);
 
-         const testPathArray = pathArray.filter((value, index) => index>0 && index<7);
+         // const testPathArray = pathArray.filter((value, index) => index>0 && index<7);
 
          let myClasses = 'AuthNavLink';
-         const testPath = testPathArray.join("");
-         if(testPath === 'hotels' || 'hotel' && (testPath !== 'home')){
+         // const testPath = testPathArray.join("");
+         if(
+            pathArray[1] === 'hotels' || 'hotel'
+            && (pathArray[1] !== 'home')
+            && (pathArray[1] !== 'profile')
+            && (pathArray[1] !== 'search')
+            && (pathArray[1] !== 'help')
+            && (pathArray[1] !== 'settings-and-privacy')
+         ){
             myClasses = 'AuthNavLink MyActiveLink';
          }
          return myClasses;
@@ -34,14 +42,14 @@ class NavHotels extends Component{
 
       const myClasses = styleBorder(window.location.pathname);
 
-         return (
-            <li className="AuthNavigationItem HotelsNav">
+      return (
+         <li className="AuthNavigationItem HotelsNav">
 
-               <NavLink className={ myClasses }  activeClassName = "ActiveLink" to={this.props.link}>
-                  <img className="AuthNavIcon" src={hotelIcon} alt="Hotel Icon of CrowApp"/>
-               </NavLink>
-            </li>
-         )
+            <NavLink className={ myClasses }  activeClassName = "ActiveLink" to={this.props.link}>
+               <img className="AuthNavIcon" src={hotelIcon} alt="Hotel Icon of CrowApp"/>
+            </NavLink>
+         </li>
+      )
 
 
 

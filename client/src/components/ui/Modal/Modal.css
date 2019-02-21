@@ -15,8 +15,8 @@
 /*For DESKTOPS ONLY --60VW  */
 @media only screen and (min-width: 800px) {
     .Modal{
-        width: 60vw;
-        left: 20vw;
+        width: 40vw;
+        left: 30vw;
     }
 
 
@@ -25,8 +25,8 @@
 /*For TABS ONLY -- 75VW  */
 @media only screen and (min-width: 450px) and (max-width: 800px) {
     .Modal{
-        width: 75vw;
-        left: 12.5vw;
+        width: 70vw;
+        left: 15vw;
     }
 
 

@@ -1,7 +1,5 @@
-import store from '../redux/store/store';
-
-
-export const   convertRates = (rates, userId) => {
+//Convert array of rating data from backend to a frontend compatible data
+export const  convertRates = (rates, userId) => {
    const ratingItems = Object.keys(rates);
 
    const outputRates ={};
@@ -20,11 +18,11 @@ export const   convertRates = (rates, userId) => {
             outputRates[ratingItems[i]].users.push(rateData.user);
             outputRates[ratingItems[i]].rateValue += rateData.value;
          }
-
-
       i++;
    }
 
    // console.log(outputRates);
    return outputRates;
 };
+
+

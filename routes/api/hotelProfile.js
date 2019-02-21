@@ -5,7 +5,7 @@ const passport = require('passport');
 const Hotel = require('../../models/Hotel');
 const Rating = require('../../models/Rating');
 
-const {convertToAverageRating, sortByTopRate, sortByDate} = require('../../helpers/backendHelpers');
+const {convertToAverageRating, sortByTopRate, sortByDate, sortForHome} = require('../../helpers/backendHelpers');
 
 
 const router = express.Router();
@@ -65,7 +65,7 @@ router.get('/id/:hotel_id', (req, res) => {
 
 
 //@route /api/hotelProfile/topRated
-//get sorted hotels
+//get top rated hotels
 //private
 router.get('/top-rated', passport.authenticate('jwt', {session: false}), (req, res) => {
    const errors = {};
@@ -98,7 +98,7 @@ router.get('/top-rated', passport.authenticate('jwt', {session: false}), (req, r
 
 
 //@route /api/hotelProfile/newest
-//get sorted hotels
+//get newest hotels
 //private
 router.get('/newest', passport.authenticate('jwt', {session: false}), (req, res) => {
    const errors = {};
@@ -125,6 +125,43 @@ router.get('/newest', passport.authenticate('jwt', {session: false}), (req, res)
          });
          const sortedArray = sortByDate(newHotelArr);
          res.status(200).json(sortedArray);
+
+      })
+});
+
+
+router.get('/home', passport.authenticate('jwt', {session: false}), (req, res) => {
+   const errors = {};
+
+   Rating.find()
+      .populate('hotel')
+      .lean()
+      .then(allHotels => {
+         if(!allHotels){
+            errors.noHotels = 'There are no hotels at all';
+         }
+         console.log("these are all hotels:", allHotels);
+
+
+
+
+
+
+         const newHotelArr = allHotels.map((hotelProfile, index) => {
+            const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
+            console.log(hotelProfile.rates);
+            const sortedForHome = sortForHome(hotelProfile.rates);
+            return {
+               averageRating: hotelAverageRating.toFixed(1),
+               date: hotelProfile.hotel.date,
+               _id: hotelProfile.hotel._id,
+               name: hotelProfile.hotel.name,
+               avatar: hotelProfile.hotel.avatar,
+               location: hotelProfile.hotel.location,
+               reviews: hotelProfile.reviews.length
+            };
+         });
+         res.status(200).json(newHotelArr);
 
       })
 });

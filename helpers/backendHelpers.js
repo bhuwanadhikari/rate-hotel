@@ -27,6 +27,13 @@ exports.sortByTopRate = (allHotelsArr) => {
 //sorting by date
 exports.sortByDate = (allHotelsArr) => {
    sortedHotelArr = allHotelsArr.sort((a, b) => a.date>b.date ? -1 : 1);
-
    return sortedHotelArr;
+};
+
+//sort by tea's rating
+exports.sortForHome = (rates) => {
+   //tea,lunch, meal, value of money, cleanliness
+   const teaArr = [], lunchArr = [], mealArr = [], expensiveness = [], hygiene = [];
+
+     return 1;
 };
