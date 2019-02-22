@@ -75,9 +75,8 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
          errors.noRating = 'Neither Hotel nor rating found';
          return res.status(400).json(errors);
       }
+
       //check if user already exists in array of objects
-
-
       const ratingItems =['dal', 'rice', 'curry', 'chutney', 'salad', 'sideDish', 'lunch', 'tea', 'expensiveness', 'vif', 'comfortability', 'hygiene', 'serving', 'freshness'];
 
       for(let key in ratingItems) {
@@ -109,97 +108,30 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
 });
 
 
-//@route /api/hotelProfile/top-rated
-//register new hotel
-//public
-// router.get('/top-rated', (req, res) => {
-//    const errors = {};
-//
-//    Rating.find()
-//       .populate('hotel')
-//       .then(allHotels => {
-//          if(!allHotels){
-//             errors.noHotels = 'There are no hotels at all';
-//          }
-//
-//          const newHotelArr = allHotels.map((hotelProfile) => {
-//             const reviews = hotelProfile.reviews.length;
-//             return {
-//                hotelAverageRating: convertToAverageRating(hotelProfile.rates),
-//                _id: hotelProfile.hotel.id,
-//                name: hotelProfile.hotel.name,
-//                avatar: hotelProfile.hotel.avatar,
-//                location: hotelProfile.hotel.location,
-//                reviews: hotelProfile.reviews.length
-//             };
-//          });
-//
-//          res.status(200).json(newHotelArr);
-//
-//       })
-// });
+router.post('/review/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+   const errors = {};
+   Rating.findOne({hotel: req.params.id}).then((rating) => {
+      if(!rating){
+         errors.noRating= 'Neither Hotel nor Rating found';
+         return res.status(400).json(errors);
+      }
 
-//@route /api/hotelProfile/newest
-//register new hotel
-//public
-// router.get('/all', (req, res) => {
-//    const errors = {};
-//
-//    Rating.find()
-//       .populate('hotel')
-//       .then(allHotels => {
-//          if(!allHotels){
-//             errors.noHotels = 'There are no hotels at all';
-//          }
-//
-//          const newHotelArr = allHotels.map((hotelProfile) => {
-//             const reviews = hotelProfile.reviews.length;
-//             return {
-//                averageRating: (Math.random()*5).toFixed(1),
-//                _id: hotelProfile.hotel.id,
-//                name: hotelProfile.hotel.name,
-//                avatar: hotelProfile.hotel.avatar,
-//                location: hotelProfile.hotel.location,
-//                reviews: (Math.random()*1000).toFixed(0)
-//             };
-//          });
-//
-//          res.status(200).json(newHotelArr);
-//
-//       })
-// });
+      if(req.body.review){
 
+         const newReviewData = {};
+         newReviewData.user= req.user.id;
+         newReviewData.review = req.body.review;
+         rating.reviews.unshift(newReviewData);
 
-//@route /api/hotelProfile/recommended
-//hotels to display in home
-//public
-// router.get('/all', (req, res) => {
-//    const errors = {};
-//
-//    Rating.find()
-//       .populate('hotel')
-//       .then(allHotels => {
-//          if(!allHotels){
-//             errors.noHotels = 'There are no hotels at all';
-//          }
-//
-//          const newHotelArr = allHotels.map((hotelProfile) => {
-//             const reviews = hotelProfile.reviews.length;
-//             return {
-//                averageRating: (Math.random()*5).toFixed(1),
-//                _id: hotelProfile.hotel.id,
-//                name: hotelProfile.hotel.name,
-//                avatar: hotelProfile.hotel.avatar,
-//                location: hotelProfile.hotel.location,
-//                reviews: (Math.random()*1000).toFixed(0)
-//             };
-//          });
-//
-//          res.status(200).json(newHotelArr);
-//
-//       })
-// });
-
+         //save to database
+         rating.save().then(rating => {
+            res.status(200).json({reviews: rating.reviews});
+         }).catch((e) => {
+            res.status(400).json(errors);
+         })
+      }
+   })
+});
 
 
 module.exports = router;

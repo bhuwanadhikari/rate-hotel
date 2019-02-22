@@ -31,7 +31,7 @@ class Hotel extends Component {
 
 
    render() {
-      if (this.props.hotel.loading === 1) {
+      if (this.state.hotel !== null) {
          return (
             <div className="HotelBox">
                <div className="HotelCard">

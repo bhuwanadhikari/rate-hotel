@@ -85,7 +85,6 @@ const RatingSchema = new Schema(
          writer: {type: String},
          user: {type: Schema.Types.ObjectId, ref: 'users'},
          review: {type: String},
-         avatar: {type: String},
          date: {type: Date, default: Date.now()}
       }]
 

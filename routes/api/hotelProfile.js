@@ -139,29 +139,42 @@ router.get('/home', passport.authenticate('jwt', {session: false}), (req, res) =
       .then(allHotels => {
          if(!allHotels){
             errors.noHotels = 'There are no hotels at all';
+            return res.status(400).json(errors);
          }
-         console.log("these are all hotels:", allHotels);
+         // console.log("these are all hotels:", allHotels);
+         const homeObject = {
+            // each should have four
+            tea: [],
+            lunch: [],
+            meal: [],
+            hygiene: [],
+            overall: [],
+         };
 
+         const allRatingArray = allHotels.map(hotelProfile => {
 
-
-
-
-
-         const newHotelArr = allHotels.map((hotelProfile, index) => {
-            const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
-            console.log(hotelProfile.rates);
-            const sortedForHome = sortForHome(hotelProfile.rates);
-            return {
-               averageRating: hotelAverageRating.toFixed(1),
-               date: hotelProfile.hotel.date,
-               _id: hotelProfile.hotel._id,
-               name: hotelProfile.hotel.name,
-               avatar: hotelProfile.hotel.avatar,
-               location: hotelProfile.hotel.location,
-               reviews: hotelProfile.reviews.length
-            };
          });
-         res.status(200).json(newHotelArr);
+
+         res.json(allHotels);
+
+
+
+
+
+         // const newHotelArr = allHotels.map((hotelProfile, index) => {
+         //    const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
+         //    console.log(hotelProfile.rates);
+         //    const sortedForHome = sortForHome(hotelProfile.rates);
+         //    return {
+         //       averageRating: hotelAverageRating.toFixed(1),
+         //       date: hotelProfile.hotel.date,
+         //       _id: hotelProfile.hotel._id,
+         //       name: hotelProfile.hotel.name,
+         //       avatar: hotelProfile.hotel.avatar,
+         //       location: hotelProfile.hotel.location,
+         //       reviews: hotelProfile.reviews.length
+         //    };
+         // });
 
       })
 });
