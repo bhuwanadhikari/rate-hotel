@@ -13,15 +13,14 @@ class Hotel extends Component {
    constructor(props){
       super(props);
       this.state = {
-         hotel: null
+         hotel: null,
       }
-   }
+   };
 
    componentDidMount() {
       this.props.getHotelById(this.props.match.params.id);
 
    }
-
 
    componentWillReceiveProps(nextProps) {
       if( nextProps.hotel.hotel) {
@@ -31,8 +30,12 @@ class Hotel extends Component {
 
 
    render() {
-      if (this.state.hotel !== null) {
+      console.log(this.state.hotel);
+      if ((this.state.hotel !== null)) {
+
+
          return (
+
             <div className="HotelBox">
                <div className="HotelCard">
 
@@ -46,6 +49,9 @@ class Hotel extends Component {
 
 
                      <div className="Intro">{this.state.hotel.name}</div>
+                     <div className="StatHolder">
+                        Rating box here
+                     </div>
 
 
                      {this.state.hotel.location?(
@@ -57,14 +63,6 @@ class Hotel extends Component {
 
                      {this.state.hotel.bio ?
                         (<div className="Bio">{this.state.hotel.bio}</div>):null}
-
-
-                     <div className="StatHolder">
-                        <Stat name="Total Ratings Done" value="13" />
-                        <Stat name="Average Rating Done" value="3.7"/>
-                     </div>
-
-
                   </div>
 
                </div>

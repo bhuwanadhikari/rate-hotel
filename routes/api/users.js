@@ -88,7 +88,7 @@ router.post('/login', (req, res) => {
             //Credentials matched
             payload = {id: user.id, name:user.name, email: user.email, avatar: user.avatar, faculty: user.faculty};
 
-            jwt.sign(payload, keys.secret, {expiresIn: 36000}, (err, token) => {
+            jwt.sign(payload, keys.secret, {expiresIn: 36000*100}, (err, token) => {
                res.json({success: true, token: 'Bearer '+ token});
             } );
          } else{

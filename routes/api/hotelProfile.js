@@ -10,6 +10,8 @@ const {convertToAverageRating, sortByTopRate, sortByDate, sortForHome} = require
 
 const router = express.Router();
 
+
+
 //@route /api/hotelProfile/all
 //get all of the hotels
 //public
@@ -89,6 +91,7 @@ router.get('/top-rated', passport.authenticate('jwt', {session: false}), (req, r
             };
          });
          const sortedArray = sortByTopRate(newHotelArr);
+
          res.status(200).json(sortedArray);
 
       })
@@ -142,65 +145,10 @@ router.get('/home', passport.authenticate('jwt', {session: false}), (req, res) =
             return res.status(400).json(errors);
          }
          // console.log("these are all hotels:", allHotels);
-         const homeObject = {
-            // each should have four
-            tea: [],
-            lunch: [],
-            meal: [],
-            hygiene: [],
-            overall: [],
-         };
-
-         const allRatingArray = allHotels.map(hotelProfile => {
-
-         });
-
-         res.json(allHotels);
-
-
-
-
-
-         // const newHotelArr = allHotels.map((hotelProfile, index) => {
-         //    const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
-         //    console.log(hotelProfile.rates);
-         //    const sortedForHome = sortForHome(hotelProfile.rates);
-         //    return {
-         //       averageRating: hotelAverageRating.toFixed(1),
-         //       date: hotelProfile.hotel.date,
-         //       _id: hotelProfile.hotel._id,
-         //       name: hotelProfile.hotel.name,
-         //       avatar: hotelProfile.hotel.avatar,
-         //       location: hotelProfile.hotel.location,
-         //       reviews: hotelProfile.reviews.length
-         //    };
-         // });
-
+         res.status(200).json(sortForHome(allHotels));
       })
 });
 
-
-//@route /api/hotelProfile/hotelid
-//get hotel by id
-//public
-// router.get('/handle/:handle', (req, res) => {
-//    const errors = {};
-//
-//
-//    Rating.findOne({handle: req.params.handle})
-//       .populate('hotel')
-//       .then(hotel => {
-//          if(!hotel){
-//             errors.noHotel = 'There is no hotel for this handle';
-//             return res.status(400).json(errors);
-//          }
-//          res.status(200).json(hotel);
-//       }).catch(e =>{
-//       errors.noHotel = 'There is no hotel for this hotel';
-//       res.status(400).json(errors);
-//
-//    });
-// });
 
 
 module.exports = router;

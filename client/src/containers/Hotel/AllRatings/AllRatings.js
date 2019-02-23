@@ -9,7 +9,6 @@ import RateOnly from '../RateView/RateOnly/RateOnly';
 import Button from '../../../components/ui/Button/Button';
 import RateView from '../RateView/RateView';
 import './AllRatings.css';
-import profileReducer from "../../../redux/reducers/profileReducer";
 
 class AllRatings extends Component {
    constructor(props){
@@ -25,21 +24,6 @@ class AllRatings extends Component {
       // console.log(this.props.hotelData);
    }
 
-   /*chutney: Array []
-comfortability: Array []
-curry: Array []
-dal: Array []
-expensiveness: Array []
-freshness: Array []
-hygiene: Array []
-lunch: Array []
-rice: Array []
-salad: Array []
-serving: Array []
-sideDish: Array []
-tea: Array []
-vif: Array []
-*/
    onMoreDetailsHandler = () => {
       this.setState({
          expandMeal: !this.state.expandMeal,
@@ -121,11 +105,14 @@ vif: Array []
             <div className="OtherRatingsBox" >
                {OtherRatings}
             </div>
+
          </div>
       );
    }
 }
 
+
+//kashdk
 AllRatings.propTypes = {
    getHotelById: PropTypes.func.isRequired,
    hotel: PropTypes.object.isRequired,

@@ -82,20 +82,20 @@ class ProfileCard extends Component {
                (<div className="Bio">{profile.bio}</div>):null}
 
 
-            <div className="StatHolder">
-               <Stat name="Total Ratings Done" value="13" />
-               <Stat name="Average Rating Done" value="3.7"/>
-            </div>
+            {/*---------------------Uncomment to show the social media icons---------------------------*/}
+            {/*<div className="StatHolder">*/}
+               {/*<Stat name="Total Ratings Done" value="13" />*/}
+               {/*<Stat name="Average Rating Done" value="3.7"/>*/}
+            {/*</div>*/}
 
-
-            {mediaState?(
-               <div className="Media">
-                  <p>Social Media Links</p>
-                  <ul>
-                     {transformedLinks}
-                  </ul>
-               </div>):null
-            }
+            {/*{mediaState?(*/}
+               {/*<div className="Media">*/}
+                  {/*<p>Social Media Links</p>*/}
+                  {/*<ul>*/}
+                     {/*{transformedLinks}*/}
+                  {/*</ul>*/}
+               {/*</div>):null*/}
+            {/*}*/}
          </div>
       );
    }
