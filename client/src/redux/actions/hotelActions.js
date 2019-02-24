@@ -1,10 +1,11 @@
 import {
    GET_HOTEL,
    GET_ALL_HOTELS,
+   GET_HOME_OBJECT,
    GET_TOP_RATED_HOTELS,
    GET_NEWEST_HOTELS,
    HOTEL_LOADING,
-   HOTEL_NOT_FOUND,
+   // HOTEL_NOT_FOUND,
    HOLD_HOTEL,
    GET_ERRORS,
    DO_RATE_LOADING,
@@ -27,6 +28,22 @@ export const getHotelById = (id) => (dispatch) => {
    }))
 };
 
+
+//Get Home Date
+export const getHomeObject = () => (dispatch) => {
+   dispatch(setHotelLoading());
+   axios.get('/api/hotelProfile/home')
+      .then(res => dispatch({
+            type: GET_HOME_OBJECT,
+            payload: res.data
+         })
+      )
+      .catch(err => dispatch({
+         type: GET_HOME_OBJECT,
+         payload: {notFound: 'notFound'}
+      }));
+
+};
 
 //Get all hotels
 export const getAllHotels = () => (dispatch) => {

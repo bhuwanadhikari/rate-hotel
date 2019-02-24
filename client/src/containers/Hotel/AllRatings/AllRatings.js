@@ -10,9 +10,7 @@ import Button from '../../../components/ui/Button/Button';
 import RateView from '../RateView/RateView';
 import './AllRatings.css';
 
-const foo = (value, variable1) => {
 
-};
 
 class AllRatings extends Component {
    constructor(props){

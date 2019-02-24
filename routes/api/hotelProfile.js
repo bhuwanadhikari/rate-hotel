@@ -133,6 +133,9 @@ router.get('/newest', passport.authenticate('jwt', {session: false}), (req, res)
 });
 
 
+//@route /api/hotelProfile/home
+//get home data
+//private
 router.get('/home', passport.authenticate('jwt', {session: false}), (req, res) => {
    const errors = {};
 

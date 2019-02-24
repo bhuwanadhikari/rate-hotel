@@ -1,0 +1,31 @@
+.HomeBox {
+    width: 100vw;
+    margin: auto;
+}
+
+.SmallHotelCardBoxHome {
+    background-color: white;
+    box-shadow: none;
+    border: 1px solid var(--themeDrop);
+}
+
+
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+    .HomeBox {
+        width: 60vw;
+    }
+
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .HomeBox {
+        width: 75vw;
+    }
+
+
+}
+

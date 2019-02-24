@@ -1,0 +1,88 @@
+.ICBox {
+    width: 100%;
+    margin: auto;
+}
+
+.ICHeading {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    border-left: 1px solid var(--themeDrop);
+    border-top: 1px solid var(--themeDrop);
+    border-right: 1px solid var(--themeDrop);
+    color: var(--bio);
+    font-weight: bold;
+    margin: 10px auto 0 auto;
+    padding-top: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.ICMain {
+    width: 95%;
+    margin: auto;
+    height: 455px;
+    overflow: hidden;
+    border-radius: 5px;
+    border-left: 1px solid var(--themeDrop);
+    border-bottom: 1px solid var(--themeDrop);
+    border-right: 1px solid var(--themeDrop);
+}
+
+.PedIcon {
+    display: inline;
+    font-family: "Font Awesome 5 Free", sans-serif;
+    color: var(--intro);
+    padding-left: 10px;
+}
+
+
+
+.TEAIcon:after {
+    content: "\f7b6";
+}
+.LUNCHIcon:after {
+    content: "\f564";
+}
+.MEALIcon:after {
+    content: "\f2e7";
+}
+.COSTIcon:after {
+    content: "\f3d1";
+}
+
+.CLEANLINESSIcon:after {
+    content: "\f51a";
+}
+.OVERALLIcon:after {
+    content: "\f03a";
+}
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+
+
+
+    .ICMain {
+        width: 449px;
+        margin: auto;
+    }
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+
+    .ICHeading {
+        width: 380px ;
+        margin: 15px auto 0 auto;
+
+    }
+
+    .ICMain {
+        width: 380px;
+        margin: auto;
+    }
+
+
+}
+

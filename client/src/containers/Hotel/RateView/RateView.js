@@ -6,9 +6,9 @@ import DoRating from '../DoRating/DoRating';
 import './RateView.css'
 import Modal from '../../../components/ui/Modal/Modal';
 import Auxi from '../../../hoc/Auxi';
-
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+//
+// import {connect} from 'react-redux';
+// import PropTypes from 'prop-types';
 
 class RateView extends React.Component {
    constructor(props){

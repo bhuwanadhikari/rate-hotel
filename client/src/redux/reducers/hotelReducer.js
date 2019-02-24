@@ -1,11 +1,12 @@
 import {
    GET_HOTEL,
    GET_ALL_HOTELS,
+   GET_HOME_OBJECT,
    GET_TOP_RATED_HOTELS,
    GET_NEWEST_HOTELS,
    HOTEL_LOADING,
    HOLD_HOTEL,
-   HOTEL_NOT_FOUND,
+   // HOTEL_NOT_FOUND,
    DO_RATE_LOADING,
    DONE_RATING
 } from '../actions/types';
@@ -14,6 +15,7 @@ import {
 const initialState = {
    hotel: null,
    allHotels: null,
+   homeObject: null,
    topRatedHotels: null,
    newestHotels: null,
    loading: 0, //loading of all hotels and loading of one hotel
@@ -42,6 +44,14 @@ export default function(state = initialState, action){
             ...state,
             loading: 11,
             allHotels: action.payload
+         };
+
+
+      case GET_HOME_OBJECT:
+         return {
+            ...state,
+            loading: 114,
+            homeObject: action.payload
          };
 
       case GET_TOP_RATED_HOTELS:

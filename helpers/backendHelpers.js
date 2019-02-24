@@ -38,14 +38,16 @@ const sortForHome = (allHotels) => {
       tea: [],
       lunch: [],
       meal: [],
+      expensiveness: [],
       hygiene: [],
       overall: [],
    };
 
    homeObject.tea = sortForHomeHelper(allHotels, 'tea');
    homeObject.lunch = sortForHomeHelper(allHotels, 'lunch');
-   homeObject.hygiene = sortForHomeHelper(allHotels, 'hygiene');
    homeObject.meal = sortForMeal(allHotels);
+   homeObject.expensiveness = sortForHomeHelper(allHotels, 'expensiveness');
+   homeObject.hygiene = sortForHomeHelper(allHotels, 'hygiene');
    homeObject.overall = sortForOverall(allHotels);
 
    for(let quadruped in homeObject){

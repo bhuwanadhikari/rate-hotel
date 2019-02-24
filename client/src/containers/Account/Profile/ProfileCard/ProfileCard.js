@@ -19,7 +19,7 @@ class ProfileCard extends Component {
       //extract from the redux store
       const {currentUser, profile} = this.props.data;
       //to check media
-      const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
+      // const mediaState = profile.facebook || profile.twitter || profile.linkedIn || profile.instagram;
       //setup the social media links
 
       const social = {};

@@ -3,40 +3,67 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
 
+import './Home.css';
+
+import Spinner from '../../components/ui/Spinnner/Spinner';
 import ItemComponent from './ItemComponent/ItemComponent'
 
-import {releaseHotelId} from '../../redux/actions/hotelActions'
+import {releaseHotelId, getHomeObject} from '../../redux/actions/hotelActions'
 
 class Home extends Component {
    constructor(props){
       super(props);
+      if(this.props.hotel.holdHotelId){
+         const tempHotelId = this.props.hotel.holdHotelId;
+         this.props.releaseHotelId();
+         this.props.history.push(`./hotel/${tempHotelId}`)
+      }
 
-
-if(this.props.hotel.holdHotelId){
-   const tempHotelId = this.props.hotel.holdHotelId;
-   this.props.releaseHotelId();
-   this.props.history.push(`./hotel/${tempHotelId}`)
-}
+      this.state = {
+         homeObject: null,
+      }
 
    }
+
+
+   componentDidMount() {
+      this.props.getHomeObject();
+   }
+
+
+   componentWillReceiveProps(nextProps) {
+      if(nextProps.hotel.homeObject){
+         this.setState({homeObject: nextProps.hotel.homeObject});
+      }
+   }
+
+
    render() {
-      return (
-         <div>
-            Home
-            <ItemComponent/>
-            Top rated by tea box <br/>
-            Top rated by lunch box <br/>
-            Top rated by meal box <br/>
-            Top rated by value of money box <br/>
-            Top rated overall box <br/>
-         </div>
-      );
+
+      console.log(this.state.homeObject);
+      if(this.state.homeObject !== null || undefined) {
+         let quadrupedArray = ['TEA','LUNCH','MEAL','COST','CLEANLINESS','OVERALL'];
+         return (
+            <div className="HomeBox">
+               {Object.keys(this.state.homeObject).map((quadruped, index) => {
+                     return <ItemComponent
+                        key = {index}
+                        quadruped = {this.state.homeObject[quadruped]}
+                        label = {quadrupedArray[index]}
+                     />
+                  })}
+            </div>
+         );
+      } else {
+         return (<Spinner/>);
+      }
    }
 }
 
 Home.propTypes = {
-  hotel: PropTypes.object.isRequired,
-  releaseHotelId: PropTypes.func.isRequired
+   hotel: PropTypes.object.isRequired,
+   releaseHotelId: PropTypes.func.isRequired,
+   getHomeObject: PropTypes.func.isRequired,
 };
 
 
@@ -46,4 +73,4 @@ function mapStateToProps(state) {
    };
 }
 
-export default connect(mapStateToProps, {releaseHotelId})(withRouter(Home));
+export default connect(mapStateToProps, {releaseHotelId, getHomeObject})(withRouter(Home));
