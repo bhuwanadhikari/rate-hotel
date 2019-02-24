@@ -1,10 +1,12 @@
 import React from 'react';
+import RateOnly from '../../../../Hotel/RateView/RateOnly/RateOnly';
 
 const Stat = (props) => {
    return (
-      <div className="Stat">
-         <div className="StatValue" >{props.value}</div>
-         <div className="StatName">{props.name}</div>
+      <div className="StatHolderWrap">
+         <div className="StatHolderHotel">
+            <RateOnly averageRating={props.averageOfAll}/>
+         </div>
       </div>
    );
 };

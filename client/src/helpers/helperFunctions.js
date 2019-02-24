@@ -21,7 +21,7 @@ export const  convertRates = (rates, userId) => {
       i++;
    }
 
-   console.log(outputRates);
+   // console.log(outputRates);
    return outputRates;
 };
 

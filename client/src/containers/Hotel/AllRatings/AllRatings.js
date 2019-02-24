@@ -10,6 +10,10 @@ import Button from '../../../components/ui/Button/Button';
 import RateView from '../RateView/RateView';
 import './AllRatings.css';
 
+const foo = (value, variable1) => {
+
+};
+
 class AllRatings extends Component {
    constructor(props){
       super(props);
@@ -18,10 +22,18 @@ class AllRatings extends Component {
          transformValue: 0,
          mealCss: {}
       };
+
    }
 
+   averageOfAll = 0;
    componentDidMount() {
-      // console.log(this.props.hotelData);
+      this.props.updateHotelProfileRate(this.averageOfAll);
+
+   }
+
+   componentDidUpdate(){
+      this.props.updateHotelProfileRate(this.averageOfAll);
+
    }
 
    onMoreDetailsHandler = () => {
@@ -37,14 +49,26 @@ class AllRatings extends Component {
 
 
 
+
+
    render() {
       const ratingLabels = ["Dal","Rice","Curry","Chutney","Salad","Side Dish","Lunch","Tea","Value of Money","Variability of Items","Comfortability","Cleanliness","Serving","Freshness"];
 
       const rates = this.props.hotelData.rates;
       const usefulRates = convertRates(rates, this.props.auth.user.id);
 
+
       let mealTotalValue = 0, mealTotalFrequency = 0;
+      let allTotalValue = 0, allTotalFrequency = 0;
+
       const MealRatings = Object.keys(usefulRates).map((item, index) => {
+
+         if(usefulRates[item].frequency>0) {
+            allTotalValue += usefulRates[item].rateValue;
+         }
+         allTotalFrequency += usefulRates[item].frequency;
+
+         //calculate only for meal
          if(index <= 5) {
             if(usefulRates[item].frequency>0) {
                mealTotalValue += usefulRates[item].rateValue;
@@ -61,16 +85,22 @@ class AllRatings extends Component {
                </div>
             )
          }
+         return null;
       });
+      this.averageOfAll = (allTotalValue/allTotalFrequency).toFixed(1);
 
       const OtherRatings = Object.keys(usefulRates).map((item, index) => {
          if(index > 5 && index <= 12) {
             return (
                <div className="RateViewWrapper" key={index}>
                   <RateView data={usefulRates[item]} label={ratingLabels[index]} name={item}/></div>
-            )
+            );
          }
+         return null;
+
       });
+
+
 
 
       return (

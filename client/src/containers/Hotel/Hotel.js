@@ -2,18 +2,19 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {getHotelById} from '../../redux/actions/hotelActions';
-import Stat from '../Account/Profile/ProfileCard/Stat/Stat';
 import hotelPhoto from '../../img/hotelPhoto.jpg'
 
 import Spinner from '../../components/ui/Spinnner/Spinner';
 import './Hotel.css';
 import AllRatings from './AllRatings/AllRatings';
+import RateOnly from './RateView/RateOnly/RateOnly';
 
 class Hotel extends Component {
    constructor(props){
       super(props);
       this.state = {
          hotel: null,
+         averageOfAll: 0
       }
    };
 
@@ -28,14 +29,17 @@ class Hotel extends Component {
       }
    }
 
+   updateHotelProfileRate = (value) => {
+      this.setState({averageOfAll: value});
+   };
 
    render() {
-      console.log(this.state.hotel);
+
+      // console.log(this.state.hotel);
       if ((this.state.hotel !== null)) {
 
 
          return (
-
             <div className="HotelBox">
                <div className="HotelCard">
 
@@ -49,13 +53,16 @@ class Hotel extends Component {
 
 
                      <div className="Intro">{this.state.hotel.name}</div>
-                     <div className="StatHolder">
-                        Rating box here
+
+                     <div className="StatHolderWrap">
+                        <div className="StatHolderHotel">
+                           <RateOnly averageRating={this.state.averageOfAll}/>
+                        </div>
                      </div>
 
 
                      {this.state.hotel.location?(
-                        <div className="LocationBox" >
+                        <div className="LocationBox LocationBoxHotel" >
                            <p className="Location" >
                               <i className="material-icons" style={{fontSize:'16px', color:'gray'}} >&#xe55f; </i>{this.state.hotel.location}</p>
                         </div>):null}
@@ -72,6 +79,8 @@ class Hotel extends Component {
                   <div className="AllRatingsWrapperHotel">
                      <AllRatings
                         hotelData={this.props.hotel.hotel}
+                        updateHotelProfileRate = {this.updateHotelProfileRate}
+                        averageOfAll = {this.state.averageOfAll}
                      />
                   </div>
                   <div className= "AllReviewsBox"> All Reviews Here</div>

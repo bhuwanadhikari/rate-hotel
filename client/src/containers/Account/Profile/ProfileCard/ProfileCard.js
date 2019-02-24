@@ -5,7 +5,6 @@ import { getCurrentProfile, getCurrentUser } from '../../../../redux/actions/pro
 
 
 import './ProfileCard.css';
-import Stat from './Stat/Stat';
 import Option from './Option/Option';
 
 
@@ -30,29 +29,29 @@ class ProfileCard extends Component {
       social.instagram = profile.instagram? profile.instagram :"";
 
 
-      let transformedLinks = Object.keys(social)
-         .map(soKey => {
-            if(social[soKey] !== "") {
-               return (
-                  <li key={soKey}>
-                     <div className="Anchor" onClick = {
-                        (e) => {window.location.href = social[soKey];
-                        console.log(social[soKey])}
-                     } >
-                        <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
-                     </div>
-                  </li>
-               );
-            } else {
-               return (
-                  <li key={soKey} >
-                     <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>
-                        <i className={`fa fa-${soKey}`} > </i>
-                     </div>
-                  </li>
-               );
-            }
-         });
+      // let transformedLinks = Object.keys(social)
+      //    .map(soKey => {
+      //       if(social[soKey] !== "") {
+      //          return (
+      //             <li key={soKey}>
+      //                <div className="Anchor" onClick = {
+      //                   (e) => {window.location.href = social[soKey];
+      //                   console.log(social[soKey])}
+      //                } >
+      //                   <i className={`fa fa-${soKey}`} aria-hidden="true"> </i>
+      //                </div>
+      //             </li>
+      //          );
+      //       } else {
+      //          return (
+      //             <li key={soKey} >
+      //                <div className="Anchor EmptyLink"  style = {{cursor: 'disabled'}}>
+      //                   <i className={`fa fa-${soKey}`} > </i>
+      //                </div>
+      //             </li>
+      //          );
+      //       }
+      //    });
 
       return (
          <div className="ProfileCard">
