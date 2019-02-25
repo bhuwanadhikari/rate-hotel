@@ -34,6 +34,8 @@ class NavHotels extends Component{
             && (pathArray[1] !== 'search')
             && (pathArray[1] !== 'help')
             && (pathArray[1] !== 'settings-and-privacy')
+            && (pathArray[1] !== 'advanced')
+            && (pathArray[1] !== 'about-us')
          ){
             myClasses = 'AuthNavLink MyActiveLink';
          }

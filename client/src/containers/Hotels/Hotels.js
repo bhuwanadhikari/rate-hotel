@@ -24,7 +24,7 @@ class Hotels extends React.Component {
                   activeClassName="ActiveHotelsLink"
                   to="/hotels/recommended"
                >
-                  Recommended
+                  All Hotels
                </NavLink>
 
                <NavLink

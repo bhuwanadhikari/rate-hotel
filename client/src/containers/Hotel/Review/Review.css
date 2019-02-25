@@ -1,0 +1,55 @@
+.ReviewBox {
+    margin:  5px 20px 0 auto;
+}
+.Writer {
+    color: var(--bio);
+    font-size: 0.7em;
+    font-weight: bolder;
+    font-family: Poppins, sans-serif;
+}
+.ReviewValue {
+    font-size: 0.9em;
+    font-family: Poppins, sans-serif;
+    position: relative;
+    top:-3px;
+    line-height: 1.3em;
+}
+
+.far-user {
+   color: var(--theme);
+    padding-right: 3px;
+    font-family: "Font Awesome 5 Free", sans-serif;
+}
+.far-user:after{
+   content:"\f007"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*For DESKTOPS ONLY --60VW  */
+@media only screen and (min-width: 800px) {
+    .ReviewBox {
+        width: 400px;
+    }
+
+}
+
+/*For TABS ONLY -- 75VW  */
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .ReviewBox {
+        width: 350px;
+    }
+
+}
+
+

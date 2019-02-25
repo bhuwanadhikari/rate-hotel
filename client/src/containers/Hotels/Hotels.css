@@ -18,24 +18,13 @@
     list-style-type: none;
     float:  left;
     font-family: Comfortaa, sans-serif;
+    width: 33.33%;
 
 }
 
-.HotelsLink.Recommended {
-    width: 32.5vw;
-    padding: 9px 3.625vw 9px 7.25vw;
-}
-.HotelsLink.TopRated {
-    width: 22.5vw;
-    padding: 9px 3.625vw 9px 3.625vw;
-}
-.HotelsLink.Newest {
-    width: 16vw;
-    padding: 9px 7.25vw 9px 3.625vw;
-}
 
 .ActiveHotelsLink {
-    color: #fc4c02;
+    color: var(--theme);
 }
 
 
@@ -49,18 +38,7 @@
         margin: auto;
     }
 
-    .HotelsLink.Recommended {
-        width: 19.5vw;
-        padding: 9px 2.175vw 9px 4.35vw;
-    }
-    .HotelsLink.TopRated {
-        width: 13.5vw;
-        padding: 9px 2.175vw 9px 2.175vw;
-    }
-    .HotelsLink.Newest {
-        width: 9.6vw;
-        padding: 9px 4.35vw 9px 2.175vw;
-    }
+
 }
 
 /*For TABS ONLY*/
@@ -69,16 +47,5 @@
         width: 75vw;
         margin: auto;
     }
-    .HotelsLink.Recommended {
-        width: 24.375vw;
-        padding: 9px 2.71875vw 9px 5.4375vw;
-    }
-    .HotelsLink.TopRated {
-        width: 16.875vw;
-        padding: 9px 2.71875vw 9px 2.71875vw;
-    }
-    .HotelsLink.Newest {
-        width: 12vw;
-        padding: 9px 5.4375vw 9px 2.71875vw;
-    }
+
 }

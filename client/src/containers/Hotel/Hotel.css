@@ -63,9 +63,37 @@
 .LocationBoxHotel {
     margin-top: 30px;
 }
+.AllReviewsWrapper {
+    width: 300px;
+    margin: auto;
+}
+.ReviewsHeader {
+    width: 100%;
+    border-top: 1px solid silver;
+    margin: 10px auto 0 auto;
+    padding-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--bio);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
 
-.AllReviewsBox {
-    background-color: silver;
+}
+.ShowForm {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    width :130px;
+    font-size: 0.9em;
+    color: var(--darkTheme);
+    cursor: pointer;
+
+}
+.TextAreaWrapper{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.ReviewInput {
 }
 
 /*For DESKTOPS ONLY --60VW  */
@@ -79,6 +107,9 @@
     .DetailsHeader {
         width: 60vw;
     }
+    .AllReviewsWrapper {
+        width: 400px;
+    }
 }
 
 /*For TABS ONLY -- 75VW  */
@@ -89,6 +120,9 @@
     .DetailsHeader {
          width: 75vw;
      }
+    .AllReviewsWrapper {
+        width: 400px;
+    }
 }
 
 

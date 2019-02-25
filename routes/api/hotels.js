@@ -107,7 +107,9 @@ router.post('/rate/:id', passport.authenticate('jwt', {session: false}), (req, r
    }).catch();
 });
 
-
+//@route /api/hotels/review/:id
+//post review to a hotel
+//private
 router.post('/review/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
    const errors = {};
    Rating.findOne({hotel: req.params.id}).then((rating) => {

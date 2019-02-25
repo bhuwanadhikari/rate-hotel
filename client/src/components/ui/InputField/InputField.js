@@ -3,11 +3,12 @@ import Auxi from '../../../hoc/Auxi';
 
 import './InputField.css';
 
-const InputField = ({type, name, value, changed, placeholder, errors, extraCls}) => {
+const InputField = ({autofocus,type, name, value, changed, placeholder, errors, extraCls}) => {
 
    return (
       <Auxi>
          <input
+            autoFocus={autofocus}
             className={`InputField ${extraCls}`}
             type={type}
             name={name}

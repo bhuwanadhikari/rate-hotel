@@ -9,16 +9,16 @@
     font-size: 1em;
     margin-top: 0;
     margin-right: 0;
-    box-shadow: -3px 3px 5px gray;
+    box-shadow: -3px 3px 5px var(--chhaya2);
 }
 
 .AccountLinkList {
     display: block;
     list-style-type: none;
     height: 50px;
-    border-bottom:  1px solid gray;
+    border-bottom:  1px solid var(--chhaya2);
     text-align: center;
-    color: var(--theme);
+    color: var(--bio);
     line-height: 50px;
     z-index: 25;
     transition: font-size 0.2s ease-in;
@@ -37,17 +37,12 @@
     z-index: 20;
 }
 
-.Normal:hover {
-    font-size: 1.1em;
-}
-
-.Abnormal {
-    color: #123456;
-}
-.Abnormal:hover {
-    color: #123456;
+.AccountLink:hover {
+    color: var(--darkTheme);
     text-decoration: underline;
 }
+
+
 
 .Disabled {
     color: silver;
@@ -59,7 +54,6 @@
 .LogOut {
     display: block;
     cursor: pointer;
-    color: var(--bio);
 }
 
 

@@ -5,7 +5,6 @@ import { getCurrentProfile, getCurrentUser } from '../../../redux/actions/profil
 
 import './Profile.css';
 import ProfileCard from './ProfileCard/ProfileCard';
-import Activity from './Activity/Activity';
 
 
 import Modal from '../../../components/ui/Modal/Modal';
@@ -52,12 +51,11 @@ class Profile extends Component {
          return (
             <div className="ProfileContainer">
 
-               <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler} fromTop = '5%'>
+               <Modal show={this.state.showModal} modalClosed={this.onBackDropClickHandler} fromTop = '20%'>
                   <EditProfile modalClosed={this.onBackDropClickHandler}/>
                </Modal>
 
                <ProfileCard data={this.props.profile} optioned={this.onOptionHandler}/>
-               <Activity/>
             </div>
          );
       }

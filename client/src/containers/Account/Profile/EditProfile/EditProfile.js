@@ -90,6 +90,7 @@ render() {
       <form className="EditProfileBox" noValidate>
          <h1>Edit Profile</h1>
          <InputField
+            autofocus={true}
             value = {this.state.handle || ""}
             type = "text"
             name = "handle"
@@ -115,7 +116,7 @@ render() {
             errors={this.state.errors}
          />
 
-         <InputField
+         {/*<InputField
             value = {this.state.facebook || ""}
             type = "url"
             extraCls = "SocialMediaLink"
@@ -153,7 +154,7 @@ render() {
             placeholder = "Instagram Link"
             changed = {this.onChangeHandler}
             errors={this.state.errors}
-         />
+         />*/}
 
          <Button clicked={this.props.modalClosed} cls = "Warning InlineBtn" >Cancel</Button>
          <Button clicked={this.onSaveHandler} cls = "Success InlineBtn" >Save</Button>

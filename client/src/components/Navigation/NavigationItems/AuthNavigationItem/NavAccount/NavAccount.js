@@ -8,6 +8,8 @@ import { logUserOut } from '../../../../../redux/actions/authActions';
 import { clearCurrentProfile, clearCurrentUser } from '../../../../../redux/actions/profileActions';
 
 import Auxi from '../../../../../hoc/Auxi';
+import Modal from '../../../../ui/Modal/Modal';
+import Feedback from './Feedback';
 
 import accountIcon from '../../../../../img/navImg/account.svg';
 import accountIconOrange from '../../../../../img/navImg/accountorg.svg';
@@ -16,12 +18,21 @@ class NavAccount extends React.Component {
    constructor(){
       super();
       this.state = {
-         showAcDrop: false
+         showAcDrop: false,
+         showFeedbackModal: false,
       };
    }
    onClickHandler = (e) => {
       e.preventDefault();
       this.setState({showAcDrop: !this.state.showAcDrop});
+   };
+
+   onBackDropClickHandler = ()=>{
+      this.setState({showFeedbackModal: false})
+   };
+
+   onFeedbackClickHandler = () => {
+     this.setState({showFeedbackModal: true});
    };
 
    onLogOutHandler = (e) => {
@@ -87,7 +98,7 @@ class NavAccount extends React.Component {
                   </li>
 
                   <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Disabled" to = '/disabled'>Advanced</NavLink>
+                     <div className = "AccountLink LogOut" onClick={this.onFeedbackClickHandler}>Send Feedback</div>
                   </li>
 
                   <li className="AccountLinkList Abnormal">
@@ -103,6 +114,9 @@ class NavAccount extends React.Component {
                   </li>
 
                </ul>):null}
+            <Modal show={this.state.showFeedbackModal} modalClosed={this.onBackDropClickHandler} fromTop = '20%'>
+               <Feedback modalClosed={this.onBackDropClickHandler}/>
+            </Modal>
          </Auxi>
       )
    }

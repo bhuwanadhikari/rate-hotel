@@ -37,7 +37,7 @@ router.get('/all', (req, res) => {
             reviews: reviews
          };
       });
-
+      newHotelArr.sort((a,b) => a.name>b.name?1:-1);
       res.status(200).json(newHotelArr);
 
    })
@@ -113,7 +113,6 @@ router.get('/newest', passport.authenticate('jwt', {session: false}), (req, res)
          if(!allHotels){
             errors.noHotels = 'There are no hotels at all';
          }
-         console.log("these are all hotels:", allHotels);
          const newHotelArr = allHotels.map((hotelProfile, index) => {
             const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
             return {

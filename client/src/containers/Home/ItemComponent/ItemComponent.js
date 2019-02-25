@@ -77,12 +77,12 @@ class ItemComponent extends Component {
 
       return (
          <div className="ICBox">
-            <div className="ICWhole" style={{height: this.state.showingMore?'auto':'532px'}}>
+            <div className="ICWhole" style={{height: this.state.showingMore?`${this.props.quadruped.length*112+80}px`:'525px'}}>
                <div className="ICHeading">
                   TOP RATED IN {this.props.label}
                </div>
 
-               <div className="ICMain" style={{height: this.state.showingMore?'auto':'455px'}}>
+               <div className="ICMain" style={{height: this.state.showingMore?`${this.props.quadruped.length*112+7}px`:'455px'}}>
                   {pedView}
                </div>
                <div className="ViewOption" onClick = {this.onShowingMoreHandler}>
