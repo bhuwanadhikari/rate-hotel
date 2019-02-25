@@ -6,26 +6,27 @@
 .ICHeading {
     width: 100%;
     text-align: center;
-    border-radius: 5px;
-    border-left: 1px solid var(--themeDrop);
-    border-top: 1px solid var(--themeDrop);
-    border-right: 1px solid var(--themeDrop);
+    border-bottom: 1px solid silver;
     color: var(--bio);
     font-weight: bold;
     margin: 10px auto 0 auto;
-    padding-top: 10px;
     font-family: "Poppins", sans-serif;
 }
 
-.ICMain {
-    width: 95%;
-    margin: auto;
-    height: 455px;
-    overflow: hidden;
+.ICWhole {
     border-radius: 5px;
     border-left: 1px solid var(--themeDrop);
     border-bottom: 1px solid var(--themeDrop);
     border-right: 1px solid var(--themeDrop);
+    border-top: 1px solid var(--themeDrop);
+    margin: 5px auto;
+    transition: all 0.5s ease-in;
+}
+.ICMain {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
 }
 
 .PedIcon {
@@ -36,6 +37,22 @@
 }
 
 
+.ViewOption {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: var(--darkTheme);
+    background-color: var(--lightTheme);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.ViewOption:hover {
+    color: var(--themeDrop);
+}
 
 .TEAIcon:after {
     content: "\f7b6";
@@ -56,6 +73,7 @@
 .OVERALLIcon:after {
     content: "\f03a";
 }
+
 
 /*For DESKTOPS ONLY --60VW  */
 @media only screen and (min-width: 800px) {

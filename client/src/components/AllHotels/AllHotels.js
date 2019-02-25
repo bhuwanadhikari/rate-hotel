@@ -62,8 +62,7 @@ class AllHotels extends Component {
                   </div>
                   <div className="DetailBox">
                      <h5 className="HotelName">
-                        <NavLink className="HotelLink" to={`hotel/${hotel._id}`}>
-                           {hotel.name ? hotel.name : null}
+                        <NavLink className="HotelLink" exact to={`/hotel/${hotel._id}`}>                           {hotel.name ? hotel.name : null}
                         </NavLink>
                      </h5>
                      {hotel.location ? (

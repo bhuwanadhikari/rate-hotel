@@ -76,7 +76,7 @@ class App extends Component {
                      <PublicRoute exact path = "/sign-up" component = {SignUp} />
                      <PublicRoute exact path = "/login" component = {Login} />
                      <PublicRoute exact path = "/" component = {Landing} history = {this.props.history} />
-                     <Route exact path = "/all-hotels" component = {AllHotels} />
+                     <PublicRoute exact path = "/all-hotels" component = {AllHotels} />
                      <Route exact path = "/about-us" component = {AboutUs} />
                      <Route exact path = "/help" component = {Help} />
                      <PrivateRoute exact path = "/home" component = {Home} />

@@ -11,6 +11,13 @@ import './ItemComponent.css';
 
 class ItemComponent extends Component {
 
+   constructor(props){
+      super(props);
+      this.state = {
+         showingMore: false,
+      }
+   }
+
 
    onRateClickHandler = (e) => {
       if(this.props.auth.isAuthenticated){
@@ -22,10 +29,13 @@ class ItemComponent extends Component {
       }
    };
 
+   onShowingMoreHandler = () => {
+      this.setState({showingMore: !this.state.showingMore});
+   };
+
 
 
    render() {
-      console.log("quadrupeds are",this.props.quadruped);
 
       const pedView = this.props.quadruped.map((hotel, index) => {
          return (
@@ -67,12 +77,17 @@ class ItemComponent extends Component {
 
       return (
          <div className="ICBox">
-            <div className="ICHeading">
-               TOP RATED IN {this.props.label}
-            </div>
+            <div className="ICWhole" style={{height: this.state.showingMore?'auto':'532px'}}>
+               <div className="ICHeading">
+                  TOP RATED IN {this.props.label}
+               </div>
 
-            <div className="ICMain">
-               {pedView}
+               <div className="ICMain" style={{height: this.state.showingMore?'auto':'455px'}}>
+                  {pedView}
+               </div>
+               <div className="ViewOption" onClick = {this.onShowingMoreHandler}>
+                  VIEW {this.state.showingMore?"LESS":"MORE"}
+               </div>
             </div>
          </div>
       );
