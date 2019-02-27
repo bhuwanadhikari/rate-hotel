@@ -12,6 +12,7 @@ const splash = (props) => {/*
        let splashScreen = (
           <div className='Splash'>
              <img src={splashPhoto} alt=''/>
+             <h3 className="NameOfApp">CrowApp</h3>
              <div className='loading'>
                 <div className='loading-bar'> </div>
                 <div className='loading-bar'> </div>

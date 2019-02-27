@@ -10,7 +10,7 @@ const HotelSchema = new Schema({
    avatar: {type: String},
    bio: {type: String},
    location: {type: String},
-   date: {type: Date, default: Date.now()}
+   date: {type: Date, default: Date.now}
 });
 
 module.exports = Hotel = mongoose.model('hotels', HotelSchema);

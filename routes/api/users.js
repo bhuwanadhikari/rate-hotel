@@ -10,6 +10,7 @@ const validateLoginInput =  require('../../validation/login');
 
 
 const User = require('../../models/User');
+const Feedback = require('../../models/Feedback');
 
 const keys = require('../../config/keys');
 
@@ -53,7 +54,7 @@ router.post('/register', (req, res) => {
             bcrypt.hash(newUser.password, salt, (err, hash) => {
                if (err) throw err;
                newUser.password = hash;
-               
+
                newUser
                   .save()
                   .then(user => res.json(user))
@@ -119,6 +120,33 @@ router.get('/current',passport.authenticate('jwt',{session:false}),(req, res)=>{
    }).catch((err) => {
       res.status(400).json(currentUser);
    });
+});
+
+
+//@route api/users/feedback
+// send feedback
+// access public
+router.post('/feedback', (req, res)=>{
+
+   const feedbackData =  new Feedback({
+      name: req.body.name,
+      feedback: req.body.feedback,
+   });
+
+   feedbackData.save().then((feedbackObj) => {
+      res.status(200).json(feedbackObj);
+   }).catch((e) => {
+      res.status(400).json(e);
+   })
+});
+
+//@route api/users/feedback
+// get all feedbacks
+// access public
+router.get('/feedback', (req, res)=>{
+   Feedback.find()
+      .then(allFeedbacks => res.status(200).json(allFeedbacks))
+      .catch(e=>res.status(400).send(e));
 });
 
 module.exports = router;

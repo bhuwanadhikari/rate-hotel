@@ -1,7 +1,7 @@
 
 
 .Landing {
-    height: calc(100vh - 50px - 30px);
+    height: calc(100vh - 50px - 50px);
     background: #FBCEB1;
 }
 
@@ -31,5 +31,5 @@
     font-family: Poppins , sans-serif;
     font-weight: bold;
     color: white;
-    text-shadow: 1px 1px 5px orangered, 1px 1px 5px orangered;
+    text-shadow: 1px 1px 5px var(--theme), 1px 1px 5px var(--theme);
 }

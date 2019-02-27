@@ -19,14 +19,32 @@ const convertToAverageRating = (rates) => {
 const sortByTopRate = (allHotelsArr) => {
    let sortedHotelArr;
    sortedHotelArr = allHotelsArr.sort((a, b) => a.averageRating>b.averageRating ? -1 : 1);
-
    return sortedHotelArr;
 };
 
 
 //sorting by date
 const sortByDate = (allHotelsArr) => {
-   sortedHotelArr = allHotelsArr.sort((a, b) => a.date>b.date ? -1 : 1);
+   console.log("Before sorting------------------------", allHotelsArr);
+   let sortedHotelArr = allHotelsArr.sort((a, b) => {
+      a= new Date(a.date).getTime();
+      b= new Date(b.date).getTime();
+      console.log(a);
+         if(a>=b){
+            return -1;
+         }
+      else {
+            return 1;
+         }
+      }
+   );
+
+   // for(let hotel of allHotelsArr){
+   //    console.log(hotel.date);
+   // }
+
+   console.log("Before sorting------------------------", sortedHotelArr);
+
    return sortedHotelArr;
 };
 
@@ -107,7 +125,7 @@ const sortForMeal = (allHotels) => {
 //Helper for overall
 const sortForOverall = (allHotels) => {
    sortedOverallArray = allHotels.map((hotelProfile, index) => {
-         return {
+      return {
          averageRating: convertToAverageRating(hotelProfile.rates).toFixed(1),
          date: hotelProfile.hotel.date,
          _id: hotelProfile.hotel._id,

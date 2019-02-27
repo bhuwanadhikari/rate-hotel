@@ -1,0 +1,57 @@
+.CommonBox {
+    width: 94vw;
+    margin: 3vw;
+    color: #303030;
+    font-family: Muli, sans-serif;
+
+}
+
+.CommonTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.CommonHeading {
+    font-weight: bold;
+}
+
+.CommonParagraph {
+    padding: 5px 25px 10px 25px;
+    font-size: 0.95em;
+}
+
+.CommonList {
+    margin: 0px 25px 0px 30px;
+
+}
+
+.ContactLink {
+    color: var(--darkTheme);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*For DESKTOPS ONLY*/
+@media only screen and (min-width: 800px) {
+    .CommonBox {
+        width: 50vw;
+        margin: 4vw 25vw;
+
+    }
+
+
+}
+
+/*For TABS ONLY*/
+@media only screen and (min-width: 450px) and (max-width: 800px) {
+    .CommonBox {
+        width: 70vw;
+        margin: 4vw 15vw;
+
+    }
+
+}

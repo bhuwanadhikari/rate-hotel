@@ -10,12 +10,9 @@ class Feedback extends Component {
       super();
       this.state = {
          name: '',
-         feedback: ''
+         bio: ''
       }
    }
-
-
-
 
    onChangeHandler = (e) => {
       e.preventDefault();
@@ -25,36 +22,27 @@ class Feedback extends Component {
    onSaveHandler = (e) => {
       e.preventDefault();
       this.props.modalClosed();
-      axios.post('/api/users/feedback', "feedbackData").then((res)=> {
+      const feedbackData = {
+         name: this.state.name,
+         feedback: this.state.bio,
+      };
+      // console.log(feedbackData);
+      axios.post('/api/users/feedback', feedbackData).then((res)=> {
          alert("Your Feedback is received by CrowApp Server successfully");
-      }).then(()=>{
+      }).catch(()=>{
          alert("Sorry something went wrong, Please Try Again!");
       });
    };
 
-   componentWillReceiveProps(nextProps) {
-
-   }
-
-   componentDidMount(){
-
-   }
-
-
-
-
-
-
-
    render() {
       return (
          <form className="EditProfileBox" noValidate>
-            <h1>Send Us Message/Feedback</h1>
+            <h1>{this.props.feedbackHeading}</h1>
             <InputField
                autofocus={true}
-               value = {this.state.handle || ""}
+               value = {this.state.name || ""}
                type = "text"
-               name = "handle"
+               name = "name"
                placeholder = "Your name(Optional)"
                changed = {this.onChangeHandler}
                errors={{}}
@@ -64,12 +52,12 @@ class Feedback extends Component {
                extraCls = "TextArea"
                type = "text"
                name = "bio"
-               placeholder = "Feedback Message"
+               placeholder = "Type your message here"
                changed = {this.onChangeHandler}
                errors={{}}
             />
             <Button clicked={this.props.modalClosed} cls = "Warning InlineBtn" >Cancel</Button>
-            <Button clicked={this.onSaveHandler} cls = "Success InlineBtn" >Send Feedback</Button>
+            <Button clicked={this.onSaveHandler} cls = "Success InlineBtn" >Send</Button>
          </form>
 
       );

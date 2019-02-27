@@ -42,7 +42,7 @@ class Home extends Component {
 
       console.log(this.state.homeObject);
       if(this.state.homeObject !== null || undefined) {
-         let quadrupedArray = ['TEA','LUNCH','MEAL','COST','CLEANLINESS','OVERALL'];
+         let quadrupedArray = ['TEA','LUNCH','MEAL','COST','CARROM BOARD','OVERALL'];
          return (
             <div className="HomeBox">
                {Object.keys(this.state.homeObject).map((quadruped, index) => {

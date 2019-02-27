@@ -50,7 +50,7 @@ class AllRatings extends Component {
 
 
    render() {
-      const ratingLabels = ["Dal","Rice","Curry","Chutney","Salad","Side Dish","Lunch","Tea","Value of Money","Variability of Items","Comfortability","Cleanliness","Serving","Freshness"];
+      const ratingLabels = ["Dal","Rice","Curry","Chutney","Salad","Side Dish","Lunch","Tea","Value of Money","Variability of Items","Comfortability","Carrom Board","Serving","Freshness"];
 
       const rates = this.props.hotelData.rates;
       const usefulRates = convertRates(rates, this.props.auth.user.id);

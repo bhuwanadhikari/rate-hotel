@@ -1,12 +1,43 @@
 .Footer {
-    height: 30px;
+    height: 50px;
     width: 100vw;
     background-color: darkslategray;
     margin: 0;
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
-    color: aliceblue;
     font-size: 0.8em;
 
+}
+
+.FooterHeader {
+    margin: 0 auto;
+}
+
+.FooterHeader li {
+    display: inline-block;
+    list-style-type: none;
+
+
+}
+
+.FooterList {
+    display: inline;
+}
+
+.FooterLink {
+    color: white;
+    text-align: center;
+    margin: 0 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.FooterLink:hover {
+    text-decoration: underline;
+}
+
+.FooterFooter{
+    color: silver;
+    margin-top: 3px;
 }

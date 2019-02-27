@@ -84,7 +84,9 @@ class App extends Component {
                      <PrivateRoute exact path = "/hotel/:id" component = {Hotel}/>
                      <PrivateRoute exact path = "/search" component = {Search} />
                      <PrivateRoute exact path = "/profile" component = {Profile} />
-                     <PrivateRoute exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
+                     <Route exact path = "/settings-and-privacy" component = {SettingsAndPrivacy} />
+                     <Route exact path = "/bhuwan" component = {() => { window.location = 'https://bhuwanadhikari.com.np'; return null;} } />
+                     <Route exact path = "/jiwan" component = {() => { window.location = 'https://jiwansapkota.com.np'; return null;} } />
                      <PrivateRoute component = {Home}/>
                   </Switch>
                   <Footer/>

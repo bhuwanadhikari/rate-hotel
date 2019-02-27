@@ -158,7 +158,11 @@ class Hotel extends Component {
                               />
                            )
                         }))
-                        :(<div>No Reviews Yet</div>)
+                        :(<div style={{
+                           fontFamily:'Poppins, Sans-Serif',
+                           fontSize:'0.9em',
+                           textAlign: 'center'
+                        }}>No Reviews Yet</div>)
                      }
                   </div>
                </div>

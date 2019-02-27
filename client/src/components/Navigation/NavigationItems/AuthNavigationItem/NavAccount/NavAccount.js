@@ -32,7 +32,7 @@ class NavAccount extends React.Component {
    };
 
    onFeedbackClickHandler = () => {
-     this.setState({showFeedbackModal: true});
+      this.setState({showFeedbackModal: true});
    };
 
    onLogOutHandler = (e) => {
@@ -90,11 +90,7 @@ class NavAccount extends React.Component {
                   </li>
 
                   <li className="AccountLinkList Normal">
-                     <NavLink className = "AccountLink" to = '/settings-and-privacy'>Settings and Privacy</NavLink>
-                  </li>
-
-                  <li className="AccountLinkList Normal" onClick={ this.onLogOutHandler }>
-                     <div className = "AccountLink LogOut">Log Out</div>
+                     <NavLink className = "AccountLink" to = '/settings-and-privacy'>Privacy Policy</NavLink>
                   </li>
 
                   <li className="AccountLinkList">
@@ -110,12 +106,16 @@ class NavAccount extends React.Component {
                   </li>
 
                   <li className="AccountLinkList">
-                     <NavLink className = "AccountLink Disabled" to = '/disabled'>Go Premium</NavLink>
+                     <NavLink className = "AccountLink Disabled" to = '/home'>Go Premium</NavLink>
+                  </li>
+
+                  <li className="AccountLinkList Normal" onClick={ this.onLogOutHandler }>
+                     <div className = "AccountLink LogOut">Log Out</div>
                   </li>
 
                </ul>):null}
             <Modal show={this.state.showFeedbackModal} modalClosed={this.onBackDropClickHandler} fromTop = '20%'>
-               <Feedback modalClosed={this.onBackDropClickHandler}/>
+               <Feedback modalClosed={this.onBackDropClickHandler} feedbackHeading={"Feedback"}/>
             </Modal>
          </Auxi>
       )
