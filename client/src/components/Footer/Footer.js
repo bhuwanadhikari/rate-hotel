@@ -33,7 +33,7 @@ class  Footer extends React.Component{
    };
 
    onAddHotelClickHandler = () => {
-      this.setState({showAddHotelModal: true});
+      this.setState({showAddHotelModal: false});
    };
 
    //For addition of Hotels--------------------------------------------

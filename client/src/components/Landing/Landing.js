@@ -14,7 +14,7 @@ const Landing = (props) => {
 
    const onSignupHandler = (e) => {
       e.preventDefault();
-      props.history.push('/signup');
+      props.history.push('/sign-up');
    };
 
    const onLoginHandler = (e) => {
