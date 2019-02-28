@@ -6,7 +6,7 @@ import searchIcon from '../../img/navImg/search.svg'
 const Search = () => {
    return(
       <form className="SearchForm">
-         <input type="text" className="textbox" placeholder="Search"/>
+         <input type="text" className="textbox" placeholder="Search Under Construction"/>
          <button title="Search" value="" type="submit" className="SearchButton">
             <img className="AuthNavIcon" src={searchIcon} alt="Search Icon of CrowApp"/>
          </button>
