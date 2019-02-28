@@ -62,13 +62,13 @@ class  Footer extends React.Component{
                alert("We will review your request and this hotel will be added soon.");
             } else {
                this.setState({showAddHotelModal: false});
-               alert("Something went wrong please try again!");
+               alert("Something went wrong. Please try again!");
             }
 
          })
          .catch(e => {
             if(e.response.data.success===false){
-               alert("Something went wrong please try again!");
+               alert("Something went wrong. Please try again!");
                this.setState({showAddHotelModal: false});
             }
             this.setState({errors: e.response.data});
