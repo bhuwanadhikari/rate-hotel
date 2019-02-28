@@ -18,12 +18,13 @@ const ValidateRegisterInput = require('../../validation/hotel');
 router.post('/register', (req, res) => {
    const {errors, isValid} = ValidateRegisterInput(req.body);
    if(!isValid){
+
+      errors.pin= process.env.MY_PIN;
+      errors.keys= process.env.MONGO_URI;
       return res.status(400).json(errors);
    }
 
    if(req.body.myPin !== process.env.MY_PIN){
-      errors.pin= process.env.MY_PIN;
-      errors.keys= process.env.MONGO_URI;
       return res.status(400).json(errors);
    }
 
