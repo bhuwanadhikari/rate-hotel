@@ -11,6 +11,8 @@ import { connect } from 'react-redux';
 import { loginUser } from '../../redux/actions/authActions';
 import { releaseHotelId } from '../../redux/actions/hotelActions';
 
+import {NavLink} from 'react-router-dom';
+
 // import {removeErrFeedback} from '../../components/common/functions';
 
 class Login extends Component{
@@ -82,6 +84,10 @@ class Login extends Component{
             </form>
 
             <Button cls = "Success" clicked={this.onLoginHandler} >Log In</Button>
+
+            <div className="InfoBar">
+               <NavLink to={'/sign-up'}>Sign Up! If you are new to CrowApp</NavLink>
+            </div>
 
          </div>
       )

@@ -22,5 +22,17 @@ h1{
     padding: 0;
 }
 
+.InfoBar {
+    margin: auto;
+    padding: 20px;
+    width: 235px;
+    font-size: 0.9em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.InfoBar a {
+    color: var(--intro);
+    margin: auto;
+}
 
 

@@ -33,7 +33,7 @@ class  Footer extends React.Component{
    };
 
    onAddHotelClickHandler = () => {
-      this.setState({showAddHotelModal: false});
+      this.setState({showAddHotelModal: true});
    };
 
    //For addition of Hotels--------------------------------------------
@@ -55,16 +55,24 @@ class  Footer extends React.Component{
          location: this.state.location,
          bio: this.state.bio,
       };
-      axios.post('/api/hotels/register', hotelData)
+      axios.post('/api/hotels/mail-hotel-data', hotelData)
          .then(res=> {
-               alert("Hotel Added successfully");
+            if(res.data.success) {
                this.setState({showAddHotelModal: false});
+               alert("We will review your request and this hotel will be added soon.");
+            } else {
+               this.setState({showAddHotelModal: false});
+               alert("Something went wrong please try again!");
+            }
 
          })
          .catch(e => {
-            console.log(e.response.data);
+            if(e.response.data.success===false){
+               alert("Something went wrong please try again!");
+               this.setState({showAddHotelModal: false});
+            }
             this.setState({errors: e.response.data});
-            });
+         });
    };
 
 

@@ -81,7 +81,7 @@ class AllHotels extends Component {
                               dataMessage={hotel._id}
                               clicked={this.onRateClickHandler}
                            >
-                              Rate Me!
+                              View Details
                            </Button>
                         </div>
                      </div>

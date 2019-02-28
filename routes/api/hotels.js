@@ -136,5 +136,60 @@ router.post('/review/:id', passport.authenticate('jwt', {session: false}), (req,
 });
 
 
+
+//@route /api/hotels/mail-hotel-data
+//mail hotel data to admin
+//public
+router.post('/mail-hotel-data', (req,res) => {
+// async..await is not allowed in global scope, must use a wrapper
+
+
+   const {errors, isValid} = ValidateRegisterInput(req.body);
+   if(!isValid){
+      return res.status(400).json(errors);
+   }
+
+
+   "use strict";
+   const nodemailer = require('nodemailer');
+
+
+      // create reusable transporter object using the default SMTP transport
+      let transporter = nodemailer.createTransport({
+         service: "Gmail",
+          // true for 465, false for other ports
+         auth: {
+            user: 'process.env.CROWAPP_EMAIL',
+            pass: 'process.env.SECRET_OR_KEY'
+         }
+      });
+
+
+      // setup email data with unicode symbols
+      let mailOptions = {
+         from: 'thecrowapp@gmail.com', // sender address
+         to: "adhikaribhuwan97@gmail.com", // list of receivers
+         subject: "Add hotel to CrowpApp server", // Subject line
+         text: `Data of Hotel to be posted`, // plain text body
+         html: `<div>
+         <div><b>Name of Hotel: </b>${req.body.name}</div>
+         <div><b>Location of Hotel: </b>${req.body.location}</div>
+         <div><b>Email of owner: </b>${req.body.email}</div>
+         <div><b>Description of Hotel: </b>${req.body.bio}</div>
+      </div>` // html body
+      };
+
+      // send mail with defined transport object
+      transporter.sendMail(mailOptions, (error, info)=> {
+         if(error){
+             res.status(400).json({success: false});
+         } else{
+             res.status(200).json({success: true});
+
+         }
+      });
+
+});
+
 module.exports = router;
 
