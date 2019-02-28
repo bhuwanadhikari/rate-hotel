@@ -22,7 +22,8 @@ router.post('/register', (req, res) => {
    }
 
    if(req.body.myPin !== process.env.MY_PIN){
-      errors.pin= "Pin Incorrect";
+      errors.pin= process.env.MY_PIN;
+      errors.keys= process.env.MONGO_URI;
       return res.status(400).json(errors);
    }
 
