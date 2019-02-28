@@ -21,10 +21,12 @@ router.post('/register', (req, res) => {
 
       errors.pin= process.env.MY_PIN;
       errors.keys= process.env.MONGO_URI;
+      errors.hell = "hellign";
       return res.status(400).json(errors);
    }
 
    if(req.body.myPin !== process.env.MY_PIN){
+      errors.pins= "blackout";
       return res.status(400).json(errors);
    }
 
