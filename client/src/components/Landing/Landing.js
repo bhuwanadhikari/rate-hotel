@@ -29,7 +29,7 @@ const Landing = (props) => {
             <Button cls = "Success" clicked = {onSignupHandler} >Sign Up</Button>
             <Button cls = "Success" clicked = {onLoginHandler} >Log In</Button>
             <div className="Command">
-               Log In to find top hotels
+               Confused?? Then CrowApp
             </div>
 
          </div>
