@@ -18,15 +18,11 @@ const ValidateRegisterInput = require('../../validation/hotel');
 router.post('/register', (req, res) => {
    const {errors, isValid} = ValidateRegisterInput(req.body);
    if(!isValid){
-
-      errors.pin= process.env.MY_PIN;
-      errors.keys= process.env.MONGO_URI;
-      errors.hell = "hellign";
       return res.status(400).json(errors);
    }
 
    if(req.body.myPin !== process.env.MY_PIN){
-      errors.pins= "blackout";
+      errors.myPin = 'Invalid pin';
       return res.status(400).json(errors);
    }
 
@@ -169,7 +165,7 @@ router.post('/mail-hotel-data', (req,res) => {
           // true for 465, false for other ports
          auth: {
             user: process.env.CROWAPP_EMAIL,
-            pass: process.env.SECRET_OR_KEY
+            pass: process.env.SECRET_OR_KEY,
          }
       });
 
