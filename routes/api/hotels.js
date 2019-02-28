@@ -21,6 +21,10 @@ router.post('/register', (req, res) => {
       return res.status(400).json(errors);
    }
 
+   if(req.body.myPin !== process.env.MY_PIN){
+      return res.status(400).json(errors);
+   }
+
    Hotel.findOne({email: req.body.email})
       .then(hotel =>{
          if(hotel){
