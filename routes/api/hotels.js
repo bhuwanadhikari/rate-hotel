@@ -163,8 +163,8 @@ router.post('/mail-hotel-data', (req,res) => {
          service: "Gmail",
           // true for 465, false for other ports
          auth: {
-            user: 'process.env.CROWAPP_EMAIL',
-            pass: 'process.env.SECRET_OR_KEY'
+            user: process.env.CROWAPP_EMAIL,
+            pass: process.env.SECRET_OR_KEY
          }
       });
 

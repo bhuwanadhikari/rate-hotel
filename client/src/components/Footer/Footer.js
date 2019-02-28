@@ -57,8 +57,6 @@ class  Footer extends React.Component{
       };
       axios.post('/api/hotels/mail-hotel-data', hotelData)
          .then(res=> {
-            console.log("inside then block");
-
             if(res.data.success) {
                this.setState({showAddHotelModal: false});
                alert("We will review your request and this hotel will be added soon.");
@@ -71,7 +69,6 @@ class  Footer extends React.Component{
          .catch(e => {
             if(e.response.data.success===false){
                alert("Something went wrong please try again!");
-               console.log("inside cathch block");
                this.setState({showAddHotelModal: false});
             }
             this.setState({errors: e.response.data});
