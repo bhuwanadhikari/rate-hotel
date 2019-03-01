@@ -81,7 +81,7 @@ class AllHotels extends Component {
                      </div>
 
                      <div className="HotelCardFooter">
-                        <div className="ReviewNumber">{hotel.reviews} reviews</div>
+                        <div className="ReviewNumber">{hotel.reviews} ratings</div>
                         <div className="ButtonWrapper">
                            <Button
                               cls="Success InlineBtn Smaller"

@@ -26,10 +26,13 @@ const Landing = (props) => {
       <div className="Landing">
          <img src={backImg} alt="Background of CrowApp"/>
          <div className="Container">
+            <div className="TopCommand">
+               CrowApp
+            </div>
             <Button cls = "Success" clicked = {onSignupHandler} >Sign Up</Button>
             <Button cls = "Success" clicked = {onLoginHandler} >Log In</Button>
             <div className="Command">
-               Confused?? Then CrowApp
+               Confused?? Log In to Find Top Rated Hotels
             </div>
 
          </div>

@@ -97,7 +97,7 @@ class App extends Component {
 
       setTimeout(() => {
          this.setState({appState : updatedAppState});
-      }, 3000);
+      }, 100);
    }
 
    render() {

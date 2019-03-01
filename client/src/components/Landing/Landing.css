@@ -17,7 +17,7 @@
 .Container {
     margin: 0;
     position: absolute;
-    top: 30%;
+    top: 25%;
     width: 100%;
 
 }
@@ -32,4 +32,15 @@
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px 5px var(--theme), 1px 1px 5px var(--theme);
+}
+
+.TopCommand {
+    text-align: center;
+    font-family: Galindo , sans-serif;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 5px var(--theme), 1px 1px 5px var(--theme);
+
 }

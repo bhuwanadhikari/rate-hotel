@@ -4,7 +4,7 @@ const bcrypt  = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
-//Load Splash Validation
+//Load Validation
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput =  require('../../validation/login');
 

@@ -5,7 +5,7 @@ const passport = require('passport');
 const Hotel = require('../../models/Hotel');
 const Rating = require('../../models/Rating');
 
-const {convertToAverageRating, sortByTopRate, sortByDate, sortForHome} = require('../../helpers/backendHelpers');
+const {convertToAverageRating, sortByTopRate, sortByDate, sortForHome, countTotalRatings} = require('../../helpers/backendHelpers');
 
 
 const router = express.Router();
@@ -26,7 +26,6 @@ router.get('/all', (req, res) => {
          errors.noHotels = 'There are no hotels at all';
       }
       const newHotelArr = allHotels.map((hotelProfile, index) => {
-         const reviews = hotelProfile.reviews.length;
          const hotelAverageRating = convertToAverageRating(hotelProfile.rates);
          return {
             averageRating: hotelAverageRating.toFixed(1),
@@ -34,7 +33,7 @@ router.get('/all', (req, res) => {
             name: hotelProfile.hotel.name,
             avatar: hotelProfile.hotel.avatar,
             location: hotelProfile.hotel.location,
-            reviews: reviews
+            reviews: countTotalRatings(hotelProfile.rates), // this is counted as rating in front end
          };
       });
       newHotelArr.sort((a,b) => a.name>b.name?1:-1);
@@ -87,7 +86,7 @@ router.get('/top-rated', passport.authenticate('jwt', {session: false}), (req, r
                name: hotelProfile.hotel.name,
                avatar: hotelProfile.hotel.avatar,
                location: hotelProfile.hotel.location,
-               reviews: hotelProfile.reviews.length
+               reviews: countTotalRatings(hotelProfile.rates)
             };
          });
          const sortedArray = sortByTopRate(newHotelArr);
@@ -122,7 +121,7 @@ router.get('/newest', passport.authenticate('jwt', {session: false}), (req, res)
                name: hotelProfile.hotel.name,
                avatar: hotelProfile.hotel.avatar,
                location: hotelProfile.hotel.location,
-               reviews: hotelProfile.reviews.length
+               reviews: countTotalRatings(hotelProfile.rates)
             };
          });
          const sortedArray = sortByDate(newHotelArr);
