@@ -57,7 +57,7 @@ class RateView extends React.Component {
                         clicked={this.onDoRatingHandler}
                      >{this.props.data.alreadyRated
                         ?"Edit Rate"
-                        :"Rate this Item"}</Button>
+                        :"Rate Here"}</Button>
                   </div>
                </div>
 

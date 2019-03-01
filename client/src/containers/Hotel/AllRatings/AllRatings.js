@@ -121,7 +121,7 @@ class AllRatings extends Component {
                            <Button
                               cls="Success InlineBtn Smaller"
                               clicked={this.onMoreDetailsHandler}
-                           >{this.state.expandMeal?`Less Details`:`More Details`}</Button>
+                           >{this.state.expandMeal?`Less Details`:`Rate Meal`}</Button>
                         </div>
                      </div>
                   </div>
