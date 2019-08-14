@@ -20,7 +20,7 @@ npm install
 
 Create a file with name keys_dev.js in config folder and write required keys as in keys_prod.js
 ``` js
-//code insde keys_dev.js
+//code inside keys_dev.js
 module.exports = {
    mongoURI: 'your mongo uri'
    secret: 'your own secret'
